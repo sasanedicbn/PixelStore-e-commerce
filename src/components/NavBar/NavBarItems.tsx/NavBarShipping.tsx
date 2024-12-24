@@ -1,6 +1,6 @@
 import { FaTruck } from "react-icons/fa";
 
-const Shipping = () => {
+const NavBarShipping = () => {
   return (
     <div>
       <span>
@@ -10,4 +10,4 @@ const Shipping = () => {
     </div>
   );
 };
-export default Shipping;
+export default NavBarShipping;

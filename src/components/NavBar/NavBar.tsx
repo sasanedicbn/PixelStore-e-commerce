@@ -1,9 +1,13 @@
-import Shipping from "./NavBarItems.tsx/Shipping";
+import NavBarActions from "./NavBarItems.tsx/NavBarActions";
+import NavBarShipping from "./NavBarItems.tsx/NavBarShipping";
+import NavBarSocial from "./NavBarItems.tsx/NavBarSocial";
 
 const NavBar = () => {
   return (
     <div>
-      <Shipping />
+      <NavBarShipping />
+      <NavBarActions />
+      <NavBarSocial />
     </div>
   );
 };
