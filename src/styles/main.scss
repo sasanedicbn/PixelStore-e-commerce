@@ -40,7 +40,7 @@ nav{
       .navBarSocial {
         @include flex-between;
         width: 100px;
-      
+
         .icon-facebook {
           &:hover {
             background-color: #3b5998; 
@@ -71,29 +71,27 @@ nav{
           }
         }
       }
-      
 }
 header{
-    background-color: red;
+    background-color: white;
+    padding: 0 5.25rem;
+    display: flex;
     img{
         width: 100px;
         height: 80px;
         border-radius: 50%;
     }
     .header-search-form {
-        display: flex;
-        align-items: center;
-        border: 1px solid #ccc;
-        border-radius: 30px;
+        @include flex-between;
+        border: 2px solid $primary-color;
+        border-radius: $border-radius;
         padding: 5px 10px;
         width: 100%;
-        max-width: 400px;
+        max-width: 500px;
         background-color: #f9f9f9;
         transition: all 0.3s ease;
+        height: 50px;
       
-        &:focus-within {
-          border-color: #007bff; // Fokus efekat kada korisnik unese u input
-        }
       
         .header-search-input {
           flex-grow: 1;

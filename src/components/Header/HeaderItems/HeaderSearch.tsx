@@ -17,7 +17,7 @@ const HeaderSearch = () => {
       <input
         type="text"
         className="header-search-input"
-        placeholder="Pretraga..."
+        placeholder="Search..."
         value={searchTerm}
         onChange={handleInputChange}
       />
