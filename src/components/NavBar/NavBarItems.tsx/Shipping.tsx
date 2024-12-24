@@ -1,4 +1,13 @@
+import { FaTruck } from "react-icons/fa";
+
 const Shipping = () => {
-  return <div>FREE Shipping Over $35</div>;
+  return (
+    <div>
+      <span>
+        <FaTruck />
+      </span>{" "}
+      FREE Shipping Over $35
+    </div>
+  );
 };
 export default Shipping;
