@@ -80,4 +80,53 @@ header{
         height: 80px;
         border-radius: 50%;
     }
+    .header-search-form {
+        display: flex;
+        align-items: center;
+        border: 1px solid #ccc;
+        border-radius: 30px;
+        padding: 5px 10px;
+        width: 100%;
+        max-width: 400px;
+        background-color: #f9f9f9;
+        transition: all 0.3s ease;
+      
+        &:focus-within {
+          border-color: #007bff; // Fokus efekat kada korisnik unese u input
+        }
+      
+        .header-search-input {
+          flex-grow: 1;
+          border: none;
+          background-color: transparent;
+          padding: 5px 10px;
+          font-size: 16px;
+          outline: none;
+          color: #333;
+      
+          &::placeholder {
+            color: #aaa;
+          }
+      
+          &:focus {
+            color: #333;
+          }
+        }
+      
+        .header-search-btn {
+          background-color: transparent;
+          border: none;
+          cursor: pointer;
+          padding: 5px;
+          margin-left: 10px;
+          color: #007bff;
+          font-size: 20px;
+          transition: color 0.3s ease;
+      
+          &:hover {
+            color: #0056b3;
+          }
+        }
+      }
+      
 }
