@@ -19,6 +19,7 @@ nav{
     .navBarActions {
         border-left: 1px solid white;
         border-right: 1px solid white;  
+        margin-left: 10rem;
         @include flex-between;
         height: 100%;      
         .navBar-items {
@@ -73,8 +74,8 @@ nav{
       }
 }
 header{
-    background-color: orange;
-    padding: 0 5.25rem;
+    border-bottom: 1px solid grey;
+    padding: 1rem 5.25rem;
     @include flex-between;
     img{
         width: 100px;
@@ -87,7 +88,7 @@ header{
         border-radius: $border-radius;
         padding: 5px 10px;
         width: 100%;
-        max-width: 500px;
+        max-width: 700px;
         background-color: #f9f9f9;
         transition: all 0.3s ease;
         height: 50px;
@@ -122,6 +123,29 @@ header{
       
           &:hover {
             color: #0056b3;
+          }
+        }
+      }
+      .header-actions {
+        display: flex;
+        gap: 1rem; 
+      
+        .header-action-btn {
+          background-color: transparent;
+          border: none;
+          cursor: pointer;
+          font-size: 1.25rem; 
+          color: #333;
+          padding: 0.3125rem;
+          transition: color 0.3s ease, transform 0.3s ease;
+      
+          &:hover {
+            color: #007bff;
+            transform: scale(1.1);
+          }
+      
+          &:focus {
+            outline: none;
           }
         }
       }
