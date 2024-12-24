@@ -1,12 +1,11 @@
-import { FaTruck } from "react-icons/fa";
+import Icon from "../../../UX/Icons";
 
 const NavBarShipping = () => {
   return (
-    <div>
-      <span>
-        <FaTruck />
-      </span>{" "}
-      FREE Shipping Over $35
+    <div className="navBarShipping">
+      <Icon name="truck" size="18" color="#fafafa" />
+      <p>FREE Shipping Over</p>
+      <span>$35</span>
     </div>
   );
 };

@@ -1,0 +1,49 @@
+@import 'variables';
+@import 'mixins';
+
+
+.navBar-conatiner{
+    width: 100%;
+    @include flex-between;
+    background-color: $primary-color;
+    padding: 0 5.25rem;
+    font-size: $text;
+    height: 3rem;
+    color: #fafafa;
+    .navBarShipping{
+        @include flex-between;
+        p{
+            padding: 0 .3rem;
+        }
+    }
+    .navBarActions {
+        border-left: 1px solid white;
+        border-right: 1px solid white;  
+        @include flex-between;
+        height: 100%;      
+        .navBar-items {
+          display: flex;
+          list-style: none; 
+      
+          li {
+            padding: 0 1.2rem;
+            cursor: pointer;
+            transition: color 0.3s ease;
+      
+            &:hover {
+                color: #f1f1f1;
+            }
+          }
+        }
+      }
+      
+    .navBarSocial{
+        @include flex-between;
+        width: 100px;
+        div{
+            &:hover{
+            transform: scale(1.1);
+        }
+    }
+    }
+}

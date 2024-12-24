@@ -1,4 +1,5 @@
 import "./App.css";
+import "./styles/main.scss";
 import Home from "./pages/Home/HomeHelpers.tsx/Home";
 
 function App() {

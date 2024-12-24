@@ -4,7 +4,7 @@ import NavBarSocial from "./NavBarItems.tsx/NavBarSocial";
 
 const NavBar = () => {
   return (
-    <div>
+    <div className="navBar-conatiner">
       <NavBarShipping />
       <NavBarActions />
       <NavBarSocial />

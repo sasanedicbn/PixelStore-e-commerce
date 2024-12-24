@@ -1,36 +1,31 @@
-import { FaFacebook, FaInstagram, FaTiktok } from "react-icons/fa";
-
-interface IconProps {
-  name: string;
-  size?: number;
-  color?: string;
-  onClick?: () => void;
-  className?: string;
-}
+import { FaFacebook, FaInstagram, FaTiktok, FaTruck } from "react-icons/fa";
 
 const Icon = ({
   name,
-  size = 24,
+  size = 84,
   color = "black",
   onClick = () => {},
   className = "",
 }: IconProps) => {
-  const icons: { [key: string]: React.ElementType } = {
-    facebook: FaFacebook,
-    instagram: FaInstagram,
-    tiktok: FaTiktok,
+  const icons = {
+    facebook: (
+      <FaFacebook name={name} size={size} color={color} className={className} />
+    ),
+    instagram: (
+      <FaInstagram
+        name={name}
+        size={size}
+        color={color}
+        className={className}
+      />
+    ),
+    tiktok: (
+      <FaTiktok name={name} size={size} color={color} className={className} />
+    ),
+    truck: <FaTruck name={name} size={size} color={color} />,
   };
 
-  const SelectedIcon = icons[name];
-
-  return (
-    <SelectedIcon
-      size={size}
-      color={color}
-      onClick={onClick}
-      className={className}
-    />
-  );
+  return icons[name as keyof typeof icons] || null;
 };
 
 export default Icon;
