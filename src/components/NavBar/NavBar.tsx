@@ -4,11 +4,11 @@ import NavBarSocial from "./NavBarItems.tsx/NavBarSocial";
 
 const NavBar = () => {
   return (
-    <div className="navBar-conatiner">
+    <nav>
       <NavBarShipping />
       <NavBarActions />
       <NavBarSocial />
-    </div>
+    </nav>
   );
 };
 
