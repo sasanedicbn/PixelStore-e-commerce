@@ -1,3 +1,4 @@
+import HeaderActions from "./HeaderItems/HeaderActions";
 import HeaderLogo from "./HeaderItems/HeaderLogo";
 import HeaderSearch from "./HeaderItems/HeaderSearch";
 
@@ -6,6 +7,7 @@ const Header = () => {
     <header>
       <HeaderLogo />
       <HeaderSearch />
+      <HeaderActions />
     </header>
   );
 };

@@ -73,9 +73,9 @@ nav{
       }
 }
 header{
-    background-color: white;
+    background-color: orange;
     padding: 0 5.25rem;
-    display: flex;
+    @include flex-between;
     img{
         width: 100px;
         height: 80px;
@@ -91,7 +91,6 @@ header{
         background-color: #f9f9f9;
         transition: all 0.3s ease;
         height: 50px;
-      
       
         .header-search-input {
           flex-grow: 1;
@@ -117,7 +116,7 @@ header{
           cursor: pointer;
           padding: 5px;
           margin-left: 10px;
-          color: #007bff;
+          color: $primary-color;
           font-size: 20px;
           transition: color 0.3s ease;
       
