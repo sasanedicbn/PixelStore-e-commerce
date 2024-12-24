@@ -37,13 +37,39 @@
         }
       }
       
-    .navBarSocial{
+      .navBarSocial {
         @include flex-between;
         width: 100px;
-        div{
-            &:hover{
-            transform: scale(1.1);
+      
+        .icon-facebook {
+          &:hover {
+            background-color: #3b5998; 
+            border-radius: 50%;       
+            padding: 2px;
+            transition: background-color 0.3s ease; 
+            cursor: pointer;
+          }
         }
-    }
-    }
+      
+        .icon-instagram {
+          &:hover {
+            background-color: #e4405f; 
+            border-radius: 50%;
+            padding: 2px;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+          }
+        }
+      
+        .icon-tiktok {
+          &:hover {
+            background-color: #000000; 
+            border-radius: 50%;
+            padding: 3px;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+          }
+        }
+      }
+      
 }
