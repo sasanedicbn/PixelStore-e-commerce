@@ -1,17 +1,18 @@
-import { FaUser, FaHeart, FaShoppingCart } from "react-icons/fa";
+import Button from "../../../UX/Button";
+import Icon from "../../../UX/Icons";
 
 const HeaderActions = () => {
   return (
     <div className="header-actions">
-      <button className="header-action-btn">
-        <FaUser />
-      </button>
-      <button className="header-action-btn">
-        <FaHeart />
-      </button>
-      <button className="header-action-btn">
-        <FaShoppingCart />
-      </button>
+      <Button type="user">
+        <Icon name="user" />
+      </Button>
+      <Button type="favourites">
+        <Icon name="favourites" />
+      </Button>
+      <Button type="cart">
+        <Icon name="cart" />
+      </Button>
     </div>
   );
 };

@@ -5,6 +5,7 @@ const Button = ({ type, children, onClick, disabled = false }: ButtonProps) => {
     cart: `header-action-btn`,
   };
 
+  console.log(styles[type]);
   return (
     <button className={styles[type]} onClick={onClick} disabled={disabled}>
       {children}
