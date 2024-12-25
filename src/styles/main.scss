@@ -77,18 +77,36 @@ header{
     border-bottom: 1px solid grey;
     padding: 1rem 5.25rem;
     @include flex-between;
-    img{
-        width: 100px;
-        height: 80px;
-        border-radius: 50%;
+    
+.pixel-logo {
+    display: flex;
+    align-items: center;
+    font-family: 'Press Start 2P', cursive; 
+    font-size: 1.5rem;
+    color: $primary-color;
+  
+    .pixel-letter {
+      margin: 0 2px;
+      transition: transform 0.3s ease-in-out;
+  
+      &:hover {
+        transform: scale(1.2);
+      }
     }
+  
+    .pixel-separator {
+      margin: 0 3px;
+      color: #efeeee;
+      text-shadow: 1px 1px 0 #000;
+    }
+  }
     .header-search-form {
         @include flex-between;
         border: 2px solid $primary-color;
         border-radius: $border-radius;
         padding: 5px 10px;
         width: 100%;
-        max-width: 680px;
+        max-width: 650px;
         transition: all 0.3s ease;
         height: 50px;
       
