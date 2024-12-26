@@ -173,9 +173,6 @@ header{
 }
 .menu-container{
   @include wrapper(section, .5rem, .5rem);
-  .menuItems{
-    
-  }
   background-color: red;
 }
 .products{
