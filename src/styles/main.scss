@@ -1,12 +1,13 @@
-@import 'variables';
-@import 'mixins';
+@use 'variables' as *;
+@use './mixins' as *;
+
 
 
 nav{
     width: 100%;
     @include flex-between;
     background-color: $primary-color;
-    @include wrapper(section);
+    @include wrapper(section, 0,0);
     font-size: $text;
     height: 3rem;
     color: #fafafa;
@@ -75,7 +76,7 @@ nav{
 }
 header{
     border-bottom: 1px solid grey;
-    // padding: 1.75rem 5.25rem;
+    padding: 1.75rem 5.25rem;
     @include wrapper(section, 1.75rem, 1.75rem);
     @include flex-between;
     
@@ -169,4 +170,15 @@ header{
         }
       }
       
+}
+.menu-container{
+  @include wrapper(section, .5rem, .5rem);
+  .menuItems{
+    
+  }
+  background-color: red;
+}
+.products{
+  display: flex;
+  background-color: orange;
 }

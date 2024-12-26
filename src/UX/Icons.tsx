@@ -7,6 +7,7 @@ import {
   FaTruck,
   FaUser,
 } from "react-icons/fa";
+import { IoChevronDown, IoMenu } from "react-icons/io5";
 
 const Icon = ({
   name,
@@ -34,6 +35,8 @@ const Icon = ({
     user: <FaUser name={name} />,
     favourites: <FaHeart name={name} />,
     cart: <FaShoppingCart name={name} />,
+    burger: <IoMenu name={name} />,
+    down: <IoChevronDown name={name} />,
   };
 
   return icons[name as keyof typeof icons] || null;
