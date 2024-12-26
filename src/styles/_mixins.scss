@@ -8,3 +8,12 @@
     justify-content: space-between;
     align-items: center;
   }
+  $wrappers: (
+  global: 0 5.25rem,
+  section: 0 3rem,
+  small: 0 1rem
+);
+
+@mixin wrapper($type) {
+  padding: map-get($wrappers, $type);
+}
