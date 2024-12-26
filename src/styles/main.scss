@@ -6,6 +6,7 @@ nav{
     width: 100%;
     @include flex-between;
     background-color: $primary-color;
+    @include wrapper(section);
     font-size: $text;
     height: 3rem;
     color: #fafafa;
@@ -74,7 +75,8 @@ nav{
 }
 header{
     border-bottom: 1px solid grey;
-    padding: 1.75rem 5.25rem;
+    // padding: 1.75rem 5.25rem;
+    @include wrapper(section, 1.75rem, 1.75rem);
     @include flex-between;
     
 .pixel-logo {
