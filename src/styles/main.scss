@@ -75,11 +75,12 @@ nav{
 }
 header{
     border-bottom: 1px solid grey;
-    padding: 1rem 5.25rem;
+    padding: 1.75rem 5.25rem;
     @include flex-between;
     
 .pixel-logo {
     display: flex;
+    
     align-items: center;
     font-family: 'Press Start 2P', cursive; 
     font-size: 1.5rem;

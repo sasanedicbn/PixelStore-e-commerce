@@ -1,4 +1,4 @@
-const PixelStudioLogo = () => {
+const HeaderLogo = () => {
   return (
     <div className="pixel-logo">
       <span className="pixel-letter">P</span>
@@ -17,4 +17,4 @@ const PixelStudioLogo = () => {
   );
 };
 
-export default PixelStudioLogo;
+export default HeaderLogo;
