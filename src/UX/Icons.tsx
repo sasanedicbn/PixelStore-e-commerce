@@ -1,3 +1,4 @@
+import { AiOutlineRight } from "react-icons/ai";
 import {
   FaFacebook,
   FaHeart,
@@ -37,6 +38,7 @@ const Icon = ({
     cart: <FaShoppingCart name={name} />,
     burger: <IoMenu name={name} size={size} color={color} />,
     down: <IoChevronDown name={name} color={color} />,
+    right: <AiOutlineRight name={name} color={color} size={size} />,
   };
 
   return icons[name as keyof typeof icons] || null;

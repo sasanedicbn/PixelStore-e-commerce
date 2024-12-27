@@ -233,6 +233,7 @@ header{
     border-bottom: 1px solid $bottom-gray;
     font-size: $text;
     color: $menu-items;
+    @include flex-between;
   }
  }
 }
