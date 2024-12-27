@@ -221,7 +221,7 @@ header{
   position: absolute;
   border: 1px solid $bottom-gray;
   // bottom: -2rem;
-  width: 13.5rem;
+  width: 13.75rem;
   top: 3.5rem;
   // background-color: orange;
   // width: 300px;
@@ -231,6 +231,8 @@ header{
     list-style: none;
     padding: 1rem ;
     border-bottom: 1px solid $bottom-gray;
+    font-size: $text;
+    color: $menu-items;
   }
  }
 }
