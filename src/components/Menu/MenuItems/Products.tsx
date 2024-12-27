@@ -9,21 +9,15 @@ const Products = () => {
   const handleMouseEnter = () => {
     setIsHovered(true);
     if (productRef.current) {
-      productRef.current.style.backgroundColor = "red";
-      productRef.current.style.backgroundColor = "red";
-      console.log("na btn", productRef.current);
+      productRef.current.style.backgroundColor = "#e32726";
     }
   };
-
   const handleMouseLeave = () => {
     setIsHovered(false);
     if (productRef.current) {
       productRef.current.style.backgroundColor = "white";
-      console.log("skinuo se sa btn", productRef.current);
     }
   };
-
-  console.log("productRef.current", productRef);
 
   return (
     <div

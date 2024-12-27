@@ -203,6 +203,7 @@ header{
       border-right: 1px solid $bottom-gray;
       width: 11.5rem;
       cursor: pointer;
+      transition: all 0.3s ease-in-out;
       position: relative;
       span{
         @include flex-start;
@@ -212,6 +213,8 @@ header{
           color: $primary-color;
           font-weight: bold;
           font-size: $text;
+          transition: all 0.3s ease-in-out;
+
         }
         .white{
           color: white;
@@ -225,13 +228,14 @@ header{
 .products-dropMenu{
   position: absolute;
   border: 1px solid $bottom-gray;
-  // bottom: -2rem;
   width: 13.75rem;
+  transition: all 3s ease-in-out;
   top: 3.5rem;
-  // background-color: orange;
-  // width: 300px;
+  // transform: translateY(-10px);
+  background-color: white;
  ul{
   // background-color: purple;
+  transition: opacity 0.3s ease, transform 0.3s ease;
   li{
     list-style: none;
     padding: 1rem ;
