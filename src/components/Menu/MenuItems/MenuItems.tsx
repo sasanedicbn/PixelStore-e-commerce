@@ -5,7 +5,7 @@ const MenuItems = () => {
   return (
     <div className="menuItems-container">
       <Products />
-      <ul>
+      <ul className="menu-ul">
         <li>
           Deals{" "}
           <span>

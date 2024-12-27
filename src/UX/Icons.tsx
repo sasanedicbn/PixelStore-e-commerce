@@ -35,8 +35,8 @@ const Icon = ({
     user: <FaUser name={name} />,
     favourites: <FaHeart name={name} />,
     cart: <FaShoppingCart name={name} />,
-    burger: <IoMenu name={name} size={size} />,
-    down: <IoChevronDown name={name} />,
+    burger: <IoMenu name={name} size={size} color={color} />,
+    down: <IoChevronDown name={name} color={color} />,
   };
 
   return icons[name as keyof typeof icons] || null;

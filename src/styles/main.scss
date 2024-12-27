@@ -75,14 +75,13 @@ nav{
       }
 }
 header{
-    border-bottom: 1px solid grey;
+    border-bottom: 1px solid $bottom-gray;
     padding: 1.75rem 5.25rem;
-    @include wrapper(section, 1.70rem, 1.70rem);
+    @include wrapper(section, 1.75rem, 1.75rem);
     @include flex-between;
     
 .pixel-logo {
     display: flex;
-    
     align-items: center;
     font-family: 'Press Start 2P', cursive; 
     font-size: 1.5rem;
@@ -174,12 +173,12 @@ header{
 // MENU-CONTAINER
 .menu-container{
   @include wrapper(section, 0, 0);
-  height: 4rem;
-  border-bottom: 1px solid gray;
+  height: 3.65rem;
+  border-bottom: 1px solid $bottom-gray;
   .menuItems-container{
     display: flex;
     height: 100%;
-    ul{
+    .menu-ul{
       display: flex;
       justify-items: center;
       align-items: center;
@@ -188,6 +187,8 @@ header{
         cursor: pointer;
         height: 100%;
         list-style: none;
+        font-size: $text;
+        letter-spacing: -.35px;
         padding-left: 1.8rem;
         margin:0 .7rem;
         @include flex-center;
@@ -197,15 +198,39 @@ header{
     }
     .products{
       @include flex-between;
-      padding: 0 .5rem;
-      background-color: orange;
-      width: 10rem;
+      padding-right:  .8rem;
+      border-left: 1px solid $bottom-gray;
+      border-right: 1px solid $bottom-gray;
+      width: 11.5rem;
+      cursor: pointer;
+      position: relative;
       span{
         @include flex-start;
         gap:.2rem;
+        padding: 0 .8rem;
+        p{
+          color: $primary-color;
+          font-weight: bold;
+          font-size: $text;
+        }
       }
     }
   }
- 
 }
-
+.products-dropMenu{
+  position: absolute;
+  border: 1px solid $bottom-gray;
+  // bottom: -2rem;
+  width: 13.5rem;
+  top: 3.5rem;
+  // background-color: orange;
+  // width: 300px;
+ ul{
+  // background-color: purple;
+  li{
+    list-style: none;
+    padding: 1rem ;
+    border-bottom: 1px solid $bottom-gray;
+  }
+ }
+}
