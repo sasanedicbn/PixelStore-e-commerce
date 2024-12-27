@@ -208,8 +208,13 @@ header{
         @include flex-start;
         gap:.2rem;
         padding: 0 .8rem;
-        p{
+        .red{
           color: $primary-color;
+          font-weight: bold;
+          font-size: $text;
+        }
+        .white{
+          color: white;
           font-weight: bold;
           font-size: $text;
         }
