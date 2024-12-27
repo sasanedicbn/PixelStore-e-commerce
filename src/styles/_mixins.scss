@@ -9,10 +9,16 @@
     justify-content: space-between;
     align-items: center;
   }
+  @mixin flex-start {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
 
 $wrappers: (
   section:  5.25rem,
   small:  1rem
+
 );
 
 @mixin wrapper($type, $padding-top: 0, $padding-bottom: 0) {

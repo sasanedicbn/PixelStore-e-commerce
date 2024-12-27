@@ -3,7 +3,7 @@ import Products from "./Products";
 
 const MenuItems = () => {
   return (
-    <div>
+    <div className="menuItems-container">
       <Products />
       <ul>
         <li>

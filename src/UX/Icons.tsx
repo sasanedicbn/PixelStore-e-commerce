@@ -35,7 +35,7 @@ const Icon = ({
     user: <FaUser name={name} />,
     favourites: <FaHeart name={name} />,
     cart: <FaShoppingCart name={name} />,
-    burger: <IoMenu name={name} />,
+    burger: <IoMenu name={name} size={size} />,
     down: <IoChevronDown name={name} />,
   };
 
