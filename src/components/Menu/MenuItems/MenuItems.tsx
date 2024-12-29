@@ -1,10 +1,10 @@
-import { useRef } from "react";
+import React, { useRef, useState } from "react";
 import Icon from "../../../UX/Icons";
 import MenuItemsDrop from "../../../UX/MenuItemsDrop";
 import Products from "./Products";
 
 const MenuItems = () => {
-  const refDeals = useRef(null);
+  const [activeMenu, setActiveMenu] = useState(null);
 
   const itemsForDeals = [
     {
@@ -23,31 +23,50 @@ const MenuItems = () => {
     { isImage: true, content: "https://via.placeholder.com/150" },
   ];
 
+  const itemsForServices = [
+    {
+      title: "SERVICES",
+      content: ["Consulting", "Support", "Custom Solutions"],
+    },
+    { title: "Additional Services", content: ["Training", "Installation"] },
+    { isImage: true, content: "https://via.placeholder.com/150" },
+  ];
+
+  const itemsForBrands = [
+    { title: "BRANDS", content: ["Brand A", "Brand B", "Brand C"] },
+    { title: "Popular Brands", content: ["Brand D", "Brand E"] },
+    { isImage: true, content: "https://via.placeholder.com/150" },
+  ];
+
+  const menuData = {
+    Deals: itemsForDeals,
+    Services: itemsForServices,
+    Brands: itemsForBrands,
+  };
+
+  const handleMouseEnter = (menu) => setActiveMenu(menu);
+  const handleMouseLeave = () => setActiveMenu(null);
+
   return (
     <div className="menuItems-container">
       <Products />
       <ul className="menu-ul">
-        <li>
-          Deals{" "}
-          <span>
-            <Icon name="down" />
-          </span>
-          <MenuItemsDrop ref={refDeals} items={itemsForDeals} />
-        </li>
-        <li>
-          Services{" "}
-          <span>
-            <Icon name="down" />
-          </span>
-          <MenuItemsDrop items={[]} />
-        </li>
-        <li>
-          Brands{" "}
-          <span>
-            <Icon name="down" />
-          </span>
-          <MenuItemsDrop items={[]} />
-        </li>
+        {Object.keys(menuData).map((menuName) => (
+          <li
+            key={menuName}
+            onMouseEnter={() => handleMouseEnter(menuName)}
+            onMouseLeave={handleMouseLeave}
+            className="menu-item"
+          >
+            {menuName}{" "}
+            <span>
+              <Icon name="down" />
+            </span>
+            {activeMenu === menuName && (
+              <MenuItemsDrop items={menuData[menuName]} />
+            )}
+          </li>
+        ))}
       </ul>
     </div>
   );
