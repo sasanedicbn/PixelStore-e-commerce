@@ -20,7 +20,7 @@ const MenuItems = () => {
         "Gift Lists",
       ],
     },
-    { isImage: true, content: "https://via.placeholder.com/150" },
+    { isImage: true, content: "....public/services.jpg" },
   ];
 
   const itemsForServices = [
