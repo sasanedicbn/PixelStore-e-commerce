@@ -1,32 +1,30 @@
-import React from "react";
-import "./MenuItemsDrop.scss";
+import { useRef } from "react";
 
-const MenuItemsDrop = () => {
+const MenuItemsDrop = ({ items }) => {
+  const dropdownRef = useRef(null);
+
   return (
-    <div className="menu-container">
-      <button className="menu-button">Deals Menu</button>
+    <div className="menu-container" ref={dropdownRef}>
       <div className="menu-dropdown">
-        <div className="menu-column">
-          <h3>DEALS</h3>
-          <ul>
-            <li>Top Deals</li>
-            <li>Weekly Deals</li>
-            <li>Deal of the Day</li>
-            <li>Fall Savings</li>
-          </ul>
-        </div>
-        <div className="menu-column">
-          <h3>Gift Guides</h3>
-          <ul>
-            <li>Gift Ideas New</li>
-            <li>Gifts by Price</li>
-            <li>Gifts by Recipient</li>
-            <li>Gift Lists</li>
-          </ul>
-        </div>
-        <div className="menu-column image-column">
-          <img src="https://via.placeholder.com/150" alt="Deals" />
-        </div>
+        {items.map((column, index) => (
+          <div
+            key={index}
+            className={`menu-column ${column.isImage ? "image-column" : ""}`}
+          >
+            {column.isImage ? (
+              <img src={column.content} alt="Menu Visual" />
+            ) : (
+              <>
+                <h3>{column.title}</h3>
+                <ul>
+                  {column.content.map((item, idx) => (
+                    <li key={idx}>{item}</li>
+                  ))}
+                </ul>
+              </>
+            )}
+          </div>
+        ))}
       </div>
     </div>
   );
