@@ -8,6 +8,7 @@ import {
   FaTruck,
   FaUser,
 } from "react-icons/fa";
+import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
 import { IoChevronDown, IoMenu } from "react-icons/io5";
 
 const Icon = ({
@@ -39,6 +40,8 @@ const Icon = ({
     burger: <IoMenu name={name} size={size} color={color} />,
     down: <IoChevronDown name={name} color={color} />,
     right: <AiOutlineRight name={name} color={color} size={size} />,
+    sliderRight: <FiArrowRight name={name} size={size} color={color} />,
+    sliderLeft: <FiArrowLeft name={name} size={size} color={color} />,
   };
 
   return icons[name as keyof typeof icons] || null;
