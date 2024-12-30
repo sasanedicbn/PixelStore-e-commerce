@@ -3,6 +3,8 @@ const Button = ({ type, children, onClick, disabled = false }: ButtonProps) => {
     user: `header-action-btn`,
     favourites: `header-action-btn`,
     cart: `header-action-btn`,
+    sliderBtnLeft: "slider-btn slider-btn-left",
+    sliderBtnRight: "slider-btn slider-btn-right",
   };
 
   console.log(styles[type]);

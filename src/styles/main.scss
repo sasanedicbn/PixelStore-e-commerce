@@ -409,3 +409,40 @@ header{
      }
   }
 }
+.slider-btn-left{
+  position: absolute;
+  left:0;
+  top:50%;
+}
+.slider-btn-right{
+  position: absolute;
+  right: 0;
+  top:50%;
+}
+.slider-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 70px;
+  background-color: white;
+  color: #ffffff;
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  
+
+  &:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+
+  svg {
+    font-size: 20px;
+  }
+}
