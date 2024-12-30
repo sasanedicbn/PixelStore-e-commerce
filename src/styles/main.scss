@@ -372,6 +372,34 @@ header{
   .secondslideritem{
     .ssi-description{
       position: absolute;
+      top: 5rem;
+      left: 20rem;
+      h4{
+        font-size: 1rem;
+        text-transform: uppercase;
+        color: rgb(100, 97, 97);
+        font-weight: 400;
+        letter-spacing: .1rem;
+        margin-bottom: .75rem;
+      }
+      h1{
+        font-size: 3rem;
+        color: rgb(57, 57, 57);
+        letter-spacing: .1rem;
+        margin-bottom: .5rem;
+      }
+      h2{
+        font-size: 2.2rem;
+        color: rgb(57, 57, 57);
+        letter-spacing: .1rem;
+      }
+      .ssi-discount{
+        margin-top: 2.8rem;
+        margin-left: 7rem;
+        font-size: 1.5rem;
+        color: rgb(120, 118, 118);
+        letter-spacing: .3rem;
+      }
     }
     img{
       width: 100%;
