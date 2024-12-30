@@ -309,3 +309,45 @@ header{
     }
   }
 }
+.slider{
+  background-color: orange;
+  position: relative;
+  .firstslideritem{
+    background-color: red;
+    .fsi-description{
+      position: absolute;
+      z-index: 1;
+      top: 1.5rem;
+      right: 22.5rem;
+      h4{
+        color: rgb(100, 97, 97);
+        margin-bottom: .5rem;
+        letter-spacing: .1rem;
+        font-weight: 500;
+      }
+      h1{
+        font-size: 3.4rem;
+        letter-spacing: .2rem;
+        margin-bottom: .3rem;
+        font-weight: bold;
+        color: #282626;
+      }
+      h2{
+        font-size: 2.4rem;
+        font-weight: 500;
+        letter-spacing: .2rem;
+        color: rgb(39, 38, 38);
+        text-transform: uppercase;
+      }
+      h3{
+        margin-top: 2.75rem;
+        margin-left: 5rem;
+      }
+    }
+    img{
+      width: 100%;
+      z-index: -1;
+      object-fit: cover;
+    }
+  }
+}
