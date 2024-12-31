@@ -5,6 +5,7 @@ const Button = ({ type, children, onClick, disabled = false }: ButtonProps) => {
     cart: `header-action-btn`,
     sliderBtnLeft: "slider-btn slider-btn-left",
     sliderBtnRight: "slider-btn slider-btn-right",
+    sellersActions: "sellers-btns",
   };
 
   console.log(styles[type]);

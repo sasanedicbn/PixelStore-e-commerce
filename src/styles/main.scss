@@ -441,3 +441,27 @@ header{
   }
 
 }
+// BEST SELLERS
+.sellers-btns {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  color: #333;
+  font-size: 1rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    border-color: red;
+    color: red;
+  }
+
+  &.active {
+    border-color: red;
+    color: red;
+  }
+}
+
