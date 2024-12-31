@@ -20,7 +20,7 @@ const MenuItems = () => {
         "Gift Lists",
       ],
     },
-    { isImage: true, content: "....public/services.jpg" },
+    { isImage: true, content: "..../public/assets.services.jpg" },
   ];
 
   const itemsForServices = [

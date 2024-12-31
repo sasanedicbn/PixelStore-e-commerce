@@ -232,6 +232,7 @@ header{
   transition: all 3s ease-in-out;
   top: 3.5rem;
   background-color: white;
+  z-index: 2;
  ul{
   transition: opacity 0.3s ease, transform 0.3s ease;
   li{
