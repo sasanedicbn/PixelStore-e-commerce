@@ -17,11 +17,15 @@
 
 $wrappers: (
   section:  5.25rem,
-  small:  1rem
-
+  small:  1rem,
+ 
 );
 
 @mixin wrapper($type, $padding-top: 0, $padding-bottom: 0) {
   $horizontal-padding: map-get($wrappers, $type);
   padding: $padding-top $horizontal-padding $padding-bottom $horizontal-padding;
+}
+@mixin wrapper-margin($type, $margin-top: 0, $margin-bottom: 0) {
+  $horizontal-margin: map-get($wrappers, $type);
+  margin: $margin-top $horizontal-margin $margin-bottom $horizontal-margin;
 }

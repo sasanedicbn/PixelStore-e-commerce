@@ -3,13 +3,12 @@ import BtnsSellers from "./BestSellersItems/BtnsSellers";
 
 const BestSellers = () => {
   return (
-    <>
+    <div className="bestSellers-container">
+      <h2>Best Sellers</h2>
       <Highlighted>
-        <h2>Best Sellers</h2>
-
         <BtnsSellers />
       </Highlighted>
-    </>
+    </div>
   );
 };
 
