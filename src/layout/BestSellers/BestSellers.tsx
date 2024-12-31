@@ -1,4 +1,5 @@
 import Highlighted from "../../UX/Highlighted";
+import ProductCart from "../../UX/ProductCart";
 import BtnsSellers from "./BestSellersItems/BtnsSellers";
 
 const BestSellers = () => {
@@ -7,6 +8,7 @@ const BestSellers = () => {
       <h2>Best Sellers</h2>
       <Highlighted>
         <BtnsSellers />
+        <ProductCart />
       </Highlighted>
     </div>
   );
