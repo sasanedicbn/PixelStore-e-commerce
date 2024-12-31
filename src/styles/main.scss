@@ -411,13 +411,15 @@ header{
 }
 .slider-btn-left{
   position: absolute;
-  left:0;
+  left:5%;
   top:50%;
+  transform: translate(0%,-50%);
 }
 .slider-btn-right{
   position: absolute;
-  right: 0;
+  right: 5%;
   top:50%;
+  transform: translate(0%,-50%);
 }
 .slider-btn {
   display: flex;
@@ -434,15 +436,7 @@ header{
   
 
   &:hover {
-    background-color: #0056b3;
-    transform: scale(1.1);
+    border: 1px solid $primary-color;
   }
 
-  &:active {
-    transform: scale(0.95);
-  }
-
-  svg {
-    font-size: 20px;
-  }
 }
