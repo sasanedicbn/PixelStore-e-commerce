@@ -444,7 +444,7 @@ header{
 // BEST SELLERS
 .bestSellers-container{
   background-color: rgb(247, 246, 246);
-  padding-bottom: 2rem;
+
 h2{
   padding-top: 3rem;
   margin-left:  5.25rem;
@@ -455,6 +455,7 @@ h2{
   background-color: #fff;
   padding: 1.5rem;
   border-radius: $border-radius;
+  border: 1px solid $primary-color;
 
 .btns-sellers{
 
