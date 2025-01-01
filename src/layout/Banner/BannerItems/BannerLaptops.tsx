@@ -1,8 +1,8 @@
 const BannerLaptops = () => {
   return (
-    <div>
+    <div className="banner-laptops">
       <img
-        src="../middle-banner/middle-laptop-banner-2.jpg"
+        src="../public/assets/middle-banner/middle-laptop-banner-2.jpg"
         alt="Laptops banner"
       />
     </div>
