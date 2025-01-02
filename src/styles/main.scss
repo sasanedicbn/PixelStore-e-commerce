@@ -459,8 +459,6 @@ header{
 // BEST SELLERS
 .bestSellers-container{
   background-color: rgb(247, 246, 246);
-  padding-bottom: 3rem;
-
 h2{
   padding-top: 3rem;
   margin-left:  5.25rem;
@@ -561,7 +559,7 @@ h2{
   width:100%;
   display: flex;
   gap:1.2rem;
-  @include wrapper(section, 1rem, 3rem);
+  @include wrapper(section, 3rem, 3rem);
   background-color: rgb(247, 246, 246);
   .banner-laptops{
     position: relative;
