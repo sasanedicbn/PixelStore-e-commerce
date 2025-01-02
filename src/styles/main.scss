@@ -170,6 +170,119 @@ header{
       }
       
 }
+.slider {
+  position: relative;
+  width: 100%;
+  height: 100%; 
+  overflow: hidden;
+}
+
+.firstslideritem {
+  position: relative;
+
+  .fsi-description {
+    position: absolute;
+    z-index: 1;
+    top: 10%; 
+    right: 15%; 
+    
+    h4 {
+      color: rgb(100, 97, 97);
+      margin-bottom: 2%; 
+      letter-spacing: 0.1rem;
+      font-weight: 500;
+    }
+    h1 {
+      font-size: 3.4vw;
+      letter-spacing: 0.2rem;
+      margin-bottom: 1%;
+      font-weight: bold;
+      color: #282626;
+    }
+    h2 {
+      font-size: 2vw;
+      font-weight: 500;
+      letter-spacing: 0.2rem;
+      color: rgb(39, 38, 38);
+      text-transform: uppercase;
+    }
+    h3 {
+      margin-top: 5%;
+      margin-left: 10%;
+      text-transform: uppercase;
+      letter-spacing: 0.2rem;
+      color: rgb(100, 97, 97);
+      font-weight: 400;
+    }
+    .fsi-upto {
+      font-size: 1.5vw;
+      margin-left: 15%;
+      margin-top: 6%;
+      text-transform: uppercase;
+      font-weight: bold;
+      color: rgb(53, 53, 53);
+
+      span {
+        background-color: rgb(44, 44, 44);
+        color: rgb(233, 230, 230);
+        font-size: 3.5vw;
+        padding: 1%;
+        font-weight: bold;
+        margin-left: 2%;
+      }
+    }
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    z-index: -1;
+    object-fit: cover;
+    cursor: pointer;
+  }
+}
+
+  .secondslideritem {
+    .ssi-description {
+      position: absolute;
+      top: 20%;
+      left: 10%;
+      h4 {
+        font-size: 1vw;
+        text-transform: uppercase;
+        color: rgb(100, 97, 97);
+        font-weight: 400;
+        letter-spacing: 0.1rem;
+        margin-bottom: 2%;
+      }
+      h1 {
+        font-size: 3vw;
+        color: rgb(57, 57, 57);
+        letter-spacing: 0.1rem;
+        margin-bottom: 2%;
+      }
+      h2 {
+        font-size: 2.2vw;
+        color: rgb(57, 57, 57);
+        letter-spacing: 0.1rem;
+      }
+      .ssi-discount {
+        margin-top: 8%;
+        margin-left: 10%;
+        font-size: 1.5vw;
+        color: rgb(120, 118, 118);
+        letter-spacing: 0.3rem;
+      }
+    }
+    img {
+      width: 100%;
+      z-index: -1;
+      object-fit: cover;
+      cursor: pointer;
+    }
+  }
+
+
 // MENU-CONTAINER
 .menu-container{
   @include wrapper(section, 0, 0);
@@ -310,111 +423,13 @@ header{
     }
   }
 }
-.slider{
-  position: relative;
-  .firstslideritem{
-    .fsi-description{
-      position: absolute;
-      z-index: 1;
-      top: 1.5rem;
-      right: 20rem;
-      h4{
-        color: rgb(100, 97, 97);
-        margin-bottom: .5rem;
-        letter-spacing: .1rem;
-        font-weight: 500;
-      }
-      h1{
-        font-size: 3.4rem;
-        letter-spacing: .2rem;
-        margin-bottom: .3rem;
-        font-weight: bold;
-        color: #282626;
-      }
-      h2{
-        font-size: 2.4rem;
-        font-weight: 500;
-        letter-spacing: .2rem;
-        color: rgb(39, 38, 38);
-        text-transform: uppercase;
-      }
-      h3{
-        margin-top: 2.75rem;
-        margin-left: 5.5rem;
-        text-transform: uppercase;
-        letter-spacing: .2rem;
-        color: rgb(100, 97, 97);
-        font-weight: 400;
-      }
-      .fsi-upto{
-        font-size: 1.5rem;
-        margin-left: 11rem;
-        margin-top: 1.2rem;
-        text-transform: uppercase;
-        font-weight: bold;
-        color: rgb(53, 53, 53);
-        span{
-          background-color: rgb(44, 44, 44);
-          color: rgb(233, 230, 230);
-          font-size: 3.5rem;
-          padding: .5rem;
-          font-weight: bold;
-          margin-left:1rem ;
-        }
-      }
-    }
-    img{
-      width: 100%;
-      z-index: -1;
-      object-fit: cover;
-      cursor: pointer;
-    }
-  }
-  .secondslideritem{
-    .ssi-description{
-      position: absolute;
-      top: 5rem;
-      left: 20rem;
-      h4{
-        font-size: 1rem;
-        text-transform: uppercase;
-        color: rgb(100, 97, 97);
-        font-weight: 400;
-        letter-spacing: .1rem;
-        margin-bottom: .75rem;
-      }
-      h1{
-        font-size: 3rem;
-        color: rgb(57, 57, 57);
-        letter-spacing: .1rem;
-        margin-bottom: .5rem;
-      }
-      h2{
-        font-size: 2.2rem;
-        color: rgb(57, 57, 57);
-        letter-spacing: .1rem;
-      }
-      .ssi-discount{
-        margin-top: 2.8rem;
-        margin-left: 7rem;
-        font-size: 1.5rem;
-        color: rgb(120, 118, 118);
-        letter-spacing: .3rem;
-      }
-    }
-    img{
-      width: 100%;
-      z-index: -1;
-      object-fit: cover;
-      cursor: pointer;
-     }
-  }
-}
+
 .slider-btn-left{
   position: absolute;
   left:5%;
   top:50%;
   transform: translate(0%,-50%);
+  z-index: 10;
 }
 .slider-btn-right{
   position: absolute;
@@ -549,6 +564,7 @@ h2{
   @include wrapper(section, 1rem, 3rem);
   background-color: rgb(247, 246, 246);
   .banner-laptops{
+    position: relative;
     width: 65%;
     img{
      width: 100%;
@@ -556,6 +572,34 @@ h2{
      border-radius: $border-radius;
      border: 1px solid rgb(197, 192, 192);
     } 
+    .banner-laptops-description{
+      position: absolute;
+      left:45%;
+      top:15%;
+      .new-arrivals{
+        color: rgb(115, 110, 110);
+        letter-spacing: 1.8px;
+      }
+      h1{
+        color: rgb(45, 43, 43);
+        letter-spacing: 1.2px;
+        font-size: 2.5rem;
+      }
+      .save-up{
+        margin-top: 1%;
+        color: rgb(45, 43, 43);
+        font-size: 2rem;
+      }
+    }
+    span{
+      position: absolute;
+      right: 15%;
+      top: 60%;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      color: $primary-color;
+      transform: rotate(-30deg);
+      font-size: 2rem;
+   }
   }
   .banner-tvs{
     width: 35%;
