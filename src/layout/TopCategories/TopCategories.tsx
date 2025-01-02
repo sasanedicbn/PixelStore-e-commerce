@@ -8,11 +8,11 @@ const TopCategories = () => {
     },
     {
       name: "Computers",
-      img: "../public/assets/top-categories/Computersnew.jpg",
+      img: "../public/assets/top-categories/Computersnew3.webp",
     },
     {
       name: "Gaming",
-      img: "../public/assets/top-categories/Gamingnew.jpg",
+      img: "../public/assets/top-categories/Gamingnew2.webp",
     },
     {
       name: "Audio",
@@ -20,7 +20,7 @@ const TopCategories = () => {
     },
     {
       name: "Appliances",
-      img: "../public/assets/top-categories/Photograpy.jpg",
+      img: "../public/assets/top-categories/Photograpynew2.webp",
     },
   ];
 
