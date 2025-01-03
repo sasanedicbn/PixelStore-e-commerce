@@ -25,11 +25,13 @@ const TopCategories = () => {
   ];
 
   return (
-    <div>
-      <h1>Shop Top Categories</h1>
-      {topCategory.map((category, index) => (
-        <SingleCategory key={index} name={category.name} img={category.img} />
-      ))}
+    <div className="top-categories-container">
+      <h2 className="top-categories-title">Shop Top Categories</h2>
+      <div className="categories-grid">
+        {topCategory.map((category, index) => (
+          <SingleCategory key={index} name={category.name} img={category.img} />
+        ))}
+      </div>
     </div>
   );
 };

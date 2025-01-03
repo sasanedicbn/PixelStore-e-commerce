@@ -1,8 +1,8 @@
 const SingleCategory = ({ name, img }) => {
   return (
-    <div>
+    <div className="single-category">
       <img src={img} alt="Top categories img" />
-      <h2>{name}</h2>
+      <h3>{name}</h3>
     </div>
   );
 };
