@@ -12,7 +12,11 @@ const BrandsSlider = () => {
   return (
     <div className="brands-slider-container">
       <h2 className="brands-slider-title">Brands We Love</h2>
-      <BrandsSliderItem />
+      <div className="brands-slider-items">
+        {brands.map((brand, index) => (
+          <BrandsSliderItem key={index} src={brand.src} alt={brand.alt} />
+        ))}
+      </div>
     </div>
   );
 };

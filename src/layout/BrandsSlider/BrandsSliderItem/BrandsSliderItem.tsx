@@ -1,14 +1,11 @@
-const BrandsSliderItem = () => {
+const BrandsSliderItem = ({ src, alt }) => {
   return (
     <div className="brands-item">
       <div className="brands-imgs">
-        <img src="../public/assets/brands/Acer.jpg" alt="Acer brand" />
-        <img src="../public/assets/brands/Asus.jpg" alt="Acer brand" />
-        <img src="../public/assets/brands/Lenovo.jpg" alt="Acer brand" />
-        <img src="../public/assets/brands/Microsoft.jpg" alt="Acer brand" />
-        <img src="../public/assets/brands/Sigma.jpg" alt="Acer brand" />
+        <img src={src} alt={alt} className="brands-img" />
       </div>
     </div>
   );
 };
+
 export default BrandsSliderItem;
