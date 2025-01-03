@@ -559,7 +559,7 @@ h2{
   width:100%;
   display: flex;
   gap:1.2rem;
-  @include wrapper(section, 3rem, 3rem);
+  @include wrapper(section, 3rem, 0rem);
   background-color: rgb(247, 246, 246);
   .banner-laptops{
     position: relative;
