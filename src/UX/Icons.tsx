@@ -1,5 +1,6 @@
-import { AiOutlineRight } from "react-icons/ai";
+import { AiFillLock, AiOutlineRight } from "react-icons/ai";
 import {
+  FaDollarSign,
   FaFacebook,
   FaHeart,
   FaInstagram,
@@ -10,6 +11,7 @@ import {
 } from "react-icons/fa";
 import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
 import { IoChevronDown, IoMenu } from "react-icons/io5";
+import { RiCustomerService2Line } from "react-icons/ri";
 
 const Icon = ({
   name,
@@ -42,6 +44,9 @@ const Icon = ({
     right: <AiOutlineRight name={name} color={color} size={size} />,
     sliderRight: <FiArrowRight name={name} size={size} color={color} />,
     sliderLeft: <FiArrowLeft name={name} size={size} color={color} />,
+    currency: <FaDollarSign name={name} size={size} color={color} />,
+    services: <RiCustomerService2Line name={name} size={size} color={color} />,
+    payment: <AiFillLock name={name} size={size} color={color} />,
   };
 
   return icons[name as keyof typeof icons] || null;
