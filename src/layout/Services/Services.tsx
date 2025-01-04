@@ -1,7 +1,7 @@
 import ServicesItems from "./ServicesItems/ServicesItems";
 
 const Services = () => {
-  // objekat odnosno niz ovdje napravi i mapuj ga nemoj ovo
+  // Niz objekata sa podacima za svaki servis
   const services = [
     {
       icon: "truck",
@@ -24,13 +24,21 @@ const Services = () => {
       description: "Secure and easy online checkout.",
     },
   ];
+
   return (
     <div className="services-container">
       <div className="services-items">
-        {services.map}
-        <ServicesItems icon="" title="FREE SHIPPING & RETURN" />
+        {services.map((service, index) => (
+          <ServicesItems
+            key={index}
+            icon={service.icon}
+            title={service.title}
+            description={service.description}
+          />
+        ))}
       </div>
     </div>
   );
 };
+
 export default Services;
