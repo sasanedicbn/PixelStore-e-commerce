@@ -5,8 +5,8 @@ const ServicesItems = ({ icon, title, description }) => {
     <div className="single-services">
       <Icon type={icon} size="24" color="red" />
       <div className="single-descriptions">
-        <h4>FREE SHIPPING & RETURN</h4>
-        <p>Free shipping on all orders over $35.</p>
+        <h4>{title}</h4>
+        <p>{description}</p>
       </div>
     </div>
   );
