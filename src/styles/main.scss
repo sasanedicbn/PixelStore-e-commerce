@@ -689,7 +689,7 @@ h2{
   background-color: rgb(247, 246, 246);
   .services-items{
     @include flex-between;
-    gap: 2%;
+    gap: 2.5%;
     background-color: #fff;
     width: 100%;
     border-radius: $border-radius;
