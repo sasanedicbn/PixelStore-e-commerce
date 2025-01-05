@@ -682,3 +682,32 @@ h2{
     }
   }
 }
+// SERVICES-CONTAINER
+.services-container{
+  width:100%;
+  @include wrapper(section, 0rem, 3rem);
+  background-color: rgb(247, 246, 246);
+  .services-items{
+    @include flex-between;
+    gap: 2%;
+    background-color: #fff;
+    width: 100%;
+    border-radius: $border-radius;
+    padding: 2.25rem;
+    .single-services{
+      @include flex-between;
+      gap: .9rem;
+      .single-descriptions{
+        .title{
+          font-size: 16px;
+          color: rgb(30, 29, 29);
+        }
+        .description{
+          color: rgb(78, 76, 76);
+          font-size: 14px;
+          margin-top:.35rem;
+        }
+      }
+    }
+  }
+}

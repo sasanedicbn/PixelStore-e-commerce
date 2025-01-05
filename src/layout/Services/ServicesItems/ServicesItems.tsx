@@ -3,10 +3,10 @@ import Icon from "../../../UX/Icons";
 const ServicesItems = ({ icon, title, description }) => {
   return (
     <div className="single-services">
-      <Icon type={icon} size="24" color="red" />
+      <Icon name={icon} size="32" color="#e32726" />
       <div className="single-descriptions">
-        <h4>{title}</h4>
-        <p>{description}</p>
+        <h4 className="title">{title}</h4>
+        <p className="description">{description}</p>
       </div>
     </div>
   );

@@ -1,7 +1,6 @@
 import ServicesItems from "./ServicesItems/ServicesItems";
 
 const Services = () => {
-  // Niz objekata sa podacima za svaki servis
   const services = [
     {
       icon: "truck",
