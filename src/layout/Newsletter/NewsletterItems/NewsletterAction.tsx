@@ -1,5 +1,3 @@
-import "./NewsletterAction.scss";
-
 const NewsletterAction = () => {
   return (
     <div className="newsletter-container">

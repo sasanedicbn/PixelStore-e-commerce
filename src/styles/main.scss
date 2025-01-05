@@ -667,17 +667,18 @@ h2{
   background-color: rgb(247, 246, 246);
   .brands-slider-items{
     display: flex;
-    background-color: red;
+    // background-color: red;
     // padding: 2rem;
     overflow: hidden;
 
     .brands-item{
+      margin-top: 1rem;
       width: 100%;
       height: 100px;
       img{
         height: 100%;
         width: 100%;
-        transform: translateX(-100%);
+        // transform: translateX(-100%);
       }
     }
   }
@@ -685,7 +686,7 @@ h2{
 // SERVICES-CONTAINER
 .services-container{
   width:100%;
-  @include wrapper(section, 0rem, 3rem);
+  @include wrapper(section, 2rem, 3rem);
   background-color: rgb(247, 246, 246);
   .services-items{
     @include flex-between;
@@ -700,14 +701,77 @@ h2{
       .single-descriptions{
         .title{
           font-size: 16px;
-          color: rgb(30, 29, 29);
+          color:$mini-titles-color
         }
         .description{
-          color: rgb(78, 76, 76);
+          color: $mini-titles-color;
           font-size: 14px;
           margin-top:.35rem;
         }
       }
     }
   }
+}
+
+// newsletter
+.newsletter{
+  width:100%;
+  @include wrapper(section, 2rem, 3rem);
+  background-color: rgb(247, 246, 246);
+  @include flex-between;
+  .description-container{
+    @include flex-between;
+    gap: 1rem;
+    width: 32%;
+    .description{
+      .title{
+      color: $mini-titles-color;
+      }
+      .details{
+        color: $mini-descriptions-color;
+        font-size:$text;
+      }
+    }
+  }
+  .newsletter-container {
+    @include flex-between;
+    gap: 8px;
+    width: 65%;
+  
+    .newsletter-input {
+      flex: 1;
+      padding: 10px;
+      font-size: 16px;
+      border: 2px solid #ccc;
+      border-radius: $border-radius;
+      height: 3rem;
+      width: 35%;
+      &:focus {
+        outline: none;
+        border-color: grey;
+      }
+    }
+  
+    .newsletter-button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: $primary-color;
+      color: #fff;
+      border: none;
+      border-radius: $border-radius;
+      cursor: pointer;
+      height: 3rem;
+      width: 25%;
+      transition: all 0.3 ease-in-out;
+  
+      &:hover {
+        background-color: #c02424;
+      }
+  
+      &:active {
+        background-color: #004085;
+      }
+    }
+  }
+  
 }

@@ -5,7 +5,7 @@ const NewsletterDescription = () => {
     <div className="description-container">
       <Icon name="letter" size="42" color="grey" />
       <div className="description">
-        <h4 className="title">Subscribe To Our Newsletter</h4>
+        <h3 className="title">Subscribe To Our Newsletter</h3>
         <p className="details">
           Get all the latest information on Events, Sales and Offers.
         </p>
