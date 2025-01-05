@@ -1,6 +1,7 @@
 import { AiFillLock, AiOutlineRight } from "react-icons/ai";
 import {
   FaDollarSign,
+  FaEnvelope,
   FaFacebook,
   FaHeart,
   FaInstagram,
@@ -47,6 +48,7 @@ const Icon = ({
     currency: <FaDollarSign name={name} size={size} color={color} />,
     services: <RiCustomerService2Line name={name} size={size} color={color} />,
     payment: <AiFillLock name={name} size={size} color={color} />,
+    letter: <FaEnvelope name={name} size={size} color={color} />,
   };
 
   return icons[name as keyof typeof icons] || null;
