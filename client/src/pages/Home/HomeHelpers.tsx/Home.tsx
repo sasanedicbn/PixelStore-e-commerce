@@ -4,6 +4,7 @@ import NavBar from "../../../components/NavBar/NavBar";
 import Banner from "../../../layout/Banner/Banner";
 import BestSellers from "../../../layout/BestSellers/BestSellers";
 import BrandsSlider from "../../../layout/BrandsSlider/BrandsSlider";
+import Footer from "../../../layout/Footer.tsx/Footer";
 import Newsletter from "../../../layout/Newsletter/Newsletter";
 import Services from "../../../layout/Services/Services";
 import Slider from "../../../layout/Slider/Slider";
@@ -24,6 +25,7 @@ const Home = () => {
       <BrandsSlider />
       <Services />
       <Newsletter />
+      <Footer />
     </div>
   );
 };
