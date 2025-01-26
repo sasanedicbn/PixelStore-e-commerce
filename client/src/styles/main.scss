@@ -773,7 +773,6 @@ h2{
       }
     }
   }
-  
 }
 // FOOTER
 
@@ -782,7 +781,6 @@ h2{
   flex-wrap: wrap;
   justify-content: space-between;
   @include wrapper(section, 2rem, 3rem);
-  // padding: 20px;
   background-color: #323232;
   color: black;
   font-size: 14px;
