@@ -1,3 +1,11 @@
+import {
+  FaFacebook,
+  FaTwitter,
+  FaInstagram,
+  FaPinterest,
+  FaYoutube,
+} from "react-icons/fa";
+
 const FooterItems = () => {
   return (
     <div className="footer-items">
@@ -38,11 +46,18 @@ const FooterItems = () => {
       <div className="footer-section">
         <h4 className="footer-title">Connect with Us</h4>
         <ul className="footer-socials">
-          <li className="footer-social">Facebook</li>
-          <li className="footer-social">Twitter</li>
-          <li className="footer-social">Instagram</li>
-          <li className="footer-social">Pinterest</li>
-          <li className="footer-social">YouTube</li>
+          <li className="footer-social">
+            <FaFacebook /> Facebook
+          </li>
+          <li className="footer-social">
+            <FaTwitter /> Twitter
+          </li>
+          <li className="footer-social">
+            <FaInstagram /> Instagram
+          </li>
+          <li className="footer-social">
+            <FaYoutube /> Youtube
+          </li>
         </ul>
       </div>
 
