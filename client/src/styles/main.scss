@@ -781,7 +781,7 @@ h2{
   flex-wrap: wrap;
   justify-content: space-between;
   @include wrapper(section, 2rem, 3rem);
-  background-color: #323232;
+  background-color: #fff;
   color: black;
   font-size: 14px;
 
@@ -793,7 +793,7 @@ h2{
     .footer-title {
       font-size: 16px;
       margin-bottom: 10px;
-      color: #f1f1f1;
+      color: black;
       font-weight: bold;
     }
 
@@ -804,7 +804,7 @@ h2{
       .footer-item {
         margin-bottom: 8px;
         cursor: pointer;
-        color: #ccc;
+        color: rgb(65, 64, 64);
 
         &:hover {
           text-decoration: underline;
