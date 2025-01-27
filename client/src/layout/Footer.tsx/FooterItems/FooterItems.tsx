@@ -1,10 +1,4 @@
-import {
-  FaFacebook,
-  FaTwitter,
-  FaInstagram,
-  FaPinterest,
-  FaYoutube,
-} from "react-icons/fa";
+import { FaFacebook, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
 
 const FooterItems = () => {
   return (
@@ -47,22 +41,22 @@ const FooterItems = () => {
         <h4 className="footer-title">Connect with Us</h4>
         <ul className="footer-socials">
           <li className="footer-social">
-            <FaFacebook /> Facebook
+            <FaFacebook />
           </li>
           <li className="footer-social">
-            <FaTwitter /> Twitter
+            <FaTwitter />
           </li>
           <li className="footer-social">
-            <FaInstagram /> Instagram
+            <FaInstagram />
           </li>
           <li className="footer-social">
-            <FaYoutube /> Youtube
+            <FaYoutube />
           </li>
         </ul>
       </div>
 
       <div className="footer-copyright">
-        <p>© 2025 Circuit City Corporation, Inc.</p>
+        <p>© 2025 Sasa Nedic.</p>
       </div>
     </div>
   );
