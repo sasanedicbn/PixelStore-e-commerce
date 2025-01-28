@@ -18,3 +18,8 @@ mongoose
   .catch((error) => {
     console.log(error);
   });
+
+app.post("/api/products", (req, res) => {
+  const { name, price } = req.body;
+  res.json({ name, price });
+});
