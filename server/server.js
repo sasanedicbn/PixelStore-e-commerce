@@ -1,6 +1,18 @@
-const express = require("express");
-const PORT = process.env.PORT;
+import express from "express";
+import mongoose from "mongoose";
+import dotenv from "dotenv";
 
 const app = express();
+dotenv.config();
+const PORT = process.env.PORT || 7000;
+const MONGOURL = process.env.MONGO_URL;
 
-app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
+mongoose
+  .connect(MONGOURL)
+  .then(() => {
+    console.log("Database connected sucessufuly");
+    app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
+  })
+  .catch((error) => {
+    console.log(error);
+  });
