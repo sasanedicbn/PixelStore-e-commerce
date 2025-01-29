@@ -1,10 +1,11 @@
 import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
+import ProductsModel from "./model/products.js";
 
 const app = express();
 dotenv.config();
-const PORT = process.env.PORT || 6000;
+const PORT = process.env.PORT || 8000;
 const MONGOURL = process.env.MONGO_URL;
 
 app.use(express.json());
@@ -19,7 +20,11 @@ mongoose
     console.log(error);
   });
 
-app.post("/api/products", (req, res) => {
-  const { name, price } = req.body;
-  res.json({ name, price });
+app.get("/api/products", async (req, res) => {
+  try {
+    const userData = await ProductsModel.find();
+    res.json(userData);
+  } catch (error) {
+    res.status(500).json({ message: "Error fetching products", error });
+  }
 });

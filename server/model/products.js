@@ -5,4 +5,6 @@ const productsSchema = new mongoose.Schema({
   price: String,
 });
 
-export default ProductsModel = mongoose.model("products", productsSchema);
+const ProductsModel = mongoose.model("Product", productsSchema);
+
+export default ProductsModel;
