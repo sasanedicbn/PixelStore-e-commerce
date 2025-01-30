@@ -21,25 +21,43 @@ const Slider = () => {
     const response = await fetch("./public/assets/products.json");
     const products = await response.json();
     console.log("products", products);
+
     const payload = new FormData();
     console.log(payload, "pejload");
+
     const promises = products.map(async (product, index) => {
       console.log("product unutra", product);
-      payload.append(`title_${index}`, product.title);
-      payload.append(`price_${index}`, product.price);
-      payload.append(`category_${index}`, product.category);
+
+      const formData = new FormData();
+      formData.append("title", product.title);
+      formData.append("price", product.price);
+      formData.append("category", product.category);
 
       try {
         const imageResponse = await fetch(product.image);
         const blob = await imageResponse.blob();
-        payload.append(`image_${index}`, blob, `image_${index}.jpg`);
+        formData.append("image", blob, `image_${index}.jpg`);
+
+        return {
+          title: product.title,
+          price: product.price,
+          category: product.category,
+          image: blob,
+        };
       } catch (error) {
         console.error(`Error loading image ${product.image}:`, error);
+        return {
+          title: product.title,
+          price: product.price,
+          category: product.category,
+          image: null,
+        };
       }
     });
-    const da = await Promise.all(promises);
 
-    console.log("final promises", da);
+    const allProducts = await Promise.all(promises);
+
+    console.log("Final products:", allProducts);
   };
 
   return (
