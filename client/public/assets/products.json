@@ -1,0 +1,332 @@
+[
+    {
+      "title": "Cameras-1",
+      "price": 59.99,
+      "category": "cameras",
+      "image": "/public/assets/Cameras/cameras-1.jpg"
+    },
+    {
+      "title": "Cameras-2",
+      "price": 69.99,
+      "category": "cameras",
+      "image": "/public/assets/Cameras/cameras-2.jpg"
+    },
+    {
+      "title": "Cameras-3",
+      "price": 79.99,
+      "category": "cameras",
+      "image": "/public/assets/Cameras/cameras-3.jpg"
+    },
+    {
+      "title": "Cameras-4",
+      "price": 89.99,
+      "category": "cameras",
+      "image": "/public/assets/Cameras/cameras-4.jpg"
+    },
+    {
+      "title": "Cameras-5",
+      "price": 99.99,
+      "category": "cameras",
+      "image": "/public/assets/Cameras/cameras-5.jpg"
+    },
+    {
+      "title": "Cameras-6",
+      "price": 109.99,
+      "category": "cameras",
+      "image": "/public/assets/Cameras/cameras-6.jpg"
+    },
+    {
+      "title": "Cameras-7",
+      "price": 119.99,
+      "category": "cameras",
+      "image": "/public/assets/Cameras/cameras-7.jpg"
+    },
+    {
+      "title": "Cameras-8",
+      "price": 129.99,
+      "category": "cameras",
+      "image": "/public/assets/Cameras/cameras-8.jpg"
+    },
+    {
+      "title": "Cameras-9",
+      "price": 139.99,
+      "category": "cameras",
+      "image": "/public/assets/Cameras/cameras-9.jpg"
+    },
+    {
+      "title": "Cameras-10",
+      "price": 149.99,
+      "category": "cameras",
+      "image": "/public/assets/Cameras/cameras-10.jpg"
+    },
+    {
+      "title": "Cameras-11",
+      "price": 159.99,
+      "category": "cameras",
+      "image": "/public/assets/Cameras/cameras-11.jpg"
+    },
+    {
+      "title": "Cellphones-1",
+      "price": 59.99,
+      "category": "cellphones",
+      "image": "/public/assets/Cellphones/cellphones-1.jpg"
+    },
+    {
+      "title": "Cellphones-2",
+      "price": 69.99,
+      "category": "cellphones",
+      "image": "/public/assets/Cellphones/cellphones-2.jpg"
+    },
+    {
+      "title": "Cellphones-3",
+      "price": 79.99,
+      "category": "cellphones",
+      "image": "/public/assets/Cellphones/cellphones-3.jpg"
+    },
+    {
+      "title": "Cellphones-4",
+      "price": 89.99,
+      "category": "cellphones",
+      "image": "/public/assets/Cellphones/cellphones-4.jpg"
+    },
+    {
+      "title": "Cellphones-5",
+      "price": 99.99,
+      "category": "cellphones",
+      "image": "/public/assets/Cellphones/cellphones-5.jpg"
+    },
+    {
+      "title": "Cellphones-6",
+      "price": 109.99,
+      "category": "cellphones",
+      "image": "/public/assets/Cellphones/cellphones-6.jpg"
+    },
+    {
+      "title": "Cellphones-7",
+      "price": 119.99,
+      "category": "cellphones",
+      "image": "/public/assets/Cellphones/cellphones-7.jpg"
+    },
+    {
+      "title": "Cellphones-8",
+      "price": 129.99,
+      "category": "cellphones",
+      "image": "/public/assets/Cellphones/cellphones-8.jpg"
+    },
+    {
+      "title": "Headphones-1",
+      "price": 59.99,
+      "category": "headphones",
+      "image": "/public/assets/Headphones/headphones-1.jpg"
+    },
+    {
+      "title": "Headphones-2",
+      "price": 69.99,
+      "category": "headphones",
+      "image": "/public/assets/Headphones/headphones-2.jpg"
+    },
+    {
+      "title": "Headphones-3",
+      "price": 79.99,
+      "category": "headphones",
+      "image": "/public/assets/Headphones/headphones-3.jpg"
+    },
+    {
+      "title": "Headphones-4",
+      "price": 89.99,
+      "category": "headphones",
+      "image": "/public/assets/Headphones/headphones-4.jpg"
+    },
+    {
+      "title": "Headphones-5",
+      "price": 99.99,
+      "category": "headphones",
+      "image": "/public/assets/Headphones/headphones-5.jpg"
+    },
+    {
+      "title": "Headphones-6",
+      "price": 109.99,
+      "category": "headphones",
+      "image": "/public/assets/Headphones/headphones-6.jpg"
+    },
+    {
+      "title": "Headphones-7",
+      "price": 119.99,
+      "category": "headphones",
+      "image": "/public/assets/Headphones/headphones-7.jpg"
+    },
+    {
+      "title": "Headphones-8",
+      "price": 129.99,
+      "category": "headphones",
+      "image": "/public/assets/Headphones/headphones-8.jpg"
+    },
+    {
+      "title": "Headphones-9",
+      "price": 139.99,
+      "category": "headphones",
+      "image": "/public/assets/Headphones/headphones-9.jpg"
+    },
+    {
+      "title": "Headphones-10",
+      "price": 149.99,
+      "category": "headphones",
+      "image": "/public/assets/Headphones/headphones-10.jpg"
+    },
+    {
+      "title": "Headphones-11",
+      "price": 159.99,
+      "category": "headphones",
+      "image": "/public/assets/Headphones/headphones-11.jpg"
+    },
+    {
+      "title": "Headphones-12",
+      "price": 169.99,
+      "category": "headphones",
+      "image": "/public/assets/Headphones/headphones-12.jpg"
+    },
+    {
+      "title": "Headphones-13",
+      "price": 179.99,
+      "category": "headphones",
+      "image": "/public/assets/Headphones/headphones-13.jpg"
+    },
+    {
+      "title": "Headphones-14",
+      "price": 189.99,
+      "category": "headphones",
+      "image": "/public/assets/Headphones/headphones-14.jpg"
+    },
+    {
+      "title": "Headphones-15",
+      "price": 199.99,
+      "category": "headphones",
+      "image": "/public/assets/Headphones/headphones-15.jpg"
+    },
+    {
+      "title": "Laptops-1",
+      "price": 59.99,
+      "category": "laptops",
+      "image": "/public/assets/Laptops/laptops-1.jpg"
+    },
+    {
+      "title": "Laptops-2",
+      "price": 69.99,
+      "category": "laptops",
+      "image": "/public/assets/Laptops/laptops-2.jpg"
+    },
+    {
+      "title": "Laptops-3",
+      "price": 79.99,
+      "category": "laptops",
+      "image": "/public/assets/Laptops/laptops-3.jpg"
+    },
+    {
+      "title": "Laptops-4",
+      "price": 89.99,
+      "category": "laptops",
+      "image": "/public/assets/Laptops/laptops-4.jpg"
+    },
+    {
+      "title": "Laptops-5",
+      "price": 99.99,
+      "category": "laptops",
+      "image": "/public/assets/Laptops/laptops-5.jpg"
+    },
+    {
+      "title": "Laptops-6",
+      "price": 109.99,
+      "category": "laptops",
+      "image": "/public/assets/Laptops/laptops-6.jpg"
+    },
+    {
+      "title": "Laptops-7",
+      "price": 119.99,
+      "category": "laptops",
+      "image": "/public/assets/Laptops/laptops-7.jpg"
+    },
+    {
+      "title": "Laptops-8",
+      "price": 129.99,
+      "category": "laptops",
+      "image": "/public/assets/Laptops/laptops-8.jpg"
+    },
+    {
+      "title": "Laptops-9",
+      "price": 139.99,
+      "category": "laptops",
+      "image": "/public/assets/Laptops/laptops-9.jpg"
+    },
+    {
+      "title": "Laptops-10",
+      "price": 149.99,
+      "category": "laptops",
+      "image": "/public/assets/Laptops/laptops-10.jpg"
+    },
+    {
+      "title": "Laptops-11",
+      "price": 159.99,
+      "category": "laptops",
+      "image": "/public/assets/Laptops/laptops-11.jpg"
+    },
+    {
+      "title": "Laptops-12",
+      "price": 169.99,
+      "category": "laptops",
+      "image": "/public/assets/Laptops/laptops-12.jpg"
+    },
+    {
+      "title": "Laptops-13",
+      "price": 179.99,
+      "category": "laptops",
+      "image": "/public/assets/Laptops/laptops-13.jpg"
+    },
+    {
+      "title": "Television-1",
+      "price": 59.99,
+      "category": "television",
+      "image": "/public/assets/Television/television-1.jpg"
+    },
+    {
+      "title": "Television-2",
+      "price": 69.99,
+      "category": "television",
+      "image": "/public/assets/Television/television-2.jpg"
+    },
+    {
+      "title": "Television-3",
+      "price": 79.99,
+      "category": "television",
+      "image": "/public/assets/Television/television-3.jpg"
+    },
+    {
+      "title": "Television-4",
+      "price": 89.99,
+      "category": "television",
+      "image": "/public/assets/Television/television-4.jpg"
+    },
+    {
+      "title": "Television-5",
+      "price": 99.99,
+      "category": "television",
+      "image": "/public/assets/Television/television-5.jpg"
+    },
+    {
+      "title": "Television-6",
+      "price": 109.99,
+      "category": "television",
+      "image": "/public/assets/Television/television-6.jpg"
+    },
+    {
+      "title": "Television-7",
+      "price": 119.99,
+      "category": "television",
+      "image": "/public/assets/Television/television-7.jpg"
+    },
+    {
+      "title": "Television-8",
+      "price": 129.99,
+      "category": "television",
+      "image": "/public/assets/Television/television-8.jpg"
+    }
+  ]
