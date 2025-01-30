@@ -20,23 +20,18 @@ const Slider = () => {
   const sendData = async () => {
     const response = await fetch("./public/assets/products.json");
     const products = await response.json();
-    console.log("products", products);
-
-    const payload = new FormData();
-    console.log(payload, "pejload");
 
     const promises = products.map(async (product, index) => {
-      console.log("product unutra", product);
-
       const formData = new FormData();
       formData.append("title", product.title);
       formData.append("price", product.price);
       formData.append("category", product.category);
-
       try {
         const imageResponse = await fetch(product.image);
         const blob = await imageResponse.blob();
-        formData.append("image", blob, `image_${index}.jpg`);
+        console.log(blob, "blob");
+
+        // formData.append("image", blob, `image_${index}.jpg`);
 
         return {
           title: product.title,
