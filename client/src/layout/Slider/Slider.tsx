@@ -21,38 +21,33 @@ const Slider = () => {
     const response = await fetch("./public/assets/products.json");
     const products = await response.json();
 
-    const promises = products.map(async (product, index) => {
+    const promises = products.map(async (product) => {
       const formData = new FormData();
       formData.append("title", product.title);
       formData.append("price", product.price);
       formData.append("category", product.category);
-      try {
-        const imageResponse = await fetch(product.image);
-        const blob = await imageResponse.blob();
-        console.log(blob, "blob");
 
-        // formData.append("image", blob, `image_${index}.jpg`);
+      // Preuzmi sliku kao Blob
+      const imageResponse = await fetch(product.image);
+      const blob = await imageResponse.blob();
+      formData.append("image", blob, "image.jpg");
 
-        return {
-          title: product.title,
-          price: product.price,
-          category: product.category,
-          image: blob,
-        };
-      } catch (error) {
-        console.error(`Error loading image ${product.image}:`, error);
-        return {
-          title: product.title,
-          price: product.price,
-          category: product.category,
-          image: null,
-        };
-      }
+      // Pošaljite FormData na backend
+      const uploadResponse = await fetch(
+        "http://localhost:8000/upload-products",
+        {
+          method: "POST",
+          body: formData,
+        }
+      );
+
+      const data = await uploadResponse.json();
+      console.log("Proizvod poslat:", data);
+      return data;
     });
 
-    const allProducts = await Promise.all(promises);
-
-    console.log("Final products:", allProducts);
+    const results = await Promise.all(promises);
+    console.log("Svi proizvodi poslati!", results);
   };
 
   return (

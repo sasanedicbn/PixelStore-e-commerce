@@ -328,5 +328,83 @@
       "price": 129.99,
       "category": "television",
       "image": "/public/assets/Television/television-8.jpg"
+    },
+    {
+      "title": "Appliances-1",
+      "price": 129.99,
+      "category": "appliances",
+      "image": "/public/assets/Appliances/appliances-1.jpg"
+    },
+    {
+      "title": "Appliances-2",
+      "price": 119.99,
+      "category": "appliances",
+      "image": "/public/assets/Appliances/appliances-2.jpg"
+    },
+    {
+      "title": "Appliances-3",
+      "price": 229.99,
+      "category": "appliances",
+      "image": "/public/assets/Appliances/appliances-3.jpg"
+    },
+    {
+      "title": "Appliances-4",
+      "price": 79.99,
+      "category": "appliances",
+      "image": "/public/assets/Appliances/appliances-4.jpg"
+    },
+    {
+      "title": "Appliances-5",
+      "price": 89.99,
+      "category": "appliances",
+      "image": "/public/assets/Appliances/appliances-5.jpg"
+    },
+    {
+      "title": "Appliances-6",
+      "price": 79.99,
+      "category": "appliances",
+      "image": "/public/assets/Appliances/appliances-6.jpg"
+    },
+    {
+      "title": "Appliances-7",
+      "price": 129.99,
+      "category": "appliances",
+      "image": "/public/assets/Appliances/appliances-7.jpg"
+    },
+    {
+      "title": "Appliances-8",
+      "price": 129.99,
+      "category": "appliances",
+      "image": "/public/assets/Appliances/appliances-8.jpg"
+    },
+    {
+      "title": "Appliances-9",
+      "price": 359.99,
+      "category": "appliances",
+      "image": "/public/assets/Appliances/appliances-9.jpg"
+    },
+    {
+      "title": "Appliances-10",
+      "price": 279.99,
+      "category": "appliances",
+      "image": "/public/assets/Appliances/appliances-10.jpg"
+    },
+    {
+      "title": "Appliances-11",
+      "price": 319.99,
+      "category": "appliances",
+      "image": "/public/assets/Appliances/appliances-11.jpg"
+    },
+    {
+      "title": "Appliances-12",
+      "price": 129.99,
+      "category": "appliances",
+      "image": "/public/assets/Appliances/appliances-12.jpg"
+    },
+    {
+      "title": "Appliances-13",
+      "price": 159.99,
+      "category": "appliances",
+      "image": "/public/assets/Appliances/appliances-13.jpg"
     }
   ]
