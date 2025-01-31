@@ -43,25 +43,8 @@ app.post("/upload-products", upload.single("image"), async (req, res) => {
     const { title, price, category } = req.body;
     console.log(req.body, "req body sa fronteneda");
 
-    // Obećanje za Cloudinary upload
-    const uploadImageToCloudinary = (buffer) => {
-      return new Promise((resolve, reject) => {
-        const uploadStream = cloudinary.uploader.upload_stream(
-          { folder: "products" },
-          (error, result) => {
-            if (error) {
-              reject(error);
-            } else {
-              resolve(result.secure_url);
-            }
-          }
-        );
-        uploadStream.end(buffer);
-      });
-    };
-
-    // Čekamo da Cloudinary završi upload
-    const imageUrl = await uploadImageToCloudinary(req.file.buffer);
+    // URL slike se već nalazi u req.file.url kada koristiš CloudinaryStorage
+    const imageUrl = req.file.path; // Cloudinary URL je sada u `req.file.path`
 
     // Kreiranje proizvoda u bazi
     const product = new ProductsModel({
