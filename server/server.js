@@ -9,6 +9,7 @@ const PORT = process.env.PORT || 8000;
 const MONGOURL = process.env.MONGO_URL;
 
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 mongoose
   .connect(MONGOURL)
