@@ -27,12 +27,10 @@ const Slider = () => {
       formData.append("price", product.price);
       formData.append("category", product.category);
 
-      // Preuzmi sliku kao Blob
       const imageResponse = await fetch(product.image);
       const blob = await imageResponse.blob();
       formData.append("image", blob, "image.jpg");
 
-      // Pošaljite FormData na backend
       const uploadResponse = await fetch(
         "http://localhost:8000/upload-products",
         {
@@ -42,12 +40,11 @@ const Slider = () => {
       );
 
       const data = await uploadResponse.json();
-      console.log("Proizvod poslat:", data);
       return data;
     });
 
     const results = await Promise.all(promises);
-    console.log("Svi proizvodi poslati!", results);
+    console.log("Svi proizvodi!", results);
   };
 
   return (

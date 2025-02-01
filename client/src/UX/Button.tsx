@@ -1,4 +1,10 @@
-const Button = ({ type, children, onClick, disabled = false }: ButtonProps) => {
+const Button = ({
+  type,
+  children,
+  onClick,
+  disabled = false,
+  value,
+}: ButtonProps) => {
   const styles: Record<ButtonProps["type"], string> = {
     user: `header-action-btn`,
     favourites: `header-action-btn`,
@@ -8,9 +14,13 @@ const Button = ({ type, children, onClick, disabled = false }: ButtonProps) => {
     sellersActions: "sellers-btns",
   };
 
-  console.log(styles[type]);
   return (
-    <button className={styles[type]} onClick={onClick} disabled={disabled}>
+    <button
+      className={styles[type]}
+      onClick={onClick}
+      disabled={disabled}
+      value={value}
+    >
       {children}
     </button>
   );

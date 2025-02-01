@@ -1,3 +1,4 @@
+import { useSearchParams } from "react-router-dom";
 import Highlighted from "../../UX/Highlighted";
 import ProductCart from "../../UX/ProductCart";
 import BtnsSellers from "./BestSellersItems/BtnsSellers";
