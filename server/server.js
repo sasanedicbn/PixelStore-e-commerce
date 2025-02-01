@@ -41,20 +41,16 @@ app.post("/upload-products", upload.single("image"), async (req, res) => {
     }
 
     const { title, price, category } = req.body;
-    console.log(req.body, "req body sa fronteneda");
 
-    // URL slike se već nalazi u req.file.url kada koristiš CloudinaryStorage
-    const imageUrl = req.file.path; // Cloudinary URL je sada u `req.file.path`
+    const imageUrl = req.file.path;
 
-    // Kreiranje proizvoda u bazi
     const product = new ProductsModel({
       title,
       price,
       category,
-      imageUrl, // Cloudinary link slike
+      imageUrl,
     });
 
-    // Čuvanje u MongoDB
     await product.save();
 
     res
