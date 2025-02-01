@@ -69,49 +69,49 @@
       "title": "Cellphones-1",
       "price": 59.99,
       "category": "cellphones",
-      "image": "/public/assets/Cellphones/cellphones-1.jpg"
+      "image": "/public/assets/Cellphones/phone-1.jpg"
     },
     {
       "title": "Cellphones-2",
       "price": 69.99,
       "category": "cellphones",
-      "image": "/public/assets/Cellphones/cellphones-2.jpg"
+      "image": "/public/assets/Cellphones/phone-2.jpg"
     },
     {
       "title": "Cellphones-3",
       "price": 79.99,
       "category": "cellphones",
-      "image": "/public/assets/Cellphones/cellphones-3.jpg"
+      "image": "/public/assets/Cellphones/phone-3.jpg"
     },
     {
       "title": "Cellphones-4",
       "price": 89.99,
       "category": "cellphones",
-      "image": "/public/assets/Cellphones/cellphones-4.jpg"
+      "image": "/public/assets/Cellphones/phone-4.jpg"
     },
     {
       "title": "Cellphones-5",
       "price": 99.99,
       "category": "cellphones",
-      "image": "/public/assets/Cellphones/cellphones-5.jpg"
+      "image": "/public/assets/Cellphones/phone-5.jpg"
     },
     {
       "title": "Cellphones-6",
       "price": 109.99,
       "category": "cellphones",
-      "image": "/public/assets/Cellphones/cellphones-6.jpg"
+      "image": "/public/assets/Cellphones/phone-6.jpg"
     },
     {
       "title": "Cellphones-7",
       "price": 119.99,
       "category": "cellphones",
-      "image": "/public/assets/Cellphones/cellphones-7.jpg"
+      "image": "/public/assets/Cellphones/phone-7.jpg"
     },
     {
       "title": "Cellphones-8",
       "price": 129.99,
       "category": "cellphones",
-      "image": "/public/assets/Cellphones/cellphones-8.jpg"
+      "image": "/public/assets/Cellphones/phone-8.jpg"
     },
     {
       "title": "Headphones-1",
@@ -207,127 +207,127 @@
       "title": "Laptops-1",
       "price": 59.99,
       "category": "laptops",
-      "image": "/public/assets/Laptops/laptops-1.jpg"
+      "image": "/public/assets/Laptops/laptop-1.jpg"
     },
     {
       "title": "Laptops-2",
       "price": 69.99,
       "category": "laptops",
-      "image": "/public/assets/Laptops/laptops-2.jpg"
+      "image": "/public/assets/Laptops/laptop-2.jpg"
     },
     {
       "title": "Laptops-3",
       "price": 79.99,
       "category": "laptops",
-      "image": "/public/assets/Laptops/laptops-3.jpg"
+      "image": "/public/assets/Laptops/laptop-3.jpg"
     },
     {
       "title": "Laptops-4",
       "price": 89.99,
       "category": "laptops",
-      "image": "/public/assets/Laptops/laptops-4.jpg"
+      "image": "/public/assets/Laptops/laptop-4.jpg"
     },
     {
       "title": "Laptops-5",
       "price": 99.99,
       "category": "laptops",
-      "image": "/public/assets/Laptops/laptops-5.jpg"
+      "image": "/public/assets/Laptops/laptop-5.jpg"
     },
     {
       "title": "Laptops-6",
       "price": 109.99,
       "category": "laptops",
-      "image": "/public/assets/Laptops/laptops-6.jpg"
+      "image": "/public/assets/Laptops/laptop-6.jpg"
     },
     {
       "title": "Laptops-7",
       "price": 119.99,
       "category": "laptops",
-      "image": "/public/assets/Laptops/laptops-7.jpg"
+      "image": "/public/assets/Laptops/laptop-7.jpg"
     },
     {
       "title": "Laptops-8",
       "price": 129.99,
       "category": "laptops",
-      "image": "/public/assets/Laptops/laptops-8.jpg"
+      "image": "/public/assets/Laptops/laptop-8.jpg"
     },
     {
       "title": "Laptops-9",
       "price": 139.99,
       "category": "laptops",
-      "image": "/public/assets/Laptops/laptops-9.jpg"
+      "image": "/public/assets/Laptops/laptop-9.jpg"
     },
     {
       "title": "Laptops-10",
       "price": 149.99,
       "category": "laptops",
-      "image": "/public/assets/Laptops/laptops-10.jpg"
+      "image": "/public/assets/Laptops/laptop-10.jpg"
     },
     {
       "title": "Laptops-11",
       "price": 159.99,
       "category": "laptops",
-      "image": "/public/assets/Laptops/laptops-11.jpg"
+      "image": "/public/assets/Laptops/laptop-11.jpg"
     },
     {
       "title": "Laptops-12",
       "price": 169.99,
       "category": "laptops",
-      "image": "/public/assets/Laptops/laptops-12.jpg"
+      "image": "/public/assets/Laptops/laptop-12.jpg"
     },
     {
       "title": "Laptops-13",
       "price": 179.99,
       "category": "laptops",
-      "image": "/public/assets/Laptops/laptops-13.jpg"
+      "image": "/public/assets/Laptops/laptop-13.jpg"
     },
     {
       "title": "Television-1",
       "price": 59.99,
       "category": "television",
-      "image": "/public/assets/Television/television-1.jpg"
+      "image": "/public/assets/Television/tv-1.jpg"
     },
     {
       "title": "Television-2",
       "price": 69.99,
       "category": "television",
-      "image": "/public/assets/Television/television-2.jpg"
+      "image": "/public/assets/Television/tv-2.jpg"
     },
     {
       "title": "Television-3",
       "price": 79.99,
       "category": "television",
-      "image": "/public/assets/Television/television-3.jpg"
+      "image": "/public/assets/Television/tv-3.jpg"
     },
     {
       "title": "Television-4",
       "price": 89.99,
       "category": "television",
-      "image": "/public/assets/Television/television-4.jpg"
+      "image": "/public/assets/Television/tv-4.jpg"
     },
     {
       "title": "Television-5",
       "price": 99.99,
       "category": "television",
-      "image": "/public/assets/Television/television-5.jpg"
+      "image": "/public/assets/Television/tv-5.jpg"
     },
     {
       "title": "Television-6",
       "price": 109.99,
       "category": "television",
-      "image": "/public/assets/Television/television-6.jpg"
+      "image": "/public/assets/Television/tv-6.jpg"
     },
     {
       "title": "Television-7",
       "price": 119.99,
       "category": "television",
-      "image": "/public/assets/Television/television-7.jpg"
+      "image": "/public/assets/Television/tv-7.jpg"
     },
     {
       "title": "Television-8",
       "price": 129.99,
       "category": "television",
-      "image": "/public/assets/Television/television-8.jpg"
+      "image": "/public/assets/Television/tv-8.jpg"
     },
     {
       "title": "Appliances-1",
