@@ -61,3 +61,24 @@ app.post("/upload-products", upload.single("image"), async (req, res) => {
     res.status(500).json({ message: "Failed to upload product", error });
   }
 });
+app.get("/products", async (req, res) => {
+  try {
+    const category = req.query.category;
+    let query = {};
+    if (category) {
+      query.category = category;
+    }
+
+    const products = await ProductsModel.find(query);
+
+    if (products.length === 0) {
+      return res
+        .status(404)
+        .json({ message: "No products found in this category!" });
+    }
+
+    res.status(200).json({ message: "Products found!", products });
+  } catch (error) {
+    res.status(500).json({ message: "Failed to fetch products" });
+  }
+});
