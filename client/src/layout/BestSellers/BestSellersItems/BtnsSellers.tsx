@@ -7,18 +7,8 @@ const BtnsSellers = () => {
     const value = e.target.value;
     searchParams.set("category", value);
     setSearchParams(searchParams);
-    console.log(searchParams, "searchaprams");
   };
-  // const bestSellersProducts = async () => {
-  //   try {
-  //     const response = await fetch(
-  //       "http://localhost:8000/best-sellers-products"
-  //     );
-  //     const bestproducts = response.json();
-  //   } catch (error) {
-  //     console.log("Error! You can not fetch best sellers products");
-  //   }
-  // };
+
   return (
     <div className="btns-sellers">
       <Button
