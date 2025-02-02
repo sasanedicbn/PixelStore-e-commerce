@@ -19,13 +19,14 @@ const FilteredProducts = () => {
   );
   const loading = useSelector((state) => state.products.loading);
   const error = useSelector((state) => state.products.error);
+  console.log(products, "product za id");
 
   useEffect(() => {
+    if (products.length > 0) return;
+
+    dispatch(setLoading(true));
+
     const fetchProducts = async () => {
-      if (products.length > 0) return;
-
-      dispatch(setLoading(true));
-
       try {
         const url = `http://localhost:8000/products?category=${category}`;
         const response = await fetch(url);

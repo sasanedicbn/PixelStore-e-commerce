@@ -8,6 +8,7 @@ const initialState = {
     appliances: [],
     cameras: [],
   },
+  allProducts:[],
   loading: false,
   error: null,
 };
@@ -20,6 +21,9 @@ export const productsSlice = createSlice({
       const { category, products } = action.payload;
       state.productsByCategory[category] = products;
     },
+    setAllProducts(state,action) {
+      state.allProducts = action.payload
+    },
     setLoading(state, action) {
       state.loading = action.payload;
     },
@@ -29,5 +33,5 @@ export const productsSlice = createSlice({
   },
 });
 
-export const { setProductsByCategory, setLoading, setError } = productsSlice.actions;
+export const { setProductsByCategory, setLoading, setError, setAllProducts } = productsSlice.actions;
 export default productsSlice.reducer;
