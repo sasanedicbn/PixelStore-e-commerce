@@ -6,5 +6,6 @@ baseQuery: fetchBaseQuery({baseUrl: "http://localhost:8000"}),
 endpoints:(builder) => ({
     getProductsByCategory: builder.query({
         query: (category) => `products?category=${category}`,
-})
+  })
+ })
 })
