@@ -1,41 +1,80 @@
-import { useEffect, useState } from "react";
-import Button from "./Button";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { useSearchParams } from "react-router-dom";
+import Button from "./Button";
+import {
+  setError,
+  setLoading,
+  setProductsByCategory,
+} from "../store/slices/bestSellerReducer";
 
 const ProductCart = () => {
+  const dispatch = useDispatch();
   const [searchParams] = useSearchParams();
-  const [products, setProducts] = useState([]);
-  console.log(products, "products");
+  const category = searchParams.get("category");
+
+  // Uzmi proizvode i stanje iz Redux store-a
+  const products = useSelector(
+    (state) => state.products.productsByCategory[category] || []
+  );
+  const loading = useSelector((state) => state.products.loading);
+  const error = useSelector((state) => state.products.error);
+
   useEffect(() => {
     const fetchProducts = async () => {
+      // Proveri da li proizvodi već postoje u Redux store-u
+      if (products.length > 0) {
+        return; // Nemoj ponovo učitavati ako su već učitani
+      }
+
+      dispatch(setLoading(true)); // Postavi loading na true
+
       try {
-        const category = searchParams.get("category");
-        console.log("novi", category);
         const url = category
           ? `http://localhost:8000/products?category=${category}`
           : "http://localhost:8000/products";
 
         const response = await fetch(url);
         const data = await response.json();
-        setProducts(data.products);
+
+        // Ažuriraj Redux store sa novim proizvodima
+        dispatch(setProductsByCategory({ category, products: data.products }));
       } catch (error) {
-        console.error("Error fetching products:", error);
+        dispatch(setError(error.message)); // Postavi grešku ako dođe do problema
       } finally {
+        dispatch(setLoading(false)); // Postavi loading na false
       }
     };
 
     fetchProducts();
-  }, [searchParams]);
+  }, [dispatch, category, products]);
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
+
   return (
-    <div className="product-cart">
-      <img
-        className="product-img"
-        src="https://via.placeholder.com/200"
-        alt="product img"
-      />
-      <p className="product-title">Product Name</p>
-      <p className="product-price">$19.99</p>
-      <Button>Add to Cart</Button>
+    <div className="products-container">
+      {products.length > 0 ? (
+        products.map((product) => (
+          <div key={product._id} className="product-cart">
+            <img
+              className="product-img"
+              src={product.imageUrl}
+              alt={product.title}
+            />
+            <p className="product-title">{product.title}</p>
+            <p className="product-price">${product.price}</p>
+            <Button>Add to Cart</Button>
+          </div>
+        ))
+      ) : (
+        <p>No products found.</p>
+      )}
     </div>
   );
 };

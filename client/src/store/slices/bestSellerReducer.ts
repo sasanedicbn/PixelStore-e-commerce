@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   productsByCategory: {
@@ -12,8 +12,8 @@ const initialState = {
   error: null,
 };
 
-const productsSlice = createSlice({
-  name: "products",
+export const productsSlice = createSlice({
+  name: 'products',
   initialState,
   reducers: {
     setProductsByCategory(state, action) {
