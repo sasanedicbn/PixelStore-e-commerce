@@ -5,7 +5,7 @@ import { useSearchParams } from "react-router-dom";
 const ProductCart = () => {
   const [searchParams] = useSearchParams();
   const [products, setProducts] = useState([]);
-
+  console.log(products, "products");
   useEffect(() => {
     const fetchProducts = async () => {
       try {
