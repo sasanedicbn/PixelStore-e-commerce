@@ -1,7 +1,7 @@
-import { useSearchParams } from "react-router-dom";
 import Highlighted from "../../UX/Highlighted";
 import ProductCart from "../../UX/ProductCart";
 import BtnsSellers from "./BestSellersItems/BtnsSellers";
+import FilteredProducts from "./BestSellersItems/FilteredProducts";
 
 const BestSellers = () => {
   return (
@@ -9,7 +9,7 @@ const BestSellers = () => {
       <h2>Best Sellers</h2>
       <Highlighted>
         <BtnsSellers />
-        <ProductCart />
+        <FilteredProducts />
       </Highlighted>
     </div>
   );
