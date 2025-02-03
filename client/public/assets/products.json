@@ -1,410 +1,682 @@
 [
-    {
-      "title": "Cameras-1",
-      "price": 59.99,
-      "category": "cameras",
-      "image": "/public/assets/Cameras/cameras-1.jpg"
-    },
-    {
-      "title": "Cameras-2",
-      "price": 69.99,
-      "category": "cameras",
-      "image": "/public/assets/Cameras/cameras-2.jpg"
-    },
-    {
-      "title": "Cameras-3",
-      "price": 79.99,
-      "category": "cameras",
-      "image": "/public/assets/Cameras/cameras-3.jpg"
-    },
-    {
-      "title": "Cameras-4",
-      "price": 89.99,
-      "category": "cameras",
-      "image": "/public/assets/Cameras/cameras-4.jpg"
-    },
-    {
-      "title": "Cameras-5",
-      "price": 99.99,
-      "category": "cameras",
-      "image": "/public/assets/Cameras/cameras-5.jpg"
-    },
-    {
-      "title": "Cameras-6",
-      "price": 109.99,
-      "category": "cameras",
-      "image": "/public/assets/Cameras/cameras-6.jpg"
-    },
-    {
-      "title": "Cameras-7",
-      "price": 119.99,
-      "category": "cameras",
-      "image": "/public/assets/Cameras/cameras-7.jpg"
-    },
-    {
-      "title": "Cameras-8",
-      "price": 129.99,
-      "category": "cameras",
-      "image": "/public/assets/Cameras/cameras-8.jpg"
-    },
-    {
-      "title": "Cameras-9",
-      "price": 139.99,
-      "category": "cameras",
-      "image": "/public/assets/Cameras/cameras-9.jpg"
-    },
-    {
-      "title": "Cameras-10",
-      "price": 149.99,
-      "category": "cameras",
-      "image": "/public/assets/Cameras/cameras-10.jpg"
-    },
-    {
-      "title": "Cameras-11",
-      "price": 159.99,
-      "category": "cameras",
-      "image": "/public/assets/Cameras/cameras-11.jpg"
-    },
-    {
-      "title": "Cellphones-1",
-      "price": 59.99,
-      "category": "cellphones",
-      "image": "/public/assets/Cellphones/phone-1.jpg"
-    },
-    {
-      "title": "Cellphones-2",
-      "price": 69.99,
-      "category": "cellphones",
-      "image": "/public/assets/Cellphones/phone-2.jpg"
-    },
-    {
-      "title": "Cellphones-3",
-      "price": 79.99,
-      "category": "cellphones",
-      "image": "/public/assets/Cellphones/phone-3.jpg"
-    },
-    {
-      "title": "Cellphones-4",
-      "price": 89.99,
-      "category": "cellphones",
-      "image": "/public/assets/Cellphones/phone-4.jpg"
-    },
-    {
-      "title": "Cellphones-5",
-      "price": 99.99,
-      "category": "cellphones",
-      "image": "/public/assets/Cellphones/phone-5.jpg"
-    },
-    {
-      "title": "Cellphones-6",
-      "price": 109.99,
-      "category": "cellphones",
-      "image": "/public/assets/Cellphones/phone-6.jpg"
-    },
-    {
-      "title": "Cellphones-7",
-      "price": 119.99,
-      "category": "cellphones",
-      "image": "/public/assets/Cellphones/phone-7.jpg"
-    },
-    {
-      "title": "Cellphones-8",
-      "price": 129.99,
-      "category": "cellphones",
-      "image": "/public/assets/Cellphones/phone-8.jpg"
-    },
-    {
-      "title": "Headphones-1",
-      "price": 59.99,
-      "category": "headphones",
-      "image": "/public/assets/Headphones/headphones-1.jpg"
-    },
-    {
-      "title": "Headphones-2",
-      "price": 69.99,
-      "category": "headphones",
-      "image": "/public/assets/Headphones/headphones-2.jpg"
-    },
-    {
-      "title": "Headphones-3",
-      "price": 79.99,
-      "category": "headphones",
-      "image": "/public/assets/Headphones/headphones-3.jpg"
-    },
-    {
-      "title": "Headphones-4",
-      "price": 89.99,
-      "category": "headphones",
-      "image": "/public/assets/Headphones/headphones-4.jpg"
-    },
-    {
-      "title": "Headphones-5",
-      "price": 99.99,
-      "category": "headphones",
-      "image": "/public/assets/Headphones/headphones-5.jpg"
-    },
-    {
-      "title": "Headphones-6",
-      "price": 109.99,
-      "category": "headphones",
-      "image": "/public/assets/Headphones/headphones-6.jpg"
-    },
-    {
-      "title": "Headphones-7",
-      "price": 119.99,
-      "category": "headphones",
-      "image": "/public/assets/Headphones/headphones-7.jpg"
-    },
-    {
-      "title": "Headphones-8",
-      "price": 129.99,
-      "category": "headphones",
-      "image": "/public/assets/Headphones/headphones-8.jpg"
-    },
-    {
-      "title": "Headphones-9",
-      "price": 139.99,
-      "category": "headphones",
-      "image": "/public/assets/Headphones/headphones-9.jpg"
-    },
-    {
-      "title": "Headphones-10",
-      "price": 149.99,
-      "category": "headphones",
-      "image": "/public/assets/Headphones/headphones-10.jpg"
-    },
-    {
-      "title": "Headphones-11",
-      "price": 159.99,
-      "category": "headphones",
-      "image": "/public/assets/Headphones/headphones-11.jpg"
-    },
-    {
-      "title": "Headphones-12",
-      "price": 169.99,
-      "category": "headphones",
-      "image": "/public/assets/Headphones/headphones-12.jpg"
-    },
-    {
-      "title": "Headphones-13",
-      "price": 179.99,
-      "category": "headphones",
-      "image": "/public/assets/Headphones/headphones-13.jpg"
-    },
-    {
-      "title": "Headphones-14",
-      "price": 189.99,
-      "category": "headphones",
-      "image": "/public/assets/Headphones/headphones-14.jpg"
-    },
-    {
-      "title": "Headphones-15",
-      "price": 199.99,
-      "category": "headphones",
-      "image": "/public/assets/Headphones/headphones-15.jpg"
-    },
-    {
-      "title": "Laptops-1",
-      "price": 59.99,
-      "category": "laptops",
-      "image": "/public/assets/Laptops/laptop-1.jpg"
-    },
-    {
-      "title": "Laptops-2",
-      "price": 69.99,
-      "category": "laptops",
-      "image": "/public/assets/Laptops/laptop-2.jpg"
-    },
-    {
-      "title": "Laptops-3",
-      "price": 79.99,
-      "category": "laptops",
-      "image": "/public/assets/Laptops/laptop-3.jpg"
-    },
-    {
-      "title": "Laptops-4",
-      "price": 89.99,
-      "category": "laptops",
-      "image": "/public/assets/Laptops/laptop-4.jpg"
-    },
-    {
-      "title": "Laptops-5",
-      "price": 99.99,
-      "category": "laptops",
-      "image": "/public/assets/Laptops/laptop-5.jpg"
-    },
-    {
-      "title": "Laptops-6",
-      "price": 109.99,
-      "category": "laptops",
-      "image": "/public/assets/Laptops/laptop-6.jpg"
-    },
-    {
-      "title": "Laptops-7",
-      "price": 119.99,
-      "category": "laptops",
-      "image": "/public/assets/Laptops/laptop-7.jpg"
-    },
-    {
-      "title": "Laptops-8",
-      "price": 129.99,
-      "category": "laptops",
-      "image": "/public/assets/Laptops/laptop-8.jpg"
-    },
-    {
-      "title": "Laptops-9",
-      "price": 139.99,
-      "category": "laptops",
-      "image": "/public/assets/Laptops/laptop-9.jpg"
-    },
-    {
-      "title": "Laptops-10",
-      "price": 149.99,
-      "category": "laptops",
-      "image": "/public/assets/Laptops/laptop-10.jpg"
-    },
-    {
-      "title": "Laptops-11",
-      "price": 159.99,
-      "category": "laptops",
-      "image": "/public/assets/Laptops/laptop-11.jpg"
-    },
-    {
-      "title": "Laptops-12",
-      "price": 169.99,
-      "category": "laptops",
-      "image": "/public/assets/Laptops/laptop-12.jpg"
-    },
-    {
-      "title": "Laptops-13",
-      "price": 179.99,
-      "category": "laptops",
-      "image": "/public/assets/Laptops/laptop-13.jpg"
-    },
-    {
-      "title": "Television-1",
-      "price": 59.99,
-      "category": "television",
-      "image": "/public/assets/Television/tv-1.jpg"
-    },
-    {
-      "title": "Television-2",
-      "price": 69.99,
-      "category": "television",
-      "image": "/public/assets/Television/tv-2.jpg"
-    },
-    {
-      "title": "Television-3",
-      "price": 79.99,
-      "category": "television",
-      "image": "/public/assets/Television/tv-3.jpg"
-    },
-    {
-      "title": "Television-4",
-      "price": 89.99,
-      "category": "television",
-      "image": "/public/assets/Television/tv-4.jpg"
-    },
-    {
-      "title": "Television-5",
-      "price": 99.99,
-      "category": "television",
-      "image": "/public/assets/Television/tv-5.jpg"
-    },
-    {
-      "title": "Television-6",
-      "price": 109.99,
-      "category": "television",
-      "image": "/public/assets/Television/tv-6.jpg"
-    },
-    {
-      "title": "Television-7",
-      "price": 119.99,
-      "category": "television",
-      "image": "/public/assets/Television/tv-7.jpg"
-    },
-    {
-      "title": "Television-8",
-      "price": 129.99,
-      "category": "television",
-      "image": "/public/assets/Television/tv-8.jpg"
-    },
-    {
-      "title": "Appliances-1",
-      "price": 129.99,
-      "category": "appliances",
-      "image": "/public/assets/Appliances/appliances-1.jpg"
-    },
-    {
-      "title": "Appliances-2",
-      "price": 119.99,
-      "category": "appliances",
-      "image": "/public/assets/Appliances/appliances-2.jpg"
-    },
-    {
-      "title": "Appliances-3",
-      "price": 229.99,
-      "category": "appliances",
-      "image": "/public/assets/Appliances/appliances-3.jpg"
-    },
-    {
-      "title": "Appliances-4",
-      "price": 79.99,
-      "category": "appliances",
-      "image": "/public/assets/Appliances/appliances-4.jpg"
-    },
-    {
-      "title": "Appliances-5",
-      "price": 89.99,
-      "category": "appliances",
-      "image": "/public/assets/Appliances/appliances-5.jpg"
-    },
-    {
-      "title": "Appliances-6",
-      "price": 79.99,
-      "category": "appliances",
-      "image": "/public/assets/Appliances/appliances-6.jpg"
-    },
-    {
-      "title": "Appliances-7",
-      "price": 129.99,
-      "category": "appliances",
-      "image": "/public/assets/Appliances/appliances-7.jpg"
-    },
-    {
-      "title": "Appliances-8",
-      "price": 129.99,
-      "category": "appliances",
-      "image": "/public/assets/Appliances/appliances-8.jpg"
-    },
-    {
-      "title": "Appliances-9",
-      "price": 359.99,
-      "category": "appliances",
-      "image": "/public/assets/Appliances/appliances-9.jpg"
-    },
-    {
-      "title": "Appliances-10",
-      "price": 279.99,
-      "category": "appliances",
-      "image": "/public/assets/Appliances/appliances-10.jpg"
-    },
-    {
-      "title": "Appliances-11",
-      "price": 319.99,
-      "category": "appliances",
-      "image": "/public/assets/Appliances/appliances-11.jpg"
-    },
-    {
-      "title": "Appliances-12",
-      "price": 129.99,
-      "category": "appliances",
-      "image": "/public/assets/Appliances/appliances-12.jpg"
-    },
-    {
-      "title": "Appliances-13",
-      "price": 159.99,
-      "category": "appliances",
-      "image": "/public/assets/Appliances/appliances-13.jpg"
+  {
+    "title": "Cameras-1",
+    "price": 59.99,
+    "category": "cameras",
+    "image": "/public/assets/Cameras/cameras-1.jpg",
+    "details": {
+      "available": "yes",
+      "description": "High-resolution camera with advanced autofocus. Perfect for capturing stunning photos and videos. Ideal for both beginners and professionals."
     }
-  ]
+  },
+  {
+    "title": "Cameras-2",
+    "price": 69.99,
+    "category": "cameras",
+    "image": "/public/assets/Cameras/cameras-2.jpg",
+    "details": {
+      "available": "yes",
+      "description": "Compact and lightweight design, perfect for travel. Offers excellent image quality and easy portability. Great for photographers on the go."
+    }
+  },
+  {
+    "title": "Cameras-3",
+    "price": 79.99,
+    "category": "cameras",
+    "image": "/public/assets/Cameras/cameras-3.jpg",
+    "details": {
+      "available": "no",
+      "description": "Weather-sealed body designed for outdoor shooting. Durable and reliable in various conditions. Perfect for adventure and nature photography."
+    }
+  },
+  {
+    "title": "Cameras-4",
+    "price": 89.99,
+    "category": "cameras",
+    "image": "/public/assets/Cameras/cameras-4.jpg",
+    "details": {
+      "available": "yes",
+      "description": "4K video recording with advanced image stabilization. Capture smooth and professional-quality videos. Ideal for vloggers and content creators."
+    }
+  },
+  {
+    "title": "Cameras-5",
+    "price": 99.99,
+    "category": "cameras",
+    "image": "/public/assets/Cameras/cameras-5.jpg",
+    "details": {
+      "available": "yes",
+      "description": "Mirrorless camera with interchangeable lenses. Versatile and powerful for creative photography. Suitable for both amateurs and professionals."
+    }
+  },
+  {
+    "title": "Cameras-6",
+    "price": 109.99,
+    "category": "cameras",
+    "image": "/public/assets/Cameras/cameras-6.jpg",
+    "details": {
+      "available": "yes",
+      "description": "Fast burst shooting for action photography. Never miss a moment with high-speed capture. Perfect for sports and wildlife photography."
+    }
+  },
+  {
+    "title": "Cameras-7",
+    "price": 119.99,
+    "category": "cameras",
+    "image": "/public/assets/Cameras/cameras-7.jpg",
+    "details": {
+      "available": "no",
+      "description": "Built-in Wi-Fi for instant sharing. Easily transfer photos to your smartphone or tablet. Great for social media enthusiasts."
+    }
+  },
+  {
+    "title": "Cameras-8",
+    "price": 129.99,
+    "category": "cameras",
+    "image": "/public/assets/Cameras/cameras-8.jpg",
+    "details": {
+      "available": "yes",
+      "description": "Large sensor for superior low-light performance. Capture stunning photos even in dim lighting. Ideal for night photography."
+    }
+  },
+  {
+    "title": "Cameras-9",
+    "price": 139.99,
+    "category": "cameras",
+    "image": "/public/assets/Cameras/cameras-9.jpg",
+    "details": {
+      "available": "yes",
+      "description": "Touchscreen LCD for easy navigation. User-friendly interface for all skill levels. Perfect for beginners and casual photographers."
+    }
+  },
+  {
+    "title": "Cameras-10",
+    "price": 149.99,
+    "category": "cameras",
+    "image": "/public/assets/Cameras/cameras-10.jpg",
+    "details": {
+      "available": "yes",
+      "description": "Long battery life for extended shooting. Shoot all day without worrying about power. Great for travel and outdoor photography."
+    }
+  },
+  {
+    "title": "Cameras-11",
+    "price": 159.99,
+    "category": "cameras",
+    "image": "/public/assets/Cameras/cameras-11.jpg",
+    "details": {
+      "available": "no",
+      "description": "Professional-grade DSLR with full-frame sensor. Delivers top-quality images and performance. Designed for serious photographers."
+    }
+  },
+  {
+    "title": "Cellphones-1",
+    "price": 59.99,
+    "category": "cellphones",
+    "image": "/public/assets/Cellphones/phone-1.jpg",
+    "details": {
+      "available": "yes",
+      "description": "Budget-friendly smartphone with decent performance. Great for everyday use and basic tasks. Ideal for students and casual users."
+    }
+  },
+  {
+    "title": "Cellphones-2",
+    "price": 69.99,
+    "category": "cellphones",
+    "image": "/public/assets/Cellphones/phone-2.jpg",
+    "details": {
+      "available": "yes",
+      "description": "Sleek design with a vibrant display. Enjoy a crisp and clear viewing experience. Perfect for multimedia consumption."
+    }
+  },
+  {
+    "title": "Cellphones-3",
+    "price": 79.99,
+    "category": "cellphones",
+    "image": "/public/assets/Cellphones/phone-3.jpg",
+    "details": {
+      "available": "yes",
+      "description": "Long-lasting battery for all-day use. Stay connected without frequent charging. Great for busy professionals."
+    }
+  },
+  {
+    "title": "Cellphones-4",
+    "price": 89.99,
+    "category": "cellphones",
+    "image": "/public/assets/Cellphones/phone-4.jpg",
+    "details": {
+      "available": "no",
+      "description": "Dual-camera setup for versatile photography. Capture wide-angle and close-up shots with ease. Perfect for photography enthusiasts."
+    }
+  },
+  {
+    "title": "Cellphones-5",
+    "price": 99.99,
+    "category": "cellphones",
+    "image": "/public/assets/Cellphones/phone-5.jpg",
+    "details": {
+      "available": "yes",
+      "description": "Fast processor for smooth multitasking. Handle multiple apps and games effortlessly. Ideal for power users."
+    }
+  },
+  {
+    "title": "Cellphones-6",
+    "price": 109.99,
+    "category": "cellphones",
+    "image": "/public/assets/Cellphones/phone-6.jpg",
+    "details": {
+      "available": "yes",
+      "description": "Water-resistant design for added durability. Use your phone worry-free in various conditions. Great for outdoor activities."
+    }
+  },
+  {
+    "title": "Cellphones-7",
+    "price": 119.99,
+    "category": "cellphones",
+    "image": "/public/assets/Cellphones/phone-7.jpg",
+    "details": {
+      "available": "yes",
+      "description": "High-quality audio for music lovers. Enjoy rich and immersive sound quality. Perfect for audiophiles."
+    }
+  },
+  {
+    "title": "Cellphones-8",
+    "price": 129.99,
+    "category": "cellphones",
+    "image": "/public/assets/Cellphones/phone-8.jpg",
+    "details": {
+      "available": "no",
+      "description": "Large storage capacity for all your files. Store photos, videos, and apps without worry. Ideal for heavy users."
+    }
+  },
+  {
+    "title": "Headphones-1",
+    "price": 59.99,
+    "category": "headphones",
+    "image": "/public/assets/Headphones/headphones-1.jpg",
+    "details": {
+      "available": "yes",
+      "description": "Comfortable over-ear design for long listening sessions. Enjoy your music without discomfort. Perfect for daily use."
+    }
+  },
+  {
+    "title": "Headphones-2",
+    "price": 69.99,
+    "category": "headphones",
+    "image": "/public/assets/Headphones/headphones-2.jpg",
+    "details": {
+      "available": "yes",
+      "description": "Noise-canceling technology for immersive sound. Block out distractions and focus on your music. Great for travel and work."
+    }
+  },
+  {
+    "title": "Headphones-3",
+    "price": 79.99,
+    "category": "headphones",
+    "image": "/public/assets/Headphones/headphones-3.jpg",
+    "details": {
+      "available": "yes",
+      "description": "Wireless Bluetooth connectivity for convenience. Move freely without tangled wires. Ideal for active lifestyles."
+    }
+  },
+  {
+    "title": "Headphones-4",
+    "price": 89.99,
+    "category": "headphones",
+    "image": "/public/assets/Headphones/headphones-4.jpg",
+    "details": {
+      "available": "no",
+      "description": "Bass-heavy sound for deep and powerful audio. Perfect for bass lovers and electronic music fans. Great for parties and workouts."
+    }
+  },
+  {
+    "title": "Headphones-5",
+    "price": 99.99,
+    "category": "headphones",
+    "image": "/public/assets/Headphones/headphones-5.jpg",
+    "details": {
+      "available": "yes",
+      "description": "Foldable design for easy portability. Take your headphones anywhere with ease. Perfect for travelers."
+    }
+  },
+  {
+    "title": "Headphones-6",
+    "price": 109.99,
+    "category": "headphones",
+    "image": "/public/assets/Headphones/headphones-6.jpg",
+    "details": {
+      "available": "yes",
+      "description": "Long battery life for extended use. Listen to music all day without recharging. Ideal for long trips."
+    }
+  },
+  {
+    "title": "Headphones-7",
+    "price": 119.99,
+    "category": "headphones",
+    "image": "/public/assets/Headphones/headphones-7.jpg",
+    "details": {
+      "available": "yes",
+      "description": "Built-in microphone for hands-free calls. Take calls and control your music with ease. Great for professionals."
+    }
+  },
+  {
+    "title": "Headphones-8",
+    "price": 129.99,
+    "category": "headphones",
+    "image": "/public/assets/Headphones/headphones-8.jpg",
+    "details": {
+      "available": "no",
+      "description": "Premium materials for durability and style. A stylish and long-lasting audio accessory. Perfect for fashion-conscious users."
+    }
+  },
+  {
+    "title": "Headphones-9",
+    "price": 139.99,
+    "category": "headphones",
+    "image": "/public/assets/Headphones/headphones-9.jpg",
+    "details": {
+      "available": "yes",
+      "description": "Customizable sound profiles for personalized audio. Tailor your listening experience to your preferences. Great for audiophiles."
+    }
+  },
+  {
+    "title": "Headphones-10",
+    "price": 149.99,
+    "category": "headphones",
+    "image": "/public/assets/Headphones/headphones-10.jpg",
+    "details": {
+      "available": "yes",
+      "description": "Lightweight design for all-day comfort. Wear your headphones for hours without fatigue. Perfect for long listening sessions."
+    }
+  },
+  {
+    "title": "Headphones-11",
+    "price": 159.99,
+    "category": "headphones",
+    "image": "/public/assets/Headphones/headphones-11.jpg",
+    "details": {
+      "available": "yes",
+      "description": "High-fidelity sound for audiophiles. Experience music the way it was meant to be heard. Ideal for music enthusiasts."
+    }
+  },
+  {
+    "title": "Headphones-12",
+    "price": 169.99,
+    "category": "headphones",
+    "image": "/public/assets/Headphones/headphones-12.jpg",
+    "details": {
+      "available": "no",
+      "description": "Multi-device pairing for seamless switching. Connect to multiple devices effortlessly. Great for multitaskers."
+    }
+  },
+  {
+    "title": "Headphones-13",
+    "price": 179.99,
+    "category": "headphones",
+    "image": "/public/assets/Headphones/headphones-13.jpg",
+    "details": {
+      "available": "yes",
+      "description": "Sleek and modern design for a stylish look. A fashionable accessory for music lovers. Perfect for trendsetters."
+    }
+  },
+  {
+    "title": "Headphones-14",
+    "price": 189.99,
+    "category": "headphones",
+    "image": "/public/assets/Headphones/headphones-14.jpg",
+    "details": {
+      "available": "yes",
+      "description": "Quick charging for minimal downtime. Get hours of playback with just a short charge. Ideal for busy users."
+    }
+  },
+  {
+    "title": "Headphones-15",
+    "price": 199.99,
+    "category": "headphones",
+    "image": "/public/assets/Headphones/headphones-15.jpg",
+    "details": {
+      "available": "yes",
+      "description": "Advanced sound isolation for pure audio. Immerse yourself in your music without distractions. Perfect for focused listening."
+    }
+  },
+  {
+    "title": "Laptops-1",
+    "price": 59.99,
+    "category": "laptops",
+    "image": "/public/assets/Laptops/laptop-1.jpg",
+    "details": {
+      "available": "yes",
+      "description": "Compact and lightweight for easy portability. Ideal for students and professionals on the go. Great for everyday tasks."
+    }
+  },
+  {
+    "title": "Laptops-2",
+    "price": 69.99,
+    "category": "laptops",
+    "image": "/public/assets/Laptops/laptop-2.jpg",
+    "details": {
+      "available": "yes",
+      "description": "Fast SSD storage for quick boot times. Enjoy speedy performance and responsiveness. Perfect for productivity."
+    }
+  },
+  {
+    "title": "Laptops-3",
+    "price": 79.99,
+    "category": "laptops",
+    "image": "/public/assets/Laptops/laptop-3.jpg",
+    "details": {
+      "available": "no",
+      "description": "High-resolution display for crisp visuals. Perfect for work, entertainment, and creative tasks. Great for designers."
+    }
+  },
+  {
+    "title": "Laptops-4",
+    "price": 89.99,
+    "category": "laptops",
+    "image": "/public/assets/Laptops/laptop-4.jpg",
+    "details": {
+      "available": "yes",
+      "description": "Long battery life for all-day productivity. Work or play without worrying about charging. Ideal for travelers."
+    }
+  },
+  {
+    "title": "Laptops-5",
+    "price": 99.99,
+    "category": "laptops",
+    "image": "/public/assets/Laptops/laptop-5.jpg",
+    "details": {
+      "available": "yes",
+      "description": "Powerful processor for demanding tasks. Handle multitasking and heavy applications with ease. Great for professionals."
+    }
+  },
+  {
+    "title": "Laptops-6",
+    "price": 109.99,
+    "category": "laptops",
+    "image": "/public/assets/Laptops/laptop-6.jpg",
+    "details": {
+      "available": "yes",
+      "description": "Sleek and modern design for a professional look. A stylish laptop for work and play. Perfect for business meetings."
+    }
+  },
+  {
+    "title": "Laptops-7",
+    "price": 119.99,
+    "category": "laptops",
+    "image": "/public/assets/Laptops/laptop-7.jpg",
+    "details": {
+      "available": "yes",
+      "description": "Backlit keyboard for typing in low light. Work comfortably in any lighting condition. Ideal for night owls."
+    }
+  },
+  {
+    "title": "Laptops-8",
+    "price": 129.99,
+    "category": "laptops",
+    "image": "/public/assets/Laptops/laptop-8.jpg",
+    "details": {
+      "available": "no",
+      "description": "Dedicated graphics card for gaming and design. Perfect for gamers and creative professionals. Great for rendering and editing."
+    }
+  },
+  {
+    "title": "Laptops-9",
+    "price": 139.99,
+    "category": "laptops",
+    "image": "/public/assets/Laptops/laptop-9.jpg",
+    "details": {
+      "available": "yes",
+      "description": "Thin and lightweight for ultimate portability. Take your laptop anywhere with ease. Perfect for digital nomads."
+    }
+  },
+  {
+    "title": "Laptops-10",
+    "price": 149.99,
+    "category": "laptops",
+    "image": "/public/assets/Laptops/laptop-10.jpg",
+    "details": {
+      "available": "yes",
+      "description": "Large storage capacity for all your files. Store documents, photos, and videos without worry. Ideal for heavy users."
+    }
+  },
+  {
+    "title": "Laptops-11",
+    "price": 159.99,
+    "category": "laptops",
+    "image": "/public/assets/Laptops/laptop-11.jpg",
+    "details": {
+      "available": "yes",
+      "description": "High-speed Wi-Fi for seamless connectivity. Stay connected and productive wherever you are. Great for remote work."
+    }
+  },
+  {
+    "title": "Laptops-12",
+    "price": 169.99,
+    "category": "laptops",
+    "image": "/public/assets/Laptops/laptop-12.jpg",
+    "details": {
+      "available": "no",
+      "description": "Touchscreen display for intuitive navigation. Interact with your laptop in a whole new way. Perfect for creative tasks."
+    }
+  },
+  {
+    "title": "Laptops-13",
+    "price": 179.99,
+    "category": "laptops",
+    "image": "/public/assets/Laptops/laptop-13.jpg",
+    "details": {
+      "available": "yes",
+      "description": "Premium build quality for durability. A reliable laptop built to last. Ideal for long-term use."
+    }
+  },
+  {
+    "title": "Television-1",
+    "price": 59.99,
+    "category": "television",
+    "image": "/public/assets/Television/tv-1.jpg",
+    "details": {
+      "available": "yes",
+      "description": "Compact size for small spaces. Perfect for bedrooms or kitchens. Great for secondary rooms."
+    }
+  },
+  {
+    "title": "Television-2",
+    "price": 69.99,
+    "category": "television",
+    "image": "/public/assets/Television/tv-2.jpg",
+    "details": {
+      "available": "yes",
+      "description": "HD resolution for clear and vibrant images. Enjoy your favorite shows in high definition. Ideal for casual viewing."
+    }
+  },
+  {
+    "title": "Television-3",
+    "price": 79.99,
+    "category": "television",
+    "image": "/public/assets/Television/tv-3.jpg",
+    "details": {
+      "available": "yes",
+      "description": "Smart TV features for streaming apps. Access Netflix, YouTube, and more with ease. Perfect for entertainment lovers."
+    }
+  },
+  {
+    "title": "Television-4",
+    "price": 89.99,
+    "category": "television",
+    "image": "/public/assets/Television/tv-4.jpg",
+    "details": {
+      "available": "no",
+      "description": "Large screen size for immersive viewing. Transform your living room into a home theater. Great for movie nights."
+    }
+  },
+  {
+    "title": "Television-5",
+    "price": 99.99,
+    "category": "television",
+    "image": "/public/assets/Television/tv-5.jpg",
+    "details": {
+      "available": "yes",
+      "description": "Energy-efficient design for lower power consumption. Save on electricity while enjoying your favorite shows. Ideal for eco-conscious users."
+    }
+  },
+  {
+    "title": "Television-6",
+    "price": 109.99,
+    "category": "television",
+    "image": "/public/assets/Television/tv-6.jpg",
+    "details": {
+      "available": "yes",
+      "description": "Built-in soundbar for enhanced audio. Experience rich and immersive sound quality. Perfect for music and movies."
+    }
+  },
+  {
+    "title": "Television-7",
+    "price": 119.99,
+    "category": "television",
+    "image": "/public/assets/Television/tv-7.jpg",
+    "details": {
+      "available": "yes",
+      "description": "Ultra-slim design for a modern look. A stylish addition to any living space. Great for contemporary homes."
+    }
+  },
+  {
+    "title": "Television-8",
+    "price": 129.99,
+    "category": "television",
+    "image": "/public/assets/Television/tv-8.jpg",
+    "details": {
+      "available": "no",
+      "description": "Multiple HDMI ports for connecting devices. Connect your gaming console, Blu-ray player, and more. Ideal for tech enthusiasts."
+    }
+  },
+  {
+    "title": "Appliances-1",
+    "price": 129.99,
+    "category": "appliances",
+    "image": "/public/assets/Appliances/appliances-1.jpg",
+    "details": {
+      "available": "yes",
+      "description": "Energy-efficient refrigerator with ample storage. Keep your food fresh while saving on energy. Perfect for families."
+    }
+  },
+  {
+    "title": "Appliances-2",
+    "price": 119.99,
+    "category": "appliances",
+    "image": "/public/assets/Appliances/appliances-2.jpg",
+    "details": {
+      "available": "yes",
+      "description": "Compact microwave for small kitchens. Perfect for quick meals and reheating. Great for students and small spaces."
+    }
+  },
+  {
+    "title": "Appliances-3",
+    "price": 229.99,
+    "category": "appliances",
+    "image": "/public/assets/Appliances/appliances-3.jpg",
+    "details": {
+      "available": "yes",
+      "description": "Powerful blender for smoothies and soups. Create delicious and healthy recipes with ease. Ideal for health-conscious users."
+    }
+  },
+  {
+    "title": "Appliances-4",
+    "price": 79.99,
+    "category": "appliances",
+    "image": "/public/assets/Appliances/appliances-4.jpg",
+    "details": {
+      "available": "yes",
+      "description": "Compact and efficient washing machine. Save time and energy with quick cycles. Perfect for small households."
+    }
+  },
+  {
+    "title": "Appliances-5",
+    "price": 89.99,
+    "category": "appliances",
+    "image": "/public/assets/Appliances/appliances-5.jpg",
+    "details": {
+      "available": "yes",
+      "description": "Energy-saving dishwasher for eco-friendly cleaning. Reduce water and electricity usage. Great for busy families."
+    }
+  },
+  {
+    "title": "Appliances-6",
+    "price": 79.99,
+    "category": "appliances",
+    "image": "/public/assets/Appliances/appliances-6.jpg",
+    "details": {
+      "available": "yes",
+      "description": "Compact air purifier for cleaner indoor air. Improve air quality in small spaces. Ideal for allergy sufferers."
+    }
+  },
+  {
+    "title": "Appliances-7",
+    "price": 129.99,
+    "category": "appliances",
+    "image": "/public/assets/Appliances/appliances-7.jpg",
+    "details": {
+      "available": "yes",
+      "description": "High-capacity freezer for long-term storage. Keep your food fresh for months. Perfect for large families."
+    }
+  },
+  {
+    "title": "Appliances-8",
+    "price": 129.99,
+    "category": "appliances",
+    "image": "/public/assets/Appliances/appliances-8.jpg",
+    "details": {
+      "available": "yes",
+      "description": "Smart oven with advanced cooking features. Bake, roast, and grill with precision. Great for home chefs."
+    }
+  },
+  {
+    "title": "Appliances-9",
+    "price": 359.99,
+    "category": "appliances",
+    "image": "/public/assets/Appliances/appliances-9.jpg",
+    "details": {
+      "available": "yes",
+      "description": "High-performance vacuum cleaner for deep cleaning. Tackle dirt and dust with ease. Perfect for pet owners."
+    }
+  },
+  {
+    "title": "Appliances-10",
+    "price": 279.99,
+    "category": "appliances",
+    "image": "/public/assets/Appliances/appliances-10.jpg",
+    "details": {
+      "available": "yes",
+      "description": "Energy-efficient air conditioner for cooling. Stay comfortable during hot summers. Ideal for small to medium rooms."
+    }
+  },
+  {
+    "title": "Appliances-11",
+    "price": 319.99,
+    "category": "appliances",
+    "image": "/public/assets/Appliances/appliances-11.jpg",
+    "details": {
+      "available": "yes",
+      "description": "Smart refrigerator with touchscreen controls. Manage your groceries and recipes with ease. Perfect for modern kitchens."
+    }
+  },
+  {
+    "title": "Appliances-12",
+    "price": 129.99,
+    "category": "appliances",
+    "image": "/public/assets/Appliances/appliances-12.jpg",
+    "details": {
+      "available": "yes",
+      "description": "Compact and portable dehumidifier. Reduce humidity in small spaces. Great for basements and bathrooms."
+    }
+  },
+  {
+    "title": "Appliances-13",
+    "price": 159.99,
+    "category": "appliances",
+    "image": "/public/assets/Appliances/appliances-13.jpg",
+    "details": {
+      "available": "yes",
+      "description": "High-speed blender for smoothies and shakes. Create healthy drinks in seconds. Ideal for fitness enthusiasts."
+    }
+  }
+]
