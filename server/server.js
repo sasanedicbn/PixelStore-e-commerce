@@ -68,8 +68,9 @@ app.get("/products", async (req, res) => {
     if (category) {
       query.category = category;
     }
+    console.log(query, "quey");
 
-    const products = await ProductsModel.find(query);
+    const products = await ProductsModel.find(query).limit(5);
 
     if (products.length === 0) {
       return res
