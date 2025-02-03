@@ -7,6 +7,8 @@ const productsSchema = new mongoose.Schema({
   imageUrl: String,
   details: {
     available: String,
+    description: String,
+  },
 });
 
 const ProductsModel = mongoose.model("Product", productsSchema);
