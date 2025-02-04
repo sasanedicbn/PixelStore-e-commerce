@@ -1,7 +1,11 @@
+import { useNavigate } from "react-router-dom";
 import Button from "./Button";
 
 const ProductCart = ({ products = [] }) => {
-  const getSingleProductHandler = (id) => {};
+  const navigate = useNavigate();
+  const getSinglePoductHandler = (id) => {
+    navigate(`/products/${id}`);
+  };
   return (
     <div className="products-container">
       {products.length > 0 ? (
@@ -11,7 +15,7 @@ const ProductCart = ({ products = [] }) => {
               className="product-img"
               src={product.imageUrl}
               alt={product.title}
-              onClick={() => getSingleProductHandler(product._id)}
+              onClick={() => getSinglePoductHandler(product._id)}
             />
             <p className="product-title">{product.title}</p>
             <p className="product-price">${product.price}</p>
