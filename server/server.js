@@ -40,15 +40,22 @@ app.post("/upload-products", upload.single("image"), async (req, res) => {
       return res.status(400).json({ message: "Image file is required!" });
     }
 
-    const { title, price, category } = req.body;
+    const { title, price, category, details } = req.body;
 
     const imageUrl = req.file.path;
+    console.log("details", details);
+
+    const detailsObj = details ? JSON.parse(details) : {};
 
     const product = new ProductsModel({
       title,
       price,
       category,
       imageUrl,
+      details: {
+        available: detailsObj?.available,
+        description: detailsObj?.description,
+      },
     });
 
     await product.save();
