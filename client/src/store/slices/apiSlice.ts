@@ -7,8 +7,10 @@ export const productsApi = createApi({
     getProductsByCategory: builder.query<Product[], string>({
       query: (category) => `products?category=${category}`,
     }),
+    getProductById: builder.query<Product, string>({
+        query: (id) => `products/${id}`,
+    }),
   }),
 });
 
-// Izvozi generisane hook-ove
-export const { useGetProductsByCategoryQuery } = productsApi;
+export const { useGetProductsByCategoryQuery, useGetProductByIdQuery } = productsApi;

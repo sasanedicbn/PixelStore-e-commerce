@@ -26,6 +26,7 @@ const Slider = () => {
       formData.append("title", product.title);
       formData.append("price", product.price);
       formData.append("category", product.category);
+      formData.append("details", JSON.stringify(product.details));
 
       const imageResponse = await fetch(product.image);
       const blob = await imageResponse.blob();

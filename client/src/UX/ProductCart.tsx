@@ -1,6 +1,7 @@
 import Button from "./Button";
 
 const ProductCart = ({ products = [] }) => {
+  const getSingleProductHandler = (id) => {};
   return (
     <div className="products-container">
       {products.length > 0 ? (
@@ -10,6 +11,7 @@ const ProductCart = ({ products = [] }) => {
               className="product-img"
               src={product.imageUrl}
               alt={product.title}
+              onClick={() => getSingleProductHandler(product._id)}
             />
             <p className="product-title">{product.title}</p>
             <p className="product-price">${product.price}</p>
