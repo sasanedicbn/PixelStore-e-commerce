@@ -92,7 +92,7 @@ app.get("/products", async (req, res) => {
 });
 app.get("/products/:id", async (req, res) => {
   try {
-    const { id } = req.body;
+    const { id } = req.params;
 
     const product = await ProductsModel.findById(id);
 
