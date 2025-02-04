@@ -92,5 +92,15 @@ app.get("/products", async (req, res) => {
 });
 app.get("/products/:id", async (req, res) => {
   try {
-  } catch (error) {}
+    const { id } = req.body;
+
+    const product = await ProductsModel.findById(id);
+
+    if (!product) {
+      return res.status(404).json({ msg: "We can not find this product" });
+    }
+    res.status(200).json({ msg: "Product found!", product });
+  } catch (error) {
+    res.status(500).json({ message: "Failed to fetch product" });
+  }
 });
