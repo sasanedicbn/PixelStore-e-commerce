@@ -855,3 +855,9 @@ h2{
     flex-basis: 100%;
   }
 }
+// SINGLE PRODUCT
+.single-product{
+  @include flex-center;
+  background-color: red;
+  @include wrapper(section, 0,0);
+}
