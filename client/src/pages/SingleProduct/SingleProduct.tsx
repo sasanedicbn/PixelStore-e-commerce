@@ -1,10 +1,11 @@
 import { useParams } from "react-router-dom";
 import { useGetProductByIdQuery } from "../../store/slices/apiSlice";
+import ProductDetails from "./SingleProductItems/ProductDetails";
 
 const SingleProduct = () => {
   const { id } = useParams();
   const { data: product, isLoading, isError } = useGetProductByIdQuery(id);
-  console.log(product.product);
+  //   console.log(product.product);
 
   if (isLoading) return <p>Loading...</p>;
   if (isError) return <p>Error fetching product</p>;
@@ -12,9 +13,7 @@ const SingleProduct = () => {
   return (
     <div className="single-product">
       <img src={product.product.imageUrl} alt={product.title} />
-      <h2>{product.product.title}</h2>
-      <p>${product.product.price}</p>
-      <p>{product.product.description}</p>
+      <ProductDetails product={product} />
     </div>
   );
 };
