@@ -929,3 +929,16 @@ h2{
     }
   }
 }
+// DETAILS ACTIONS 
+.detailsActions{
+  background-color:rgb(115, 115, 230);
+  .quantity{
+    display: flex;
+    width: 20%;
+    .plus-btn{
+      width: 24px;
+      height: 24px;
+      background-color: red;
+    }
+  }
+}

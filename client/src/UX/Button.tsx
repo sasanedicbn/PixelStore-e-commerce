@@ -12,6 +12,8 @@ const Button = ({
     sliderBtnLeft: "slider-btn slider-btn-left",
     sliderBtnRight: "slider-btn slider-btn-right",
     sellersActions: "sellers-btns",
+    plus: "plus-btn",
+    minus: "minus-btn",
   };
 
   return (

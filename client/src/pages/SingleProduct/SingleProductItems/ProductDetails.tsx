@@ -1,3 +1,4 @@
+import DetailsActions from "./DetailsActions";
 import ReviewStars from "./ReviewStars";
 
 const ProductDetails = ({ product }) => {
@@ -27,7 +28,7 @@ const ProductDetails = ({ product }) => {
         totalStars={5}
         onRatingChange={(rating) => console.log(rating)}
       /> */}
-      <p>SASA</p>
+      <DetailsActions />
     </div>
   );
 };
