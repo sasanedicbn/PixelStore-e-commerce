@@ -956,9 +956,7 @@ h2{
         transform: scale(1.1); 
       }
     
-      &:active {
-        background-color: #d4d4d4;
-        transform: scale(0.95); 
+      &:activecale(0.95); 
       }
     
       &:disabled {
