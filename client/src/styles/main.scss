@@ -871,14 +871,33 @@ h2{
   .product-details{
     .static-stars{
       @include flex-start;
-      color: grey;
+      color: rgb(156, 156, 156);
+      margin-bottom: 0.60rem;
+      
       span{
         font-size: 16px;
-        padding-bottom: .2rem;
+        padding-bottom: .2rem;    
       }
       p{
         margin-left: .25rem;
         font-size: 12px;
+      }
+    }
+    .price{
+      font-size: 22px;
+      font-weight: bold;
+      color: rgb(37, 37, 37);
+      border-top: 1px solid rgb(213, 213, 213);
+      padding-top: 0.8rem;
+      width: 7.5%;
+    }
+    .available, .mpn{
+      margin-top: 0.8rem;
+      color: rgb(156, 156, 156);
+      font-size: 12px;
+      span{
+        color: rgb(37, 37, 37);
+        font-weight: bold;
       }
     }
   }
