@@ -857,7 +857,56 @@ h2{
 }
 // SINGLE PRODUCT
 .single-product{
-  @include flex-center;
-  background-color: red;
+  @include flex-start;
+  margin-top: 1.5rem;
+  align-items: start;
+  gap: 1rem;
+  // background-color: red;
   @include wrapper(section, 0,0);
+   img{
+    width: 40%;
+    padding: 2rem 1rem;
+    border: 1px solid $bottom-gray;
+  }
+  .product-details{
+    .static-stars{
+      @include flex-start;
+      color: grey;
+      span{
+        font-size: 16px;
+        padding-bottom: .2rem;
+      }
+      p{
+        margin-left: .25rem;
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+// REVIEW STARS
+.review-stars {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+
+  .star {
+    font-size: 2rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+
+    &.filled {
+      color: #ffc107;
+    }
+
+    &.empty {
+      color: #e4e5e9;
+    }
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
 }
