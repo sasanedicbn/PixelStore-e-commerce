@@ -1,4 +1,4 @@
-import { FaFacebook, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
+import SocialMedia from "../../../UX/SocialMedia";
 
 const FooterItems = () => {
   return (
@@ -39,20 +39,7 @@ const FooterItems = () => {
 
       <div className="footer-section">
         <h4 className="footer-title">Connect with Us</h4>
-        <ul className="footer-socials">
-          <li className="footer-social">
-            <FaFacebook />
-          </li>
-          <li className="footer-social">
-            <FaTwitter />
-          </li>
-          <li className="footer-social">
-            <FaInstagram />
-          </li>
-          <li className="footer-social">
-            <FaYoutube />
-          </li>
-        </ul>
+        <SocialMedia />
       </div>
 
       <div className="footer-copyright">
