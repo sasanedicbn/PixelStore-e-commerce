@@ -1,3 +1,4 @@
+import SocialMedia from "../../../UX/SocialMedia";
 import DetailsActions from "./DetailsActions";
 import ReviewStars from "./ReviewStars";
 
@@ -29,6 +30,7 @@ const ProductDetails = ({ product }) => {
         onRatingChange={(rating) => console.log(rating)}
       /> */}
       <DetailsActions />
+      <SocialMedia />
     </div>
   );
 };

@@ -834,33 +834,6 @@ h2{
         }
       }
     }
-
-    .footer-socials {
-      display: flex;
-      gap: 20px;
-      font-size: 22px;
-      .footer-social {
-        cursor: pointer;
-        color: #636262;
-        transition: color 0.3s ease;
-        list-style: none;
-        border: 1px solid rgb(191, 187, 187);
-        width: 34px;
-        height: 34px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 100%;
-        padding: 6px;
-        transition: all 0.3s ease;
-
-
-        &:hover {
-          color: #343333;
-          border: 1px solid black;
-        }
-      }
-    }
   }
 
   .footer-copyright {
@@ -871,6 +844,33 @@ h2{
     flex-basis: 100%;
   }
 }
+.footer-socials {
+  display: flex;
+  gap: 8px;
+  font-size: 16px;
+  .footer-social {
+    cursor: pointer;
+    color: #636262;
+    transition: color 0.3s ease;
+    list-style: none;
+    border: 1px solid rgb(191, 187, 187);
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    padding: 6px;
+    transition: all 0.3s ease;
+
+
+    &:hover {
+      color: #343333;
+      border: 1px solid black;
+    }
+  }
+}
+
 // SINGLE PRODUCT
 .single-product{
   @include flex-start;
