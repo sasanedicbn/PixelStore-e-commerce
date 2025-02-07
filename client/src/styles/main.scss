@@ -930,10 +930,13 @@ h2{
 }
 // DETAILS ACTIONS 
 .detailsActions{
-  background-color:rgb(115, 115, 230);
-  margin-top: 1rem;
+  // background-color:rgb(115, 115, 230);
+  margin: 1.25rem 0;
+  padding: 1.25rem 0;
   display: flex;
-  height: 44px;
+  height: 80px;
+  border-bottom: 1px solid rgb(187, 185, 185);
+  border-top: 1px solid rgb(187, 185, 185);
   .quantity{
     display: flex;
     width: 20%;
@@ -984,7 +987,7 @@ h2{
     &:hover {
       background-color: #d62828; 
     }
-      
+
     &:disabled {
       background-color: #ccc;
       cursor: not-allowed;
