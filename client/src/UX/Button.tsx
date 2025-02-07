@@ -15,6 +15,7 @@ const Button = ({
     plus: "plus-btn",
     minus: "minus-btn",
     addToCart: "addtocart",
+    secondCart: "cart",
   };
 
   return (

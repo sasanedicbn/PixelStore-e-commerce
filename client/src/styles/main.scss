@@ -281,7 +281,23 @@ header{
       cursor: pointer;
     }
   }
-
+  .cart{
+    width: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ccc;
+    background-color: white;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    font-size: 20px;
+    color: #333;
+    margin-left: 1rem;
+    &:hover{
+      background-color: rgb(246, 246, 246);
+    }
+  }
+ 
 
 // MENU-CONTAINER
 .menu-container{

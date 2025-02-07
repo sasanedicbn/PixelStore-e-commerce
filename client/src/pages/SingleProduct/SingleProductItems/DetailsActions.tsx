@@ -13,6 +13,9 @@ const DetailsActions = () => {
         <Icon name="cart" />
         <span>ADD TO CART</span>
       </Button>
+      <Button type="secondCart">
+        <Icon name="favourites" />
+      </Button>
     </div>
   );
 };
