@@ -14,6 +14,7 @@ const Button = ({
     sellersActions: "sellers-btns",
     plus: "plus-btn",
     minus: "minus-btn",
+    addToCart: "addtocart",
   };
 
   return (

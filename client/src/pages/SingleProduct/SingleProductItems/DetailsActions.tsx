@@ -1,4 +1,5 @@
 import Button from "../../../UX/Button";
+import Icon from "../../../UX/Icons";
 
 const DetailsActions = () => {
   return (
@@ -8,6 +9,10 @@ const DetailsActions = () => {
         <input type="text" name="quantity" id="quantity" value={1} />
         <Button type="plus"> + </Button>
       </div>
+      <Button type="addToCart">
+        <Icon name="cart" />
+        <span>ADD TO CART</span>
+      </Button>
     </div>
   );
 };

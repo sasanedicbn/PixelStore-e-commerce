@@ -861,7 +861,6 @@ h2{
   margin-top: 1.5rem;
   align-items: start;
   gap: 1rem;
-  // background-color: red;
   @include wrapper(section, 0,0);
    img{
     width: 40%;
@@ -933,18 +932,20 @@ h2{
 .detailsActions{
   background-color:rgb(115, 115, 230);
   margin-top: 1rem;
+  display: flex;
+  height: 44px;
   .quantity{
     display: flex;
     width: 20%;
     input{
-      width: 36px;
+      width: 40px;
       text-align: center;
       font-weight: bold;
       border: 1px solid #ccc;
     }
     .plus-btn, .minus-btn {
-      width: 26px;
-      height: 36px;
+      width: 30px;
+      
       display: flex;
       align-items: center;
       justify-content: center;
@@ -967,4 +968,27 @@ h2{
     }
     
   }
+  .addtocart {
+    @include flex-center;
+    gap: 8px; 
+    background-color: #e91d2e; 
+    color: #fff; 
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+  
+    &:hover {
+      background-color: #d62828; 
+    }
+      
+    &:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+  }
+  
 }
