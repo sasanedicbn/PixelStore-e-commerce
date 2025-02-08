@@ -13,6 +13,7 @@ const SingleProduct = () => {
     <div className="single-product">
       <img src={product.product.imageUrl} alt={product.title} />
       <ProductDetails product={product} />
+      <p>SASAAS</p>
     </div>
   );
 };
