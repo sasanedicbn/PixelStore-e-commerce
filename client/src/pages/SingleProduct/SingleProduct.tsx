@@ -5,7 +5,6 @@ import ProductDetails from "./SingleProductItems/ProductDetails";
 const SingleProduct = () => {
   const { id } = useParams();
   const { data: product, isLoading, isError } = useGetProductByIdQuery(id);
-  //   console.log(product.product);
 
   if (isLoading) return <p>Loading...</p>;
   if (isError) return <p>Error fetching product</p>;

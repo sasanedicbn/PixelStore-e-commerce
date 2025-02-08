@@ -1,9 +1,7 @@
 import SocialMedia from "../../../UX/SocialMedia";
 import DetailsActions from "./DetailsActions";
-import ReviewStars from "./ReviewStars";
 
 const ProductDetails = ({ product }) => {
-  console.log(product, "product deta");
   const staticStars = 5;
   return (
     <div className="product-details">
