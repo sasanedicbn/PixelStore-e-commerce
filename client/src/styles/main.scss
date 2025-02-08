@@ -918,7 +918,7 @@ h2{
   }
   // PRODUCT INFO
   .productinfo{
-
+    @include wrapper(section, 20rem,0);
      }
 }
 
