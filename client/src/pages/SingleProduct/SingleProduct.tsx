@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useGetProductByIdQuery } from "../../store/slices/apiSlice";
 import ProductDetails from "./SingleProductItems/ProductDetails";
+import ProductInfo from "./SingleProductItems/ProductInfo";
 
 const SingleProduct = () => {
   const { id } = useParams();
@@ -13,7 +14,7 @@ const SingleProduct = () => {
     <div className="single-product">
       <img src={product.product.imageUrl} alt={product.title} />
       <ProductDetails product={product} />
-      <p>SASAAS</p>
+      <ProductInfo />
     </div>
   );
 };
