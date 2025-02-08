@@ -16,6 +16,7 @@ const Button = ({
     minus: "minus-btn",
     addToCart: "addtocart",
     secondCart: "cart",
+    info: "btn-info",
   };
 
   return (
