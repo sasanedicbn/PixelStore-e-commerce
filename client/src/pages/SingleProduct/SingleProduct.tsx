@@ -11,11 +11,13 @@ const SingleProduct = () => {
   if (isError) return <p>Error fetching product</p>;
 
   return (
-    <div className="single-product">
-      <img src={product.product.imageUrl} alt={product.title} />
-      <ProductDetails product={product} />
+    <>
+      <div className="single-product">
+        <img src={product.product.imageUrl} alt={product.title} />
+        <ProductDetails product={product} />
+      </div>
       <ProductInfo />
-    </div>
+    </>
   );
 };
 
