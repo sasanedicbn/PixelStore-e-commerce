@@ -20,7 +20,21 @@ const ProductInfo = ({ product }) => {
       case "moreInfo":
         return (
           <p className="info-p">
-            {product.product.price || "No additional information available."}
+            <div className="info-p-details">
+              <span>Brand:</span>{" "}
+              <p>
+                {product.product.title ||
+                  "No additional information available."}
+              </p>
+            </div>
+            <div className="info-p-details">
+              <span>Price:</span>{" "}
+              <p>
+                $
+                {product.product.price ||
+                  "No additional information available."}
+              </p>
+            </div>
           </p>
         );
       default:
