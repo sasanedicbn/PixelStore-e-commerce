@@ -1,23 +1,50 @@
+import { useState } from "react";
 import Button from "../../../UX/Button";
 
 const ProductInfo = ({ product }) => {
-  const renderInfo = () => {
+  const [activeTab, setActiveTab] = useState("details");
+
+  const handleTabClick = (tab) => {
+    setActiveTab(tab);
+  };
+
+  const renderContent = () => {
+    console.log(product, "render product");
     switch (activeTab) {
       case "details":
-        return <p>{product.product.description || "No details available"}</p>;
+        return (
+          <p className="info-p">
+            {product.product.details.description || "No details available."}
+          </p>
+        );
       case "moreInfo":
-        return <p>{product.product.price || "No available more info."}</p>;
-      case "reviews":
-        return <p>REVI</p>;
+        return (
+          <p className="info-p">
+            {product.product.price || "No additional information available."}
+          </p>
+        );
+      default:
+        return null;
     }
   };
 
   return (
     <div className="productinfo">
-      <Button type="info">Details</Button>
-      <Button type="info">More Information</Button>
-      <Button type="info">Reviews</Button>
+      <div className="button-group">
+        <Button type="info" onClick={() => handleTabClick("details")}>
+          Details
+        </Button>
+        <Button type="info" onClick={() => handleTabClick("moreInfo")}>
+          More Information
+        </Button>
+        <Button type="info" onClick={() => handleTabClick("reviews")}>
+          Reviews
+        </Button>
+      </div>
+
+      <div className="content">{renderContent()}</div>
     </div>
   );
 };
+
 export default ProductInfo;

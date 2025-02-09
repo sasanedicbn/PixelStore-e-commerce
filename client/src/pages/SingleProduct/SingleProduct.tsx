@@ -16,7 +16,7 @@ const SingleProduct = () => {
         <img src={product.product.imageUrl} alt={product.title} />
         <ProductDetails product={product} />
       </div>
-      <ProductInfo />
+      <ProductInfo product={product} />
     </>
   );
 };
