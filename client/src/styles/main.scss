@@ -1057,3 +1057,90 @@ h2{
     }
    }
   }
+// REVIEWS COMPONENTS
+.reviews-container {
+  max-width: 480px;
+  // padding: 20px;
+  margin-top: 1.5rem;
+
+  h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+  }
+
+  .rating {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+
+    span {
+      margin-right: 10px;
+      font-size: 18px;
+      color: #333;
+    }
+
+    .star {
+      cursor: pointer;
+      font-size: 24px;
+      color: #ccc;
+      transition: color 0.2s;
+
+      &.selected {
+        color: #ffcc00;
+      }
+
+      &:hover {
+        color: #ffcc00;
+      }
+    }
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 16px;
+      color: #333;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      transition: border-color 0.2s;
+
+      &:focus {
+        border-color: #007bff;
+        outline: none;
+      }
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+  }
+
+  button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: #0056b3;
+    }
+  }
+}

@@ -4,7 +4,7 @@ const Reviews = () => {
       <h2>You're reviewing:</h2>
       <form>
         <div className="rating">
-          <span>Ocjena:</span>
+          <span>Your rating:</span>
           {[1, 2, 3, 4, 5].map((star) => (
             <span
               key={star}
