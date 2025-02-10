@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Button from "../../../UX/Button";
+import Reviews from "./Reviews";
 
 const ProductInfo = ({ product }) => {
   const [activeTab, setActiveTab] = useState("details");
@@ -37,6 +38,8 @@ const ProductInfo = ({ product }) => {
             </div>
           </p>
         );
+      case "reviews":
+        return <Reviews />;
       default:
         return null;
     }
