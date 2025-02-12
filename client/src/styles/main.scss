@@ -1107,12 +1107,12 @@ h2{
       margin-bottom: 5px;
       font-size: 14px;
       color: #545353;
+      position: relative;
     }
     label:after{
-      width: 20px;
-      height: 20px;
-      background-color: red;
+      content: " *";
       color: red;
+      font-size: 14px; 
     }
     input,
     textarea {
