@@ -1,3 +1,5 @@
+import ReviewStars from "./ReviewStars";
+
 const Reviews = ({ product }) => {
   console.log("iz reviewa", product);
   return (
@@ -7,14 +9,10 @@ const Reviews = ({ product }) => {
       <form>
         <div className="rating">
           <span>Your Rating:</span>
-          {[1, 2, 3, 4, 5].map((star) => (
-            <span
-              key={star}
-              //   className={`star ${star <= rating ? "selected" : ""}`}
-            >
-              ★
-            </span>
-          ))}
+          <ReviewStars
+            totalStars={5}
+            onRatingChange={(rating) => console.log(rating)}
+          />
         </div>
         <div className="form-group">
           <label htmlFor="nickname">Nickname:</label>

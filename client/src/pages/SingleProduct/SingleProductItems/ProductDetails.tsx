@@ -23,10 +23,6 @@ const ProductDetails = ({ product }) => {
         MPN: <span>MGN63LL/A</span>
       </p>
       <p>{product.product.description}</p>
-      {/* <ReviewStars
-        totalStars={5}
-        onRatingChange={(rating) => console.log(rating)}
-      /> */}
       <DetailsActions />
       <SocialMedia />
     </div>
