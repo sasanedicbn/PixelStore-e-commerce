@@ -1,10 +1,12 @@
-const Reviews = () => {
+const Reviews = ({ product }) => {
+  console.log("iz reviewa", product);
   return (
     <div className="reviews-container">
-      <h2>You're reviewing:</h2>
+      <p>You're reviewing:</p>
+      <span>{product.product.title}</span>
       <form>
         <div className="rating">
-          <span>Your rating:</span>
+          <span>Your Rating:</span>
           {[1, 2, 3, 4, 5].map((star) => (
             <span
               key={star}

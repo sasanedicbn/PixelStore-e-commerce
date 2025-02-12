@@ -39,7 +39,7 @@ const ProductInfo = ({ product }) => {
           </p>
         );
       case "reviews":
-        return <Reviews />;
+        return <Reviews product={product} />;
       default:
         return null;
     }
