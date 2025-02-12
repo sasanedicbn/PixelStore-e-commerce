@@ -1,7 +1,12 @@
+import LogInSocial from "./SignInItems/LogInSocial";
+
 const SignIn = () => {
   return (
-    <div>
+    <div className="signin-container">
       <h2>Customer Login</h2>
+      <div className="signin-actions">
+        <LogInSocial />
+      </div>
     </div>
   );
 };
