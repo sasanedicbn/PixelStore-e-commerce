@@ -9,10 +9,7 @@ const Reviews = ({ product }) => {
       <form>
         <div className="rating">
           <span>Your Rating:</span>
-          <ReviewStars
-            totalStars={5}
-            onRatingChange={(rating) => console.log(rating)}
-          />
+          <ReviewStars totalStars={5} />
         </div>
         <div className="form-group">
           <label htmlFor="nickname">Nickname:</label>

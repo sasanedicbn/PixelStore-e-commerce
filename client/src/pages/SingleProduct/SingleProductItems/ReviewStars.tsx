@@ -1,12 +1,12 @@
 import { useState } from "react";
 
-const ReviewStars = ({ totalStars = 5, onRatingChange }) => {
+const ReviewStars = ({ totalStars = 5 }) => {
   const [rating, setRating] = useState(0);
   const [hover, setHover] = useState(0);
 
   const handleClick = (star) => {
     setRating(star);
-    if (onRatingChange) onRatingChange(star);
+    console.log(star, "star");
   };
 
   return (
