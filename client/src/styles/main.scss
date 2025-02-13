@@ -1152,23 +1152,20 @@ h2{
 }
 // SIGNIN
 .signin-container{
-  background-color: red;
+  // background-color: red;
   h2{
     background-color: #f4f4f4;
     height: 128px;
-    @include flex-center
+    @include flex-center;
   }
   .signin-actions{
+    @include flex-center;
     .login-social{
 
     }
     .block-customer-login {
       max-width: 500px;
-      margin: 0 auto;
       padding: 20px;
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     
       .block-title {
         font-size: 1.5rem;
@@ -1186,6 +1183,11 @@ h2{
       .field {
         display: flex;
         flex-direction: column;
+        color: rgb(135, 132, 132);
+        .remind{
+          color:black;
+          text-decoration: none;
+        }
       }
     
       .input-text {
