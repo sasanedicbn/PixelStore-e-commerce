@@ -1150,3 +1150,12 @@ h2{
     }
   }
 }
+// SIGNIN
+.signin-container{
+  background-color: red;
+  h2{
+    background-color: #f4f4f4;
+    height: 128px;
+    @include flex-center
+  }
+}
