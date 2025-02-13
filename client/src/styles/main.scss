@@ -1158,4 +1158,59 @@ h2{
     height: 128px;
     @include flex-center
   }
+  .signin-actions{
+    .login-social{
+
+    }
+    .block-customer-login {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+      .block-title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 15px;
+      }
+    
+      .form-login {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+    
+      .field {
+        display: flex;
+        flex-direction: column;
+      }
+    
+      .input-text {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+    
+      .actions-toolbar {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    
+        .btn-v-dark {
+          background-color: #333;
+          color: #fff;
+          text-align: center;
+          padding: 10px;
+          border-radius: 5px;
+          cursor: pointer;
+          text-decoration: none;
+          display: block;
+        }
+      }
+    }
+  }
 }

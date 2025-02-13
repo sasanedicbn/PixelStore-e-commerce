@@ -1,3 +1,4 @@
+import LoginForm from "./SignInItems/LogInForm";
 import LogInSocial from "./SignInItems/LogInSocial";
 
 const SignIn = () => {
@@ -6,6 +7,7 @@ const SignIn = () => {
       <h2>Customer Login</h2>
       <div className="signin-actions">
         <LogInSocial />
+        <LoginForm />
       </div>
     </div>
   );
