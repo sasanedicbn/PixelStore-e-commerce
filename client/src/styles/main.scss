@@ -1201,17 +1201,28 @@ h2{
         display: flex;
         flex-direction: column;
         gap: 10px;
-    
+     
+        // .btn-v-dark {
+        //   background-color: #3c3c3c;
+        //   color: #fff;
+        //   text-align: center;
+        //   padding: 10px;
+        //   cursor: pointer;
+        //   text-decoration: none;
+        //   display: block;
+        // }
         .btn-v-dark {
-          background-color: #333;
-          color: #fff;
-          text-align: center;
-          padding: 10px;
-          border-radius: 5px;
+          background-color: #333; 
+          color: #fff; 
+          padding-top: 12px;
+          padding-bottom: 12px;
+          font-size: 16px; 
+          width: 100%;
+          border: none;
+          border-radius: 5px; 
           cursor: pointer;
-          text-decoration: none;
-          display: block;
-        }
+          transition: background-color 0.3s ease;
+      }
       }
     }
   }

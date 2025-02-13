@@ -62,22 +62,12 @@ const LoginForm = () => {
             </a>
           </div>
           <div className="actions-toolbar">
-            <div className="primary">
-              <button
-                type="submit"
-                className="action login primary btn-v-dark py-3 text-md w-100"
-              >
-                <span>Sign In</span>
-              </button>
-            </div>
-            <div className="secondary">
-              <a
-                href="/customer/account/create/"
-                className="action create primary btn-v-dark py-3 text-md w-100"
-              >
-                <span>Create an Account</span>
-              </a>
-            </div>
+            <button type="submit" className="btn-v-dark">
+              <span>Sign In</span>
+            </button>
+            <button type="submit" className="btn-v-dark">
+              <span>Create an Account</span>
+            </button>
           </div>
         </form>
       </div>

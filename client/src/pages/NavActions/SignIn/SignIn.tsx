@@ -6,8 +6,8 @@ const SignIn = () => {
     <div className="signin-container">
       <h2>Customer Login</h2>
       <div className="signin-actions">
-        <LogInSocial />
         <LoginForm />
+        <LogInSocial />
       </div>
     </div>
   );
