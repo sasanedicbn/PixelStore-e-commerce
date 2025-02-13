@@ -65,7 +65,9 @@ const LoginForm = () => {
             <button type="submit" className="btn-v-dark">
               <span>Sign In</span>
             </button>
-            <button
+            <button type="submit" className="btn-v-dark">
+              <span>Create an Account</span>
+            </button>
           </div>
         </form>
       </div>

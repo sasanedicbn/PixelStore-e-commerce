@@ -7,7 +7,7 @@ const SignIn = () => {
       <h2>Customer Login</h2>
       <div className="signin-actions">
         <LoginForm />
-        <LogInSocial />
+        {/* <LogInSocial /> */}
       </div>
     </div>
   );
