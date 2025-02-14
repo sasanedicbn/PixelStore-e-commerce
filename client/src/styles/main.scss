@@ -1201,21 +1201,6 @@ h2{
         display: flex;
         flex-direction: column;
         gap: 10px;
-     
-
-        .btn-v-dark {
-          background-color: #333; 
-          color: #fbfbfb; 
-          padding-top: 12px;
-          padding-bottom: 12px;
-          font-size: 16px; 
-          width: 100%;
-          border: none;
-          cursor: pointer;
-          transition: background-color 0.3s ease;
-          letter-spacing: 1px;
-          font-weight: bold;
-      }
       }
     }
   }
@@ -1244,27 +1229,6 @@ h2{
     font-size: 24px;
     color: #585858;
     margin-top: 16px;
-  }
-
-  // form {
-  //   display: flex;
-  //   justify-content: space-between;
-  //   gap: 30px;
-  // }
-
-  .form-left, .form-right {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-  }
-
-  .form-left {
-    max-width: 55%;
-  }
-
-  .form-right {
-    max-width: 40%;
-
   }
  }
 }

@@ -14,3 +14,18 @@
   .submit-btn-contact:hover {
     background-color: #d93636;
   }
+
+
+  .submit-btn-signin, .create-acc-btn {
+    background-color: #333; 
+    color: #fbfbfb; 
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-size: 16px; 
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    letter-spacing: 1px;
+    font-weight: bold;
+}

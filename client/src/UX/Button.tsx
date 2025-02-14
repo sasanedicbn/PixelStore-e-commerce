@@ -18,6 +18,7 @@ const Button = ({
     secondCart: "cart",
     info: "btn-info",
     submitContact: "submit-btn-contact",
+    submitSignin: "submit-btn-signin",
   };
 
   return (
