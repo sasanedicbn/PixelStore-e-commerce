@@ -5,6 +5,7 @@ import Home from "./pages/Home/HomeHelpers.tsx/Home";
 import SingleProduct from "./pages/SingleProduct/SingleProduct";
 import Layout from "./UX/Layout";
 import SignIn from "./pages/NavActions/SignIn/SignIn";
+import ContactUs from "./pages/NavActions/ContactUs/ContactUs";
 
 function App() {
   const router = createBrowserRouter([
@@ -23,6 +24,10 @@ function App() {
         {
           path: "/customer/signin",
           element: <SignIn />,
+        },
+        {
+          path: "contact",
+          element: <ContactUs />,
         },
       ],
     },
