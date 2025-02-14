@@ -17,6 +17,7 @@ const Button = ({
     addToCart: "addtocart",
     secondCart: "cart",
     info: "btn-info",
+    submitContact: "submit-btn-contact",
   };
 
   return (
@@ -25,6 +26,7 @@ const Button = ({
       onClick={onClick}
       disabled={disabled}
       value={value}
+      type="submit"
     >
       {children}
     </button>

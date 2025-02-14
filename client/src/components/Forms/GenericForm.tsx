@@ -2,8 +2,15 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import TextInput from "./TextInput";
 import TextareaInput from "./TextareaInput";
+import Button from "../../UX/Button";
 
-const GenericForm = ({ schema, fields, onSubmit, submitButtonText }) => {
+const GenericForm = ({
+  schema,
+  fields,
+  onSubmit,
+  submitButtonText,
+  btnType,
+}) => {
   const {
     register,
     handleSubmit,
@@ -39,10 +46,10 @@ const GenericForm = ({ schema, fields, onSubmit, submitButtonText }) => {
   };
 
   return (
-    <div>
+    <div className="genericForm">
       <form onSubmit={handleSubmit(onSubmit)}>
         {fields.map((field) => renderInput(field))}
-        <button type="submit">{submitButtonText}</button>
+        <Button type={btnType}>{submitButtonText}</Button>
       </form>
     </div>
   );

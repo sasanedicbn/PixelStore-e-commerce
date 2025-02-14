@@ -13,3 +13,18 @@ $item-title: 0.95rem;
 $text:0.95rem;
 $nav-icons: 1rem;
 $border-radius: .3rem;
+.submit-btn {
+    margin-top: 20px;
+    padding: 12px;
+    background-color: #ff4d4d;
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background 0.3s ease;
+  }
+
+  .submit-btn:hover {
+    background-color: #d93636;
+  }
