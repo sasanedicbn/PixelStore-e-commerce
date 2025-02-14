@@ -21,6 +21,7 @@ const ContactUsForm = () => {
           { name: "name", label: "Name", type: "text" },
           { name: "email", label: "Email", type: "email" },
           { name: "phone", label: "Phone", type: "text" },
+          { name: "textarea", label: "Message", type: "textarea" },
         ]}
         onSubmit={handleSubmit}
         submitButtonText={"Submit"}
