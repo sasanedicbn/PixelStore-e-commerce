@@ -1224,10 +1224,13 @@ h2{
 // ContactUs 
 .contacUs-container{
   @include wrapper(section, 3rem, 3rem);
+  p{
+    color: rgb(129, 128, 128);
+    font-size: 14px;
+    margin-bottom: 2rem
+  }
 .contact-form {
   max-width: 900px;
-  // margin: 50px auto;
-  // padding: 30px;
   
   h3 {
     text-align: left;
