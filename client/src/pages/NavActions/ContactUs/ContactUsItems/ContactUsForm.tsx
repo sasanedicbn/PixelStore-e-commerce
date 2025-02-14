@@ -2,7 +2,7 @@ const ContactUsForm = () => {
   return (
     <div className="contact-form">
       <h3>Write Us</h3>
-      <form>
+      {/* <form>
         <div className="form-left">
           <label htmlFor="name">Name</label>
           <input
@@ -39,7 +39,7 @@ const ContactUsForm = () => {
             placeholder="Write your message..."
           ></textarea>
         </div>
-      </form>
+      </form> */}
     </div>
   );
 };
