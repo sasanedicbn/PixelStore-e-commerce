@@ -1,5 +1,6 @@
 import { z } from "zod";
 import GenericForm from "../../../../components/Forms/GenericForm";
+import Button from "../../../../UX/Button";
 
 const LoginForm = () => {
   const loginSchema = z.object({
@@ -13,11 +14,7 @@ const LoginForm = () => {
 
   return (
     <div className="block block-customer-login col-md-6 mx-auto mb-4 w-100">
-      <div className="block-title">
-        <strong id="block-customer-login-heading" role="heading" aria-level="2">
-          Registered Customers
-        </strong>
-      </div>
+      <div className="block-title">Registered Customers</div>
       <div
         className="block-content"
         aria-labelledby="block-customer-login-heading"
@@ -36,21 +33,8 @@ const LoginForm = () => {
           submitButtonText="Sign In"
           btnType="submitSignin"
         />
-
-        <div className="field">
-          <a
-            className="action remind"
-            href="https://circuitcity.com/customer/account/forgotpassword/"
-          >
-            <span>Forgot Your Password?</span>
-          </a>
-        </div>
-
-        <div className="actions-toolbar">
-          <button type="button" className="create-acc-btn">
-            <span>Create an Account</span>
-          </button>
-        </div>
+        <span>Forgot Your Password?</span>
+        <Button type="submitSignin">Create an Account</Button>
       </div>
     </div>
   );
