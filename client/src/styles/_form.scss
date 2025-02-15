@@ -5,7 +5,8 @@
       @include flex-column;
       margin-bottom: 12px;
       .textInput {
-       @include flex-column
+       @include flex-column;
+       margin-bottom: 16px ;
       }
     }
   }
@@ -25,8 +26,8 @@
 
 label {
   color: #727272;
-  margin: 10px 0 8px;
   font-size: 13px;
+  margin-bottom: 6px;
 }
 
 input, textarea {
