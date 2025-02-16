@@ -42,3 +42,11 @@ input:focus, textarea:focus {
   border-color: #ff4d4d;
   box-shadow: 0px 0px 5px rgba(255, 77, 77, 0.5);
 }
+.accTitle{
+    background-color: #f4f4f4;
+    height: 128px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: red;
+}
