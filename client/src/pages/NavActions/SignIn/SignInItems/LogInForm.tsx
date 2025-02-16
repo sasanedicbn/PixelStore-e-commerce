@@ -13,28 +13,22 @@ const LoginForm = () => {
   };
 
   return (
-    <div className="block block-customer-login col-md-6 mx-auto mb-4 w-100">
-      <div className="block-title">Registered Customers</div>
-      <div
-        className="block-content"
-        aria-labelledby="block-customer-login-heading"
-      >
-        <div className="field note">
-          If you have an account, sign in with your email address.
-        </div>
-
-        <GenericForm
-          schema={loginSchema}
-          fields={[
-            { name: "email", label: "Email", type: "email" },
-            { name: "password", label: "Password", type: "password" },
-          ]}
-          onSubmit={handleSubmit}
-          submitButtonText="Sign In"
-          btnType="submitSignin"
-        />
-        <Button type="submitSignin">Create an Account</Button>
-      </div>
+    <div className="block-customer-login">
+      <p className="block-title">Registered Customers</p>
+      <p className="field note">
+        If you have an account, sign in with your email address.
+      </p>
+      <GenericForm
+        schema={loginSchema}
+        fields={[
+          { name: "email", label: "Email", type: "email" },
+          { name: "password", label: "Password", type: "password" },
+        ]}
+        onSubmit={handleSubmit}
+        submitButtonText="Sign In"
+        btnType="submitSignin"
+      />
+      <Button type="submitSignin">Create an Account</Button>
     </div>
   );
 };

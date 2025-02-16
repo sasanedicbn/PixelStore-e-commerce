@@ -27,10 +27,12 @@ nav{
           display: flex;
           list-style: none; 
       
-          li {
+          li, a{
             padding: 0 1.2rem;
             cursor: pointer;
             transition: color 0.3s ease;
+            text-decoration: none;
+            color: #fffcfc;
       
             &:hover {
                 color: #f1f1f1;
@@ -1160,12 +1162,10 @@ h2{
   }
   .signin-actions{
     @include wrapper(section, 3rem, 3rem);
-    .login-social{
-
-    }
     .block-customer-login {
       max-width: 500px;
       padding: 20px;
+      margin: 0 auto;
     
       .block-title {
         font-size: 1.5rem;
