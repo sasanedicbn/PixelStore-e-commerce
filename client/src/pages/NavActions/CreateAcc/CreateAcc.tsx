@@ -1,5 +1,5 @@
 const CreateAcc = () => {
-  return <div className="createAcc"></div>;
+  return <div className="createAcc">AKCIJA</div>;
 };
 
 export default CreateAcc;

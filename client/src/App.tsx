@@ -6,6 +6,7 @@ import SingleProduct from "./pages/SingleProduct/SingleProduct";
 import Layout from "./UX/Layout";
 import SignIn from "./pages/NavActions/SignIn/SignIn";
 import ContactUs from "./pages/NavActions/ContactUs/ContactUs";
+import CreateAcc from "./pages/NavActions/CreateAcc/CreateAcc";
 
 function App() {
   const router = createBrowserRouter([
@@ -28,6 +29,10 @@ function App() {
         {
           path: "contact",
           element: <ContactUs />,
+        },
+        {
+          path: "createAccount",
+          element: <CreateAcc />,
         },
       ],
     },
