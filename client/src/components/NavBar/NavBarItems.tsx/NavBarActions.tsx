@@ -1,11 +1,13 @@
+import { Link } from "react-router-dom";
+
 const NavBarActions = () => {
   return (
     <div className="navBarActions">
       <ul className="navBar-items">
         <li>Call us at +38766992321</li>
-        <li>Sign in</li>
-        <li>Contact us</li>
-        <li>Create An Account</li>
+        <Link to="/customer/signin">Sign in</Link>
+        <Link to="contact">Contact us</Link>
+        <Link to="">Create An Account</Link>
       </ul>
     </div>
   );

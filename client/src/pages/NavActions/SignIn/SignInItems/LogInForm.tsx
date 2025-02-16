@@ -33,7 +33,6 @@ const LoginForm = () => {
           submitButtonText="Sign In"
           btnType="submitSignin"
         />
-        <span>Forgot Your Password?</span>
         <Button type="submitSignin">Create an Account</Button>
       </div>
     </div>
