@@ -1,9 +1,10 @@
 // Reusable GenericForm
 .genericForm{
-    // @include flex-center;
+    @include flex-center;
     form{
       @include flex-column;
-      margin-bottom: 12px;
+      width: 450px;
+      margin: 12px 0;
       .textInput {
        @include flex-column;
        margin-bottom: 16px ;
@@ -54,3 +55,5 @@ input:focus, textarea:focus {
 .formLayout{
     @include wrapper(section, 3rem, 3rem);
 }
+
+

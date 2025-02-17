@@ -1,6 +1,7 @@
 import { z } from "zod";
 import GenericForm from "../../../../components/Forms/GenericForm";
 import Button from "../../../../UX/Button";
+import { Link } from "react-router-dom";
 
 const LoginForm = () => {
   const loginSchema = z.object({
@@ -16,7 +17,8 @@ const LoginForm = () => {
     <div className="block-customer-login">
       <p className="block-title">Registered Customers</p>
       <p className="field note">
-        If you have an account, sign in with your email address.
+        If you have an account,{" "}
+        <Link to="/createAccount">Create an Account</Link>
       </p>
       <GenericForm
         schema={loginSchema}
@@ -28,7 +30,6 @@ const LoginForm = () => {
         submitButtonText="Sign In"
         btnType="submitSignin"
       />
-      <Button type="submitSignin">Create an Account</Button>
     </div>
   );
 };
