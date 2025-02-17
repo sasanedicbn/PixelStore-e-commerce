@@ -26,3 +26,16 @@ export const reviewSchema = z.object({
 //   phone: z.string().min(6, "Rating is required"),
 //   message: z.string().min(5, "Review must be at least 5 characters"),
 // });
+
+export const createAccountSchema = z
+  .object({
+    email: z.string().email("Invalid email address"),
+    password: z.string().min(6, "Password must be at least 6 characters"),
+    confirmPassword: z
+      .string()
+      .min(6, "Password must be at least 6 characters"),
+  })
+  .refine((data) => data.password === data.confirmPassword, {
+    message: "Passwords do not match",
+    path: ["confirmPassword"],
+  });

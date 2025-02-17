@@ -1,3 +1,4 @@
+import FormLayout from "../../../components/Forms/FormLayout";
 import AccTitle from "../../../UX/AccTitle";
 import LoginForm from "./SignInItems/LogInForm";
 
@@ -5,9 +6,9 @@ const SignIn = () => {
   return (
     <div className="signin-container">
       <AccTitle>Customer Login</AccTitle>
-      <div className="signin-actions">
+      <FormLayout>
         <LoginForm />
-      </div>
+      </FormLayout>
     </div>
   );
 };

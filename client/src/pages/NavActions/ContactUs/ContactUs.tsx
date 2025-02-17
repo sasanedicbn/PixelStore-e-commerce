@@ -1,8 +1,9 @@
+import FormLayout from "../../../components/Forms/FormLayout";
 import ContactUsForm from "./ContactUsItems/ContactUsForm";
 
 const ContactUs = () => {
   return (
-    <div className="contacUs-container">
+    <FormLayout>
       <p>
         We love talking tech and we are here via email, chat, or phone. Our
         personal concierge shopping consultants are always on call to answer
@@ -10,7 +11,7 @@ const ContactUs = () => {
         consult with one of our friendly, slightly tech-obsessed experts.
       </p>
       <ContactUsForm />
-    </div>
+    </FormLayout>
   );
 };
 
