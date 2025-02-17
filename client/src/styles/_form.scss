@@ -51,3 +51,6 @@ input:focus, textarea:focus {
     font-size: 24px;
     font-weight: bold;
 }
+.formLayout{
+    @include wrapper(section, 3rem, 3rem);
+}

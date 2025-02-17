@@ -1209,9 +1209,6 @@ h2{
 // ContactUs 
 .contacUs-container{
   @include wrapper(section, 3rem, 3rem);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   p{
     color: rgb(129, 128, 128);
     font-size: 15px;
