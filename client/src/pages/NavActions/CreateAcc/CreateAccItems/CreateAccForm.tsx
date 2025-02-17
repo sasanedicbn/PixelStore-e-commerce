@@ -3,7 +3,6 @@ import FormLayout from "../../../../components/Forms/FormLayout";
 import GenericForm from "../../../../components/Forms/GenericForm";
 
 const CreateAccForm = () => {
-  // Definišemo šemu za validaciju
   const createAccountSchema = z
     .object({
       email: z.string().email("Invalid email address"),
@@ -17,17 +16,14 @@ const CreateAccForm = () => {
       path: ["confirmPassword"],
     });
 
-  // Definišemo polja za formu
   const fields = [
     { name: "email", label: "Email", type: "email" },
     { name: "password", label: "Password", type: "password" },
     { name: "confirmPassword", label: "Confirm Password", type: "password" },
   ];
 
-  // Funkcija za obradu podataka forme
   const handleSubmit = (data) => {
     console.log("Form data submitted:", data);
-    // Ovdje možete dodati logiku za slanje podataka na server ili dalju obradu
   };
 
   return (
@@ -37,6 +33,7 @@ const CreateAccForm = () => {
         fields={fields}
         onSubmit={handleSubmit}
         submitButtonText={"Create Account"}
+        btnType="submitSignin"
       />
     </FormLayout>
   );
