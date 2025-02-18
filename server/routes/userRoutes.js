@@ -7,4 +7,4 @@ routeUser.post("/", registerUser);
 routeUser.post("/login", registerUser);
 routeUser.post("/me", registerUser);
 
-export default userRoute;
+export default routeUser;
