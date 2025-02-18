@@ -5,6 +5,7 @@ import ProductsModel from "./model/products.js";
 import { upload } from "./controllers/productsControllers.js";
 import cloudinary from "./utility/cloudinary.js";
 import cors from "cors";
+import userRoute from "./routes/userRoutes.js";
 
 const app = express();
 dotenv.config();
@@ -24,7 +25,7 @@ mongoose
   .catch((error) => {
     console.log(error);
   });
-
+app.use("/api/users", userRoute);
 app.get("/api/products", async (req, res) => {
   try {
     const userData = await ProductsModel.find();

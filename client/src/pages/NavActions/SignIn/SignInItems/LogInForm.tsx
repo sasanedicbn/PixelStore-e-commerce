@@ -1,6 +1,5 @@
 import { z } from "zod";
 import GenericForm from "../../../../components/Forms/GenericForm";
-import Button from "../../../../UX/Button";
 import { Link } from "react-router-dom";
 
 const LoginForm = () => {

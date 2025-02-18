@@ -5,6 +5,8 @@ import GenericForm from "../../../../components/Forms/GenericForm";
 const CreateAccForm = () => {
   const createAccountSchema = z
     .object({
+      name: z.string().min(2, "You need add full name"),
+      country: z.string().min(2, "You need add your country"),
       email: z.string().email("Invalid email address"),
       password: z.string().min(6, "Password must be at least 6 characters"),
       confirmPassword: z
@@ -17,6 +19,7 @@ const CreateAccForm = () => {
     });
 
   const fields = [
+    { name: "name", label: "Full name", type: "text" },
     { name: "email", label: "Email", type: "email" },
     { name: "country", label: "Country", type: "text" },
     { name: "password", label: "Password", type: "password" },
@@ -41,17 +44,3 @@ const CreateAccForm = () => {
 };
 
 export default CreateAccForm;
-{
-  /* <GenericForm
-schema={contactUsSchema}
-fields={[
-  { name: "name", label: "Name", type: "text" },
-  { name: "email", label: "Email", type: "email" },
-  { name: "phone", label: "Phone", type: "text" },
-  { name: "textarea", label: "Message", type: "textarea" },
-]}
-onSubmit={handleSubmit}
-submitButtonText={"Submit"}
-btnType={"submitContact"}
-/> */
-}
