@@ -3,6 +3,8 @@ import { registerUser } from "../controllers/user/userController.js";
 
 const routeUser = express.Router();
 
-const userRoute = routeUser.post("/", registerUser);
+routeUser.post("/", registerUser);
+routeUser.post("/login", registerUser);
+routeUser.post("/me", registerUser);
 
 export default userRoute;
