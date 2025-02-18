@@ -7,7 +7,12 @@
       margin: 12px 0;
       .textInput {
        @include flex-column;
-       margin-bottom: 16px ;
+       margin-bottom: 16px;
+       p{
+        font-size: 12px;
+        color: rgb(250, 47, 47);
+        margin: 2px;
+       }
       }
     }
   }
@@ -56,4 +61,17 @@ input:focus, textarea:focus {
     @include wrapper(section, 3rem, 3rem);
 }
 
+// SIGN IN
+.singin-title-description{
+    text-align: center;
+ a{
+    color: rgb(71, 71, 71)
+}
+}
 
+.block-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+  }

@@ -16,9 +16,9 @@ const LoginForm = () => {
   return (
     <div className="block-customer-login">
       <p className="block-title">Registered Customers</p>
-      <p className="field note">
+      <p className="singin-title-description">
         If you have an account,{" "}
-        <Link to="/createAccount">Create an Account</Link>
+        <Link to="/createAccount">create an account</Link>
       </p>
       <GenericForm
         schema={loginSchema}
