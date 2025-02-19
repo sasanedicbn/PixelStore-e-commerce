@@ -33,6 +33,7 @@ export const registerUser = async (req, res) => {
         name: user.name,
         country: user.country,
         email: user.email,
+        token: generateToken(user.id),
       });
     } else {
       res.status(400).json("Invalid user data");
@@ -51,6 +52,7 @@ export const loginUser = async (req, res) => {
       _id: user.id,
       name: user.name,
       email: user.email,
+      token: generateToken(user.id),
     });
   } else {
     res.status(400).json("Invalid credentials");
