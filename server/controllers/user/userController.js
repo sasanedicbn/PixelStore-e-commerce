@@ -59,3 +59,9 @@ export const loginUser = async (req, res) => {
 export const getMe = async (req, res) => {
   res.json({ msg: "Hello from registerUser" });
 };
+// Generate JWT
+const generateToken = (id) => {
+  return jwt.sign({ id }, process.env.JWT_SECRET, {
+    expiresIn: "30d",
+  });
+};
