@@ -43,7 +43,18 @@ export const registerUser = async (req, res) => {
   }
 };
 export const loginUser = async (req, res) => {
-  res.json({ msg: "Hello from registerUser" });
+  const { email, password } = req.body;
+  console.log(email, password, "login");
+  const user = await UserModel.findOne({ email });
+  if (user && (await bcrypt.compare(password, user.password))) {
+    res.json({
+      _id: user.id,
+      name: user.name,
+      email: user.email,
+    });
+  } else {
+    res.status(400).json("Invalid credentials");
+  }
 };
 export const getMe = async (req, res) => {
   res.json({ msg: "Hello from registerUser" });
