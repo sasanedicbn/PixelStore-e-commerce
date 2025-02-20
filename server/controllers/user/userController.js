@@ -59,7 +59,14 @@ export const loginUser = async (req, res) => {
   }
 };
 export const getMe = async (req, res) => {
-  res.json({ msg: "Hello from getMe" });
+  const { _id, name, email, country } = await UserModel.findById(req.user.id);
+
+  res.status(200).json({
+    id: _id,
+    name,
+    email,
+    country,
+  });
 };
 // Generate JWT
 const generateToken = (id) => {
