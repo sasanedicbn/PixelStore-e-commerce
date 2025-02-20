@@ -332,7 +332,7 @@ header{
       padding-right:  .8rem;
       border-left: 1px solid $bottom-gray;
       border-right: 1px solid $bottom-gray;
-      width: 11.5rem;
+      // width: 11.5rem;
       cursor: pointer;
       transition: all 0.3s ease-in-out;
       position: relative;
@@ -1155,7 +1155,6 @@ h2{
 
 // ContactUs 
   p{
-    color: rgb(129, 128, 128);
     font-size: 15px;
     margin-right: 2rem;
     line-height: 1.3;
