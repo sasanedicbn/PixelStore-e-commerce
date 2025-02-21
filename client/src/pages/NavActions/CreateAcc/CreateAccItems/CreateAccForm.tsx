@@ -1,6 +1,7 @@
 import { z } from "zod";
 import FormLayout from "../../../../components/Forms/FormLayout";
 import GenericForm from "../../../../components/Forms/GenericForm";
+import { RegisterUser } from "../../../../API/RegisterUser";
 
 const CreateAccForm = () => {
   const createAccountSchema = z
@@ -26,7 +27,8 @@ const CreateAccForm = () => {
     { name: "confirmPassword", label: "Confirm Password", type: "password" },
   ];
 
-  const handleSubmit = (data) => {
+  const handleSubmit = async (data) => {
+    await RegisterUser(data);
     console.log("Form data submitted:", data);
   };
 
