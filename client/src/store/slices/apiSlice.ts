@@ -10,7 +10,14 @@ export const productsApi = createApi({
     getProductById: builder.query<Product, string>({
         query: (id) => `products/${id}`,
     }),
+    registerUser: builder.mutation({
+      query: (formData) => ({
+        url:'products',
+        method:"POST",
+        body: formData,
+      })
+    })
   }),
 });
 
-export const { useGetProductsByCategoryQuery, useGetProductByIdQuery } = productsApi;
+export const { useGetProductsByCategoryQuery, useGetProductByIdQuery, useRegisterUserMutation } = productsApi;

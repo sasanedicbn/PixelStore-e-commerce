@@ -1,4 +1,3 @@
-import { useMutation } from "@tanstack/react-query";
 import { z } from "zod";
 import FormLayout from "../../../../components/Forms/FormLayout";
 import GenericForm from "../../../../components/Forms/GenericForm";
@@ -28,19 +27,9 @@ const CreateAccForm = () => {
     { name: "confirmPassword", label: "Confirm Password", type: "password" },
   ];
 
-  const mutation = useMutation(RegisterUser, {
-    onSuccess: (data) => {
-      console.log("User registered successfully:", data);
-      // Ovdje možete preusmjeriti korisnika ili prikazati poruku o uspjehu
-    },
-    onError: (error) => {
-      console.error("Error registering user:", error);
-      // Ovdje možete prikazati poruku o greški
-    },
-  });
-
-  const handleSubmit = (data) => {
-    mutation.mutate(data);
+  const handleSubmit = async (data) => {
+    await RegisterUser(data);
+    console.log("Form data submitted:", data);
   };
 
   return (
@@ -51,7 +40,6 @@ const CreateAccForm = () => {
         onSubmit={handleSubmit}
         submitButtonText={"Create Account"}
         btnType="submitSignin"
-        isLoading={mutation.isLoading}
       />
     </FormLayout>
   );
