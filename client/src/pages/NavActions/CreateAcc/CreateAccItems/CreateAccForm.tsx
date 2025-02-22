@@ -1,8 +1,10 @@
 import { z } from "zod";
 import FormLayout from "../../../../components/Forms/FormLayout";
 import GenericForm from "../../../../components/Forms/GenericForm";
-import { RegisterUser } from "../../../../API/RegisterUser";
 import { useRegisterUserMutation } from "../../../../store/slices/apiSlice";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import Loader from "../../../../UX/Loader";
 
 const CreateAccForm = () => {
   const createAccountSchema = z
@@ -22,6 +24,9 @@ const CreateAccForm = () => {
 
   const [addUser, { isLoading, isError, isSuccess }] =
     useRegisterUserMutation();
+  const [errorMessage, setErrorMessage] = useState("");
+  const navigate = useNavigate();
+
   const fields = [
     { name: "name", label: "Full name", type: "text" },
     { name: "email", label: "Email", type: "email" },
@@ -33,13 +38,20 @@ const CreateAccForm = () => {
   const handleSubmit = async (data) => {
     try {
       await addUser(data).unwrap();
+      // Ako je registracija uspešna, preusmeri korisnika na drugu stranicu
+      navigate("/login"); // Promenite "/login" na željenu rutu
     } catch (error) {
-      console.log(error.message, "error message");
+      setErrorMessage(
+        error.data?.message || "An error occurred during registration."
+      );
     }
   };
 
   return (
     <FormLayout>
+      {isLoading && <Loader />}
+      {isError && <p style={{ color: "red" }}>{errorMessage}</p>}
+      {isSuccess && <p style={{ color: "green" }}>Registration successful!</p>}
       <GenericForm
         schema={createAccountSchema}
         fields={fields}

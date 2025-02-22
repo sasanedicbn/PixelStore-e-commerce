@@ -55,6 +55,7 @@ input:focus, textarea:focus {
     font-weight: bold;
 }
 .formLayout{
+    position: relative;
     @include wrapper(section, 3rem, 3rem);
 }
 
