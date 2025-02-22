@@ -27,7 +27,6 @@ const CreateAccForm = () => {
   return (
     <FormLayout>
       {isLoading && <Loader />}
-      {isError && <ErrorMessage>{errorMessage}</ErrorMessage>}
       <GenericForm
         schema={createAccountSchema}
         fields={createAccFormFields}
@@ -35,6 +34,7 @@ const CreateAccForm = () => {
         submitButtonText={"Create Account"}
         btnType="submitSignin"
       />
+      {isError && <ErrorMessage>{errorMessage}</ErrorMessage>}
     </FormLayout>
   );
 };
