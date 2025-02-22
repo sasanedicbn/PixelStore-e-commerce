@@ -5,6 +5,7 @@ import { useRegisterUserMutation } from "../../../../store/slices/apiSlice";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Loader from "../../../../UX/Loader";
+import ErrorMessage from "../../../../UX/ErrorMessage";
 
 const CreateAccForm = () => {
   const createAccountSchema = z
@@ -50,7 +51,7 @@ const CreateAccForm = () => {
   return (
     <FormLayout>
       {isLoading && <Loader />}
-      {isError && <p style={{ color: "red" }}>{errorMessage}</p>}
+      {isError && <ErrorMessage>{errorMessage}</ErrorMessage>}
       {isSuccess && <p style={{ color: "green" }}>Registration successful!</p>}
       <GenericForm
         schema={createAccountSchema}
