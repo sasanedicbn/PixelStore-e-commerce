@@ -12,7 +12,7 @@ export const productsApi = createApi({
     }),
     registerUser: builder.mutation({
       query: (formData) => ({
-        url:'products',
+        url:'api/users',
         method:"POST",
         body: formData,
       })

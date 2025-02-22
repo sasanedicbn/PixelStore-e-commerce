@@ -2,6 +2,7 @@ import { z } from "zod";
 import FormLayout from "../../../../components/Forms/FormLayout";
 import GenericForm from "../../../../components/Forms/GenericForm";
 import { RegisterUser } from "../../../../API/RegisterUser";
+import { useRegisterUserMutation } from "../../../../store/slices/apiSlice";
 
 const CreateAccForm = () => {
   const createAccountSchema = z
@@ -19,6 +20,8 @@ const CreateAccForm = () => {
       path: ["confirmPassword"],
     });
 
+  const [addUser, { isLoading, isError, isSuccess }] =
+    useRegisterUserMutation();
   const fields = [
     { name: "name", label: "Full name", type: "text" },
     { name: "email", label: "Email", type: "email" },
@@ -28,8 +31,11 @@ const CreateAccForm = () => {
   ];
 
   const handleSubmit = async (data) => {
-    await RegisterUser(data);
-    console.log("Form data submitted:", data);
+    try {
+      await addUser(data).unwrap();
+    } catch (error) {
+      console.log(error.message, "error message");
+    }
   };
 
   return (
