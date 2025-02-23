@@ -74,3 +74,23 @@ const generateToken = (id) => {
     expiresIn: "30d",
   });
 };
+// WRITE US
+export const sendMessageUser = async (req, res) => {
+  const { phone, message } = req.body;
+  const userId = req.user.id;
+  try {
+    const existingUser = await UserModel.findById({ userId });
+    if (!existingUser)
+      res.status(404).message("User not found, please log in.");
+
+    const { name, email } = existingUser;
+    res.status(200).json({
+      name,
+      email,
+      phone,
+      message,
+    });
+  } catch (error) {
+    res.status(500).json({ message: "Server error" });
+  }
+};

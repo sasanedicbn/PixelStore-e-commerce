@@ -25,5 +25,4 @@ export const protect = async (req, res, next) => {
   } else {
     res.status(401).json({ msg: "Not valid token" });
   }
-  if (!token) return res.status();
 };

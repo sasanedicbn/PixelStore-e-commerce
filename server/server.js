@@ -91,6 +91,7 @@ app.get("/products", async (req, res) => {
     res.status(500).json({ message: "Failed to fetch products" });
   }
 });
+
 app.get("/products/:id", async (req, res) => {
   try {
     const { id } = req.params;
