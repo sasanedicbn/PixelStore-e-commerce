@@ -1,23 +1,25 @@
-import { z } from "zod";
 import GenericForm from "../../../../components/Forms/GenericForm";
 import { Link, useNavigate } from "react-router-dom";
 import { useLoginUserMutation } from "../../../../store/slices/apiSlice";
 import Loader from "../../../../UX/Loader";
 import ErrorMessage from "../../../../UX/ErrorMessage";
+import { loginSchema } from "../../../../schemas/schemas";
+import { loginFormFields } from "../../../../static/staticData";
+import { useState } from "react";
 
 const LoginForm = () => {
   const navigate = useNavigate();
-  const loginSchema = z.object({
-    email: z.string().email("Invalid email address"),
-    password: z.string().min(6, "Password must be at least 6 characters"),
-  });
 
-  const [loginUser, { isLoading, isError, isSuccess }] = useLoginUserMutation();
+  const [loginUser, { isLoading, isError }] = useLoginUserMutation();
+  const [errorMessage, setErrorMessage] = useState("");
+
   const handleSubmit = async (data) => {
     try {
       const success = await loginUser(data).unwrap();
       if (success) navigate("/");
-    } catch (error) {}
+    } catch (error) {
+      setErrorMessage(error.message || "An error occurred during login.");
+    }
   };
 
   return (
@@ -31,17 +33,12 @@ const LoginForm = () => {
 
       <GenericForm
         schema={loginSchema}
-        fields={[
-          { name: "email", label: "Email", type: "email" },
-          { name: "password", label: "Password", type: "password" },
-        ]}
+        fields={loginFormFields}
         onSubmit={handleSubmit}
         submitButtonText="Sign In"
         btnType="submitSignin"
       />
-      {isError && (
-        <ErrorMessage>{"An error occurred during login."}</ErrorMessage>
-      )}
+      {isError && <ErrorMessage>{errorMessage}</ErrorMessage>}
     </div>
   );
 };

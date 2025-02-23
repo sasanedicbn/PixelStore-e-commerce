@@ -5,3 +5,8 @@ export const createAccFormFields = [
     { name: "password", label: "Password", type: "password" },
     { name: "confirmPassword", label: "Confirm Password", type: "password" },
   ];
+  
+ export const loginFormFields = [
+    { name: "email", label: "Email", type: "email" },
+    { name: "password", label: "Password", type: "password" },
+  ]
