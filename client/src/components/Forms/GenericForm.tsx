@@ -46,6 +46,8 @@ const GenericForm = ({
   };
 
   return (
+    <div className="genericForm">
+      <form onSubmit={handleSubmit(onSubmit)}>
         {fields.map((field) => renderInput(field))}
         <Button type={btnType}>{submitButtonText}</Button>
       </form>

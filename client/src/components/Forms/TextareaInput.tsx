@@ -3,9 +3,7 @@ const TextareaInput = ({ label, name, register, errors }) => {
     <div className="textInput">
       <label>{label}</label>
       <textarea {...register(name)} placeholder={label} />
-      {errors[name] && <p>{errors[name].message}</p>}
-    </div>
-  );
+      {errors[name] && <p>{error
 };
 
 export default TextareaInput;
