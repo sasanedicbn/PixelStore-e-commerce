@@ -4,6 +4,7 @@ import GenericForm from "../../../../components/Forms/GenericForm";
 const ContactUsForm = () => {
   const handleSubmit = (data) => {
     console.log("data from conactUsForm", data);
+    console.log("SASAAS");
   };
   const contactUsSchema = z.object({
     name: z.string().min(2, "Review must be at least 2 characters"),
