@@ -103,4 +103,14 @@ export const sendMessageUser = async (req, res) => {
       .status(400)
       .json({ success: false, message: "You should fill all inputs fields" });
   }
+
+  try {
+    const transporter = nodemailer.createTransport({
+      service: "gmail",
+      auth: {
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
+      },
+    });
+  } catch (error) {}
 };
