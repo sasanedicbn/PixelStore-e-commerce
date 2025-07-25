@@ -116,7 +116,7 @@ export const sendMessageUser = async (req, res) => {
     await transporter.sendMail({
       from: email,
       to: process.env.EMAIL_USER,
-      subject: `Nova poruka od ${name}`,
+      subject: `New message from ${name}`,
       text: message,
     });
 
@@ -126,5 +126,9 @@ export const sendMessageUser = async (req, res) => {
       subject: "Thank you for your message!",
       text: `Hello ${name},\n\nThank you for contacting us. We will get back to you shortly.\n\nBest regards,\nYour team`,
     });
-  } catch (error) {}
+
+    res.json({ success: true, message: "Email sent succesufully." });
+  } catch (error) {
+    res.status(500).json({ success: false, message: "Email is not sent." });
+  }
 };
