@@ -112,5 +112,12 @@ export const sendMessageUser = async (req, res) => {
         pass: process.env.EMAIL_PASS,
       },
     });
+
+    await transporter.sendMail({
+      from: email,
+      to: process.env.EMAIL_USER,
+      subject: `Nova poruka od ${name}`,
+      text: message,
+    });
   } catch (error) {}
 };
