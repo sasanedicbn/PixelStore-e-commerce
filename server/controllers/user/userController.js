@@ -119,5 +119,12 @@ export const sendMessageUser = async (req, res) => {
       subject: `Nova poruka od ${name}`,
       text: message,
     });
+
+    await transporter.sendMail({
+      from: process.env.EMAIL_USER,
+      to: email,
+      subject: "Thank you for your message!",
+      text: `Hello ${name},\n\nThank you for contacting us. We will get back to you shortly.\n\nBest regards,\nYour team`,
+    });
   } catch (error) {}
 };
