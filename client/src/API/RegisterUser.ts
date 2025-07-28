@@ -14,3 +14,4 @@ export const RegisterUser = async(data) => {
         console.log('error in register user', error.message)
     }
 }
+
