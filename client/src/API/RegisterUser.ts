@@ -17,7 +17,7 @@ export const RegisterUser = async(data) => {
 
 export const ContactUs = async(data) => {
 try{
-  const response = await fetch("http://localhost:8000/contact", {
+  const response = await fetch("http://localhost:8000/api/users/contact", {
     method: "POST",
     headers: {
       'Content-Type': 'application/json',
