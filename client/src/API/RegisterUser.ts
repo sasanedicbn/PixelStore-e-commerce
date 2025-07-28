@@ -16,6 +16,7 @@ export const RegisterUser = async(data) => {
 }
 
 export const ContactUs = async(data) => {
+  console.log(data, 'iz funkcije podaci')
 try{
   const response = await fetch("http://localhost:8000/api/users/contact", {
     method: "POST",
