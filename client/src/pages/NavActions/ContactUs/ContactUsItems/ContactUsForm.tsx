@@ -1,10 +1,13 @@
 import { z } from "zod";
 import GenericForm from "../../../../components/Forms/GenericForm";
+import { ContactUs } from "../../../../API/RegisterUser";
 
 const ContactUsForm = () => {
   const handleSubmit = (data) => {
-    console.log("data from conactUsForm", data);
-    console.log("SASAAS");
+    function sendDataToContacUs() {
+      ContactUs(data);
+    }
+    sendDataToContacUs();
   };
   const contactUsSchema = z.object({
     name: z.string().min(2, "Review must be at least 2 characters"),
