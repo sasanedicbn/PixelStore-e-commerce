@@ -97,8 +97,7 @@ const generateToken = (id) => {
 
 export const sendMessageUser = async (req, res) => {
   const { name, email, message } = req.body;
-  console.log("name", name, "email", email, "message", message);
-  console.log(process.env.EMAIL_USER, process.env.EMAIL_PASS);
+
   if (!name || !email || !message) {
     return res
       .status(400)
