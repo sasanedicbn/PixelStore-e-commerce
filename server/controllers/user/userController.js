@@ -97,7 +97,8 @@ const generateToken = (id) => {
 
 export const sendMessageUser = async (req, res) => {
   const { name, email, message } = req.body;
-
+  console.log("name", name, "email", email, "message", message);
+  console.log(process.env.EMAIL_USER, process.env.EMAIL_PASS);
   if (!name || !email || !message) {
     return res
       .status(400)
@@ -129,6 +130,7 @@ export const sendMessageUser = async (req, res) => {
 
     res.json({ success: true, message: "Email sent succesufully." });
   } catch (error) {
+    console.log("email send error", email);
     res.status(500).json({ success: false, message: "Email is not sent." });
   }
 };
