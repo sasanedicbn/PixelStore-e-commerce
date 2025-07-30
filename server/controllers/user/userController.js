@@ -2,6 +2,7 @@ import jwt from "jsonwebtoken";
 import bcrypt from "bcryptjs";
 import UserModel from "../../model/user.js";
 // import asyncHandler from "express-async-handler";
+import nodemailer from "nodemailer";
 
 export const registerUser = async (req, res) => {
   const { name, email, password, country } = req.body;
@@ -101,7 +102,7 @@ export const sendMessageUser = async (req, res) => {
   if (!name || !email || !message) {
     return res
       .status(400)
-      .json({ success: false, message: "You should fill all inputs fields" });
+      .json({ success: false, message: "You should fill all input fields" });
   }
 
   try {
@@ -114,10 +115,11 @@ export const sendMessageUser = async (req, res) => {
     });
 
     await transporter.sendMail({
-      from: email,
+      from: process.env.EMAIL_USER,
       to: process.env.EMAIL_USER,
+      replyTo: email,
       subject: `New message from ${name}`,
-      text: message,
+      text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
     });
 
     await transporter.sendMail({
@@ -127,8 +129,9 @@ export const sendMessageUser = async (req, res) => {
       text: `Hello ${name},\n\nThank you for contacting us. We will get back to you shortly.\n\nBest regards,\nYour team`,
     });
 
-    res.json({ success: true, message: "Email sent succesufully." });
+    res.json({ success: true, message: "Email sent successfully." });
   } catch (error) {
+    console.error("Email sending failed:", error);
     res.status(500).json({ success: false, message: "Email is not sent." });
   }
 };
