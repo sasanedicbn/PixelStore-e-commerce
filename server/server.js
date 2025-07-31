@@ -106,7 +106,7 @@ app.get("/products/:id", async (req, res) => {
   }
 });
 
-app.get("/products", async (req, res) => {
+app.get("/products/search", async (req, res) => {
   try {
     const category = req.query.category;
     let query = {};
