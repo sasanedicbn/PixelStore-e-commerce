@@ -105,3 +105,24 @@ app.get("/products/:id", async (req, res) => {
     res.status(500).json({ message: "Failed to fetch product" });
   }
 });
+
+app.get("/products", async (req, res) => {
+  try {
+    const category = req.query.category;
+    let query = {};
+    if (category) {
+      query.category = category;
+    }
+    console.log(query, "quey");
+
+    const products = await ProductsModel.find(query);
+
+    if (products.length === 0) {
+      return res.status(404).json({ message: "No products found!" });
+    }
+
+    res.status(200).json({ message: "Products found!", products });
+  } catch (error) {
+    res.status(500).json({ message: "Failed to find products" });
+  }
+});
