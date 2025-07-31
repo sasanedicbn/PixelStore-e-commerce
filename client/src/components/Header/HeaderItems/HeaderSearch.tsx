@@ -13,18 +13,21 @@ const HeaderSearch = () => {
   };
   console.log(searchTerm, "serachterm");
   return (
-    <form className="header-search-form" onSubmit={handleSearch}>
-      <input
-        type="text"
-        className="header-search-input"
-        placeholder="Search..."
-        value={searchTerm}
-        onChange={handleInputChange}
-      />
-      <button type="submit" className="header-search-btn">
-        <FaSearch />
-      </button>
-    </form>
+    <>
+      <form className="header-search-form" onSubmit={handleSearch}>
+        <input
+          type="text"
+          className="header-search-input"
+          placeholder="Search..."
+          value={searchTerm}
+          onChange={handleInputChange}
+        />
+        <button type="submit" className="header-search-btn">
+          <FaSearch />
+        </button>
+      </form>
+      <p>SASASA</p>
+    </>
   );
 };
 

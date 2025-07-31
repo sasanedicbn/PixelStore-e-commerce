@@ -23,6 +23,13 @@ export const productsApi = createApi({
         method:"POST",
         body:formData,
       })
+    }),
+    getProductsBySearchBar: builder.mutation({
+      query: (formData) => ({
+        url:'/',
+        method: "GET",
+        body: formData,
+      })
     })
   }),
 });
