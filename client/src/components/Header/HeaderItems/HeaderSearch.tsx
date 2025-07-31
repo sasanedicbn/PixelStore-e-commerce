@@ -11,7 +11,7 @@ const HeaderSearch = () => {
   const handleInputChange = (e) => {
     setSearchTerm(e.target.value);
   };
-
+  console.log(searchTerm, "serachterm");
   return (
     <form className="header-search-form" onSubmit={handleSearch}>
       <input
