@@ -25,7 +25,7 @@ export const productsApi = createApi({
       })
     }),
      getProductsBySearchBar: builder.query({
-      query: (searchTerm) => `/products/search?query=${searchTerm}`
+      query: (searchTerm) => `api/products/search?query=${searchTerm}`
     }),
   }),
 });
