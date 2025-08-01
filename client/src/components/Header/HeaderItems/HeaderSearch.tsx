@@ -11,6 +11,7 @@ const HeaderSearch = () => {
       skip: searchTerm.length < 2,
     }
   );
+  console.log(filteredProducts, "filtrirani produkti");
 
   const handleInputChange = (e) => {
     setSearchTerm(e.target.value);
