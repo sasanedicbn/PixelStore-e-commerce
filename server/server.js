@@ -15,15 +15,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
-mongoose
-  .connect(MONGOURL)
-  .then(() => {
-    console.log("Database connected successfully");
-    app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
-  })
-  .catch((error) => {
-    console.log(error);
-  });
 app.use("/api/users", userRoute);
 app.get("/api/products", async (req, res) => {
   try {
@@ -106,14 +97,16 @@ app.get("/products/:id", async (req, res) => {
   }
 });
 
-app.get("/products/search", async (req, res) => {
+app.get("/api/products/search", async (req, res) => {
   try {
-    const category = req.query.category;
+    const searchTerm = req.query.query;
+    console.log(searchTerm, "search");
+    console.log("radi");
     let query = {};
-    if (category) {
-      query.category = category;
+
+    if (searchTerm) {
+      query.title = { $regex: searchTerm, $options: "i" };
     }
-    console.log(query, "quey");
 
     const products = await ProductsModel.find(query);
 
@@ -121,8 +114,26 @@ app.get("/products/search", async (req, res) => {
       return res.status(404).json({ message: "No products found!" });
     }
 
-    res.status(200).json({ message: "Products found!", products });
+    res.status(200).json(products);
+    console.log(products, "ovo filtirano");
   } catch (error) {
+    console.error(error);
     res.status(500).json({ message: "Failed to find products" });
   }
 });
+
+// app.get("/api/products/search", (req, res) => {
+//   console.log("🔍 Pogođena /api/products/search ruta");
+//   const searchTerm = req.query.query;
+//   console.log("Search term:", searchTerm);
+//   res.json({ message: `Searching for: ${searchTerm}` });
+// });
+mongoose
+  .connect(MONGOURL)
+  .then(() => {
+    console.log("Database connected successfully");
+    app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
+  })
+  .catch((error) => {
+    console.log(error);
+  });
