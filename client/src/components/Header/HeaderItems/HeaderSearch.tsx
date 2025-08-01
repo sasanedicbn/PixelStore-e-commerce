@@ -1,20 +1,24 @@
 import { useState } from "react";
 import { FaSearch } from "react-icons/fa";
+import { useGetProductsBySearchBarQuery } from "../../../store/slices/apiSlice";
 
 const HeaderSearch = () => {
   const [searchTerm, setSearchTerm] = useState("");
 
-  const handleSearch = (e) => {
-    e.preventDefault();
-  };
+  const { data: filteredProducts, isLoading } = useGetProductsBySearchBarQuery(
+    searchTerm,
+    {
+      skip: searchTerm.length < 2,
+    }
+  );
 
   const handleInputChange = (e) => {
     setSearchTerm(e.target.value);
   };
-  console.log(searchTerm, "serachterm");
+
   return (
     <>
-      <form className="header-search-form" onSubmit={handleSearch}>
+      <form className="header-search-form" onSubmit={(e) => e.preventDefault()}>
         <input
           type="text"
           className="header-search-input"
@@ -26,7 +30,16 @@ const HeaderSearch = () => {
           <FaSearch />
         </button>
       </form>
-      <p>SASASA</p>
+
+      {isLoading && <p>Loading...</p>}
+
+      {filteredProducts?.length > 0 && (
+        <ul>
+          {filteredProducts.map((product) => (
+            <li key={product.id}>{product.title}</li>
+          ))}
+        </ul>
+      )}
     </>
   );
 };

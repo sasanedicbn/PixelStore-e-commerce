@@ -24,14 +24,10 @@ export const productsApi = createApi({
         body:formData,
       })
     }),
-    getProductsBySearchBar: builder.mutation({
-      query: (formData) => ({
-        url:'/',
-        method: "GET",
-        body: formData,
-      })
-    })
+     getProductsBySearchBar: builder.query({
+      query: (searchTerm) => `/products/search?query=${searchTerm}`
+    }),
   }),
 });
 
-export const { useGetProductsByCategoryQuery, useGetProductByIdQuery, useRegisterUserMutation, useLoginUserMutation } = productsApi;
+export const { useGetProductsByCategoryQuery, useGetProductByIdQuery, useRegisterUserMutation, useLoginUserMutation, useGetProductsBySearchBarQuery} = productsApi;
