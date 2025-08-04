@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import { useGetProductsBySearchBarQuery } from "../../../store/slices/apiSlice";
+import SearchBarDrop from "../../../UX/SearchBarDrop";
 
 const HeaderSearch = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -33,13 +34,10 @@ const HeaderSearch = () => {
       </form>
 
       {isLoading && <p>Loading...</p>}
-
-      {filteredProducts?.length > 0 && (
-        <ul>
-          {filteredProducts.map((product) => (
-            <li key={product.id}>{product.title}</li>
-          ))}
-        </ul>
+      {filteredProducts?.length > 0 ? (
+        <SearchBarDrop items={filteredProducts} />
+      ) : (
+        ""
       )}
     </>
   );

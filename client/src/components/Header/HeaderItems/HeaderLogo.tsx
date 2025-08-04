@@ -12,6 +12,7 @@ const HeaderLogo = () => {
       <span className="pixel-letter">u</span>
       <span className="pixel-letter">d</span>
       <span className="pixel-letter">i</span>
+      <span className="pixel-letter">o</span>
     </div>
   );
 };

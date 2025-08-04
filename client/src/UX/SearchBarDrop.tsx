@@ -1,9 +1,12 @@
-const SearchBarDrop = (items) => {
+const SearchBarDrop = ({ items }) => {
+  console.log(items, "items koji primam");
   return (
     <div>
-      {items.map((item) => {
-        <p>{item.title}</p>;
-      })}
+      <ul>
+        {items.map((product) => (
+          <li key={product.id}>{product.title}</li>
+        ))}
+      </ul>
     </div>
   );
 };
