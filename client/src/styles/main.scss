@@ -150,14 +150,21 @@ header{
         position: absolute;
         top: 100%;
         width: 100%;
+        cursor: pointer;
         border: 2px solid $primary-color;
         border-bottom-left-radius: $border-radius;
         border-bottom-right-radius: $border-radius;      
         z-index: 100; 
         .searchBarDrop-product-wrapper{
           display: flex;
+          align-items: center;
+          justify-content: space-between;
           padding: 10px;
           border-bottom: 1px solid rgb(210, 209, 209);
+          div{
+            display: flex;
+            align-items: center;
+          }
         }
         .searchBarDrop-img{
           width: 50px;

@@ -5,12 +5,15 @@ const SearchBarDrop = ({ items }) => {
       <ul>
         {items.map((product) => (
           <div className="searchBarDrop-product-wrapper">
-            <img
-              src={product.imageUrl}
-              alt={"product image"}
-              className="searchBarDrop-img"
-            />
-            <li key={product._id}>{product.title}</li>
+            <div>
+              <img
+                src={product.imageUrl}
+                alt={"product image"}
+                className="searchBarDrop-img"
+              />
+              <li key={product._id}>{product.title}</li>
+            </div>
+            <p>{product.price + "€"}</p>
           </div>
         ))}
       </ul>

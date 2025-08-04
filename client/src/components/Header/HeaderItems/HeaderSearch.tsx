@@ -6,12 +6,8 @@ import SearchBarDrop from "../../../UX/SearchBarDrop";
 const HeaderSearch = () => {
   const [searchTerm, setSearchTerm] = useState("");
 
-  const { data: filteredProducts, isLoading } = useGetProductsBySearchBarQuery(
-    searchTerm,
-    {
-      skip: searchTerm.length < 2,
-    }
-  );
+  const { data: filteredProducts, isLoading } =
+    useGetProductsBySearchBarQuery(searchTerm);
   console.log(filteredProducts, "filtrirani produkti");
 
   const handleInputChange = (e) => {
