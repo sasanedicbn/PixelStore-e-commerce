@@ -31,14 +31,13 @@ const HeaderSearch = () => {
         <button type="submit" className="header-search-btn">
           <FaSearch />
         </button>
+        {isLoading && <p>Loading...</p>}
+        {filteredProducts?.length > 0 ? (
+          <SearchBarDrop items={filteredProducts} />
+        ) : (
+          ""
+        )}
       </form>
-
-      {isLoading && <p>Loading...</p>}
-      {filteredProducts?.length > 0 ? (
-        <SearchBarDrop items={filteredProducts} />
-      ) : (
-        ""
-      )}
     </>
   );
 };
