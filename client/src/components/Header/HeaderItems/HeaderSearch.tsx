@@ -6,8 +6,12 @@ import SearchBarDrop from "../../../UX/SearchBarDrop";
 const HeaderSearch = () => {
   const [searchTerm, setSearchTerm] = useState("");
 
-  const { data: filteredProducts, isLoading } =
-    useGetProductsBySearchBarQuery(searchTerm);
+  const { data: filteredProducts, isLoading } = useGetProductsBySearchBarQuery(
+    searchTerm,
+    {
+      skip: searchTerm.length < 2,
+    }
+  );
   console.log(filteredProducts, "filtrirani produkti");
 
   const handleInputChange = (e) => {
@@ -28,10 +32,8 @@ const HeaderSearch = () => {
           <FaSearch />
         </button>
         {isLoading && <p>Loading...</p>}
-        {filteredProducts?.length > 0 ? (
+        {searchTerm.length >= 2 && filteredProducts?.length > 0 && (
           <SearchBarDrop items={filteredProducts} />
-        ) : (
-          ""
         )}
       </form>
     </>
