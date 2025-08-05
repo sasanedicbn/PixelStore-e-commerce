@@ -5,6 +5,7 @@ import SearchBarDrop from "../../../UX/SearchBarDrop";
 
 const HeaderSearch = () => {
   const [searchTerm, setSearchTerm] = useState("");
+  const [showDropdown, setShowDropdown] = useState(false);
 
   const { data: filteredProducts, isLoading } = useGetProductsBySearchBarQuery(
     searchTerm,
