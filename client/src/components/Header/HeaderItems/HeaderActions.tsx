@@ -1,11 +1,12 @@
 import Button from "../../../UX/Button";
 import Icon from "../../../UX/Icons";
+import HeaderActionUser from "./HeaderActionsItems/HeaderActionUser";
 
 const HeaderActions = () => {
   return (
     <div className="header-actions">
       <Button type="user">
-        <Icon name="user" />
+        <HeaderActionUser />
       </Button>
       <Button type="favourites">
         <Icon name="favourites" />

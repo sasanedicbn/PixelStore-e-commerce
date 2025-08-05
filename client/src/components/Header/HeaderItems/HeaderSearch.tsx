@@ -39,12 +39,14 @@ const HeaderSearch = () => {
           <FaSearch />
         </button>
         {isLoading && <p>Loading...</p>}
-        {showDropdown && filteredProducts?.length > 0 && (
-          <SearchBarDrop
-            items={filteredProducts}
-            onSelect={handleCloseDropDown}
-          />
-        )}
+        {searchTerm.length > 1 &&
+          showDropdown &&
+          filteredProducts?.length > 0 && (
+            <SearchBarDrop
+              items={filteredProducts}
+              onSelect={handleCloseDropDown}
+            />
+          )}
       </form>
     </>
   );

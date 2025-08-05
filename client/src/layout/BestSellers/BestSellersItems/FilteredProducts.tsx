@@ -14,7 +14,7 @@ const FilteredProducts = () => {
   if (isLoading) return <div>Loading...</div>;
   if (isError) return <div>Error: {isError}</div>;
 
-  return <ProductCart products={products.products} />;
+  // return <ProductCart products={products.products} />;
 };
 
 export default FilteredProducts;
