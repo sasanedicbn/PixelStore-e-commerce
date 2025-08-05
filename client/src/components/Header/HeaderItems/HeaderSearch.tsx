@@ -17,6 +17,12 @@ const HeaderSearch = () => {
 
   const handleInputChange = (e) => {
     setSearchTerm(e.target.value);
+    setShowDropdown(true);
+  };
+
+  const handleCloseDropDown = () => {
+    setShowDropdown(false);
+    setSearchTerm("");
   };
 
   return (
@@ -33,8 +39,11 @@ const HeaderSearch = () => {
           <FaSearch />
         </button>
         {isLoading && <p>Loading...</p>}
-        {searchTerm.length >= 2 && filteredProducts?.length > 0 && (
-          <SearchBarDrop items={filteredProducts} />
+        {showDropdown && filteredProducts?.length > 0 && (
+          <SearchBarDrop
+            items={filteredProducts}
+            onSelect={handleCloseDropDown}
+          />
         )}
       </form>
     </>

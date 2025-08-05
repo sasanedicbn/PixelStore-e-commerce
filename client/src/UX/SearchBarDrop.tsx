@@ -1,10 +1,11 @@
 import { useNavigate } from "react-router-dom";
 
-const SearchBarDrop = ({ items }) => {
+const SearchBarDrop = ({ items, onSelect }) => {
   const navigate = useNavigate();
 
   const navigateToProductHandler = (productId) => {
     navigate(`/products/${productId}`);
+    onSelect();
   };
 
   return (
