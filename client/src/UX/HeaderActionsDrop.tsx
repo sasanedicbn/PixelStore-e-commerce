@@ -1,5 +1,5 @@
 const HeaderActionsDrop = () => {
-  return <div className="headerActionsDrop"></div>;
+  return;
 };
 
 export default HeaderActionsDrop;
