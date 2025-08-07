@@ -15,9 +15,16 @@ const HeaderActions = () => {
         <p>Content koji treba prikazati</p>
       </HeaderAction>
 
-      <Button type="favourites">
-        <Icon name="favourites" />
-      </Button>
+      <HeaderAction
+        icon={
+          <Button type="favourites">
+            <Icon name="favourites" />
+          </Button>
+        }
+      >
+        <p>Contet za prikazati favourites</p>
+      </HeaderAction>
+
       <Button type="cart">
         <Icon name="cart" />
       </Button>
