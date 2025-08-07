@@ -199,8 +199,16 @@ header{
       
           &:focus {
             outline: none;
-          }
+          }      
         }
+        .headerActionUser{
+            .headerActionsDrop{
+              width: 200px;
+              height: 150px;
+              background-color: orange;
+              
+            }
+          }
       }
       
 }

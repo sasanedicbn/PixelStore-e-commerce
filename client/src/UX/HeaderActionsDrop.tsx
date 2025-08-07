@@ -1,6 +1,8 @@
-const HeaderActionsDrop = (isHovered) => {
+const HeaderActionsDrop = () => {
   return (
-    <div className={`headerActionsDrop ${isHovered ? "hovered" : ""}`}></div>
+    <div className={"headerActionsDrop"}>
+      <p>SASASAAS</p>
+    </div>
   );
 };
 
