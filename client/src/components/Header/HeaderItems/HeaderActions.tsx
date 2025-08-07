@@ -24,10 +24,15 @@ const HeaderActions = () => {
       >
         <p>Contet za prikazati favourites</p>
       </HeaderAction>
-
-      <Button type="cart">
-        <Icon name="cart" />
-      </Button>
+      <HeaderAction
+        icon={
+          <Button type="cart">
+            <Icon name="cart" />
+          </Button>
+        }
+      >
+        <p>Contet za prikazati iz cart</p>
+      </HeaderAction>
     </div>
   );
 };
