@@ -1,9 +1,7 @@
-const HeaderActionsDrop = () => {
-  return (
-    <div className={"headerActionsDrop"}>
-      <p>SASASAAS</p>
-    </div>
-  );
+import { Children } from "react";
+
+const HeaderActionsDrop = ({ children }) => {
+  return <div className={"headerActionsDrop"}>{children}</div>;
 };
 
 export default HeaderActionsDrop;
