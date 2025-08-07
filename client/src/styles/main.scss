@@ -201,11 +201,13 @@ header{
             outline: none;
           }      
         }
-        .headerActionUser{
+        .headerAction{
             .headerActionsDrop{
+              position: absolute;
               width: 200px;
               height: 150px;
               background-color: orange;
+              
               
             }
           }

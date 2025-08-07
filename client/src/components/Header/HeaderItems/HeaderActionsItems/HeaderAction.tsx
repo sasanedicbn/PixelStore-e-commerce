@@ -5,7 +5,7 @@ const HeaderAction = ({ icon, children }) => {
   const [isHovered, setHover] = useState(false);
   return (
     <div
-      className="headerActionUser"
+      className="headerAction"
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
     >

@@ -5,11 +5,16 @@ import HeaderAction from "./HeaderActionsItems/HeaderAction";
 const HeaderActions = () => {
   return (
     <div className="header-actions">
-      <Button type="user">
-        <HeaderAction
-          icon={((<Icon name="user" />), (<p>Content koji treba prikazati</p>))}
-        />
-      </Button>
+      <HeaderAction
+        icon={
+          <Button type="user">
+            <Icon name="user" />
+          </Button>
+        }
+      >
+        <p>Content koji treba prikazati</p>
+      </HeaderAction>
+
       <Button type="favourites">
         <Icon name="favourites" />
       </Button>
