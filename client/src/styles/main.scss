@@ -202,13 +202,19 @@ header{
           }      
         }
         .headerAction{
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
             .headerActionsDrop{
               position: absolute;
-              width: 200px;
-              height: 150px;
-              background-color: orange;
-              
-              
+              top: 100%;
+              z-index: 100;
+              height: 180px;
+              width: 320px;
+              background-color: #f7f7f7;
+              border: 1px solid rgb(210, 209, 209);
+              border-radius: 4px;
             }
           }
       }
