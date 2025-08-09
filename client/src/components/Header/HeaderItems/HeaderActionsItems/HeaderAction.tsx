@@ -10,7 +10,7 @@ const HeaderAction = ({ icon, children }) => {
       onMouseLeave={() => setHover(false)}
     >
       {icon}
-      {isHovered ? <HeaderActionsDrop>{children} </HeaderActionsDrop> : ""}
+      {isHovered && <HeaderActionsDrop>{children}</HeaderActionsDrop>}
     </div>
   );
 };
