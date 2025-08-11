@@ -11,7 +11,7 @@ const routeUser = express.Router();
 
 routeUser.post("/", registerUser);
 routeUser.post("/login", loginUser);
-routeUser.get("/me", protect, getMe);
+routeUser.get("/me", getMe); //treba ubaciti protect
 routeUser.post("/contact", sendMessageUser);
 
 export default routeUser;
