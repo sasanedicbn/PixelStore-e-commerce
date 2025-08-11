@@ -60,9 +60,11 @@ export const loginUser = async (req, res) => {
   }
 };
 export const getMe = async (req, res) => {
-  const { _id, name, email, country } = await UserModel.findById(req.user.id);
+  const { _id, name, email, country } = await UserModel.findById(
+    "6899d661dd573dd59aa98385"
+  );
 
-  if (!user) {
+  if (!name) {
     return res.status(404).json({ message: "User not found" });
   }
 
