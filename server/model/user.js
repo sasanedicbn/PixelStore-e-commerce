@@ -1,5 +1,4 @@
 import mongoose from "mongoose";
-import ProductsModel from "./products";
 
 const userSchema = new mongoose.Schema({
   name: { type: String, required: true },
@@ -7,7 +6,7 @@ const userSchema = new mongoose.Schema({
   country: { type: String, required: true },
   password: { type: String, required: true },
   confirmPassword: { type: String, required: true },
-  favourites: [{ type: mongoose.Schema.Types.ObjectId, ref: ProductsModel }],
+  favourites: [{ type: mongoose.Schema.Types.ObjectId, ref: "Product" }],
   cart: [
     {
       product: { type: mongoose.Schema.Types.ObjectId, ref: "Product" },

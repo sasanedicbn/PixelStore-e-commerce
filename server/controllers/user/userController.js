@@ -61,7 +61,7 @@ export const loginUser = async (req, res) => {
 };
 export const getMe = async (req, res) => {
   const { _id, name, email, country } = await UserModel.findById(
-    "6899d661dd573dd59aa98385"
+    "689b579224c60577df0bd643"
   );
 
   if (!name) {
