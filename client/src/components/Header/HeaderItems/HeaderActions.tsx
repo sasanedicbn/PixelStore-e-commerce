@@ -1,6 +1,7 @@
 import Button from "../../../UX/Button";
 import Icon from "../../../UX/Icons";
 import HeaderAction from "./HeaderActionsItems/HeaderAction";
+import UserDrop from "./HeaderActionsItems/UserDrop";
 
 const HeaderActions = () => {
   return (
@@ -12,7 +13,8 @@ const HeaderActions = () => {
           </Button>
         }
       >
-        <p>Content koji treba prikazati</p>
+        {/* <p>Content koji treba prikazati</p> */}
+        <UserDrop />
       </HeaderAction>
 
       <HeaderAction
