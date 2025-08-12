@@ -9,8 +9,10 @@ const UserDrop = () => {
 
   return (
     <div>
-      <p>Hello, {user.name}</p>
-      <p>Email: {user.email}</p>
+      <p>
+        Hi, <span>{user.name}</span> <br />
+        Welcome to PixelStudio.
+      </p>
     </div>
   );
 };
