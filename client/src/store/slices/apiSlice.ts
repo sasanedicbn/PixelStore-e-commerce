@@ -28,7 +28,7 @@ export const productsApi = createApi({
      query: () => `api/users/me`
     }),
     getUserFavourites: builder.query({
-     query: () => `api/users/me`
+     query: () => `api/user/favourites`
     }),
      getProductsBySearchBar: builder.query({
       query: (searchTerm) => `api/products/search?query=${searchTerm}`
