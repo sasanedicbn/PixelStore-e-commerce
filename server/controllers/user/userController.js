@@ -141,3 +141,27 @@ export const sendMessageUser = async (req, res) => {
     res.status(500).json({ success: false, message: "Email is not sent." });
   }
 };
+
+export const getUserFavourites = async (req, res) => {
+  try {
+    const user = await UserModel.findById("689b579224c60577df0bd643").populate(
+      "favourites"
+    );
+
+    if (!user) {
+      return res.status(404).json({ message: "User is not found" });
+    }
+
+    if (!user.favourites || user.favourites.length === 0) {
+      return res.status(404).json({ message: "User doesn't have favourites" });
+    }
+
+    res.status(200).json({
+      favourites: user.favourites,
+    });
+  } catch (error) {
+    res
+      .status(500)
+      .json({ success: false, message: "Favoirotes is not sent." });
+  }
+};
