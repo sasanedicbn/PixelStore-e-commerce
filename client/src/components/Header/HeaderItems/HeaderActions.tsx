@@ -1,5 +1,6 @@
 import Button from "../../../UX/Button";
 import Icon from "../../../UX/Icons";
+import FavouritesDrop from "./HeaderActionsItems/FavouritesDrop";
 import HeaderAction from "./HeaderActionsItems/HeaderAction";
 import UserDrop from "./HeaderActionsItems/UserDrop";
 
@@ -24,7 +25,7 @@ const HeaderActions = () => {
           </Button>
         }
       >
-        <p>Contet za prikazati favourites</p>
+        <FavouritesDrop />
       </HeaderAction>
       <HeaderAction
         icon={
