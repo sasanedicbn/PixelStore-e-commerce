@@ -24,7 +24,12 @@ export const productsApi = createApi({
         body:formData,
       })
     }),
-    getUser: builder.
+    getUser: builder.query({
+     query: () => `api/users/me`
+    }),
+    getUserFavourites: builder.query({
+     query: () => `api/user/favourites`
+    }),
      getProductsBySearchBar: builder.query({
       query: (searchTerm) => `api/products/search?query=${searchTerm}`
     }),
