@@ -144,21 +144,21 @@ export const sendMessageUser = async (req, res) => {
 
 export const getUserFavourites = async (req, res) => {
   try {
-    // const user = await UserModel.findById("689b579224c60577df0bd643").populate(
-    //   "favourites"
-    // );
+    const user = await UserModel.findById("689b579224c60577df0bd643").populate(
+      "favourites"
+    );
 
-    // console.log(user, "user");
-    // if (!user) {
-    //   return res.status(404).json({ message: "User is not found" });
-    // }
+    console.log(user, "user");
+    if (!user) {
+      return res.status(404).json({ message: "User is not found" });
+    }
 
-    // if (!user.favourites || user.favourites.length === 0) {
-    //   return res.status(404).json({ message: "User doesn't have favourites" });
-    // }
-    // console.log(user.favourites, "user.favourites");
+    if (!user.favourites || user.favourites.length === 0) {
+      return res.status(200).json({ favourites: [] });
+    }
+    console.log(user.favourites, "user.favourites");
     res.status(200).json({
-      sasa: "radii",
+      favourites: user.favourites,
     });
   } catch (error) {
     res
