@@ -5,7 +5,7 @@ const FavouritesDrop = () => {
   if (isLoading) return <p>Loading...</p>;
   if (!favourites) return <p>You should log in to see your favourites</p>;
 
-  console.log(favourites, "favourites od usera");
+  console.log(favourites, "OVOOOOO");
   return (
     <div>
       <ul>

@@ -100,8 +100,6 @@ app.get("/products/:id", async (req, res) => {
 app.get("/api/products/search", async (req, res) => {
   try {
     const searchTerm = req.query.query;
-    console.log(searchTerm, "search");
-    console.log("radi");
     let query = {};
 
     if (searchTerm) {
