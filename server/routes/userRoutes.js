@@ -15,5 +15,6 @@ routeUser.post("/login", loginUser);
 routeUser.get("/me", getMe); //treba ubaciti protect
 routeUser.post("/contact", sendMessageUser);
 routeUser.get("/favourites", getUserFavourites);
+routeUser.get("/cart", getUserFavourites);
 
 export default routeUser;
