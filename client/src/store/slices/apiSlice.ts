@@ -30,10 +30,13 @@ export const productsApi = createApi({
     getUserFavourites: builder.query({
      query: () => `api/users/favourites`
     }),
+    getUserCart: builder.query({
+      query: () => `api/users/cart`
+    }),
      getProductsBySearchBar: builder.query({
       query: (searchTerm) => `api/products/search?query=${searchTerm}`
     }),
   }),
 });
 
-export const { useGetProductsByCategoryQuery, useGetProductByIdQuery, useRegisterUserMutation, useLoginUserMutation, useGetProductsBySearchBarQuery, useGetUserQuery, useGetUserFavouritesQuery} = productsApi;
+export const { useGetProductsByCategoryQuery, useGetProductByIdQuery, useRegisterUserMutation, useLoginUserMutation, useGetProductsBySearchBarQuery, useGetUserQuery, useGetUserFavouritesQuery, useGetUserCartQuery} = productsApi;
