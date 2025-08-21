@@ -166,3 +166,19 @@ export const getUserFavourites = async (req, res) => {
       .json({ success: false, message: "Favoirotes is not sent." });
   }
 };
+
+export const getUserCart = async (req, res) => {
+  try {
+    const user = await UserModel.findById("689b579224c60577df0bd643").populate(
+      "cart"
+    );
+    if (!user) {
+      res.status(404).json({ message: "User not found" });
+    }
+    if (user.cart.length === 0) {
+      res.status(200).json({ cart: [] });
+    }
+  } catch (error) {
+    res.status(500).json({ success: false, message: "Cart is not sent" });
+  }
+};
