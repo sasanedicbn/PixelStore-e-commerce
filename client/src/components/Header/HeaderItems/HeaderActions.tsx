@@ -1,5 +1,6 @@
 import Button from "../../../UX/Button";
 import Icon from "../../../UX/Icons";
+import CartDrop from "./HeaderActionsItems/CartDrop";
 import FavouritesDrop from "./HeaderActionsItems/FavouritesDrop";
 import HeaderAction from "./HeaderActionsItems/HeaderAction";
 import UserDrop from "./HeaderActionsItems/UserDrop";
@@ -34,7 +35,7 @@ const HeaderActions = () => {
           </Button>
         }
       >
-        <p>Contet za prikazati iz cart</p>
+        <CartDrop />
       </HeaderAction>
     </div>
   );
