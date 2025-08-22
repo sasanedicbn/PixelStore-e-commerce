@@ -2,18 +2,19 @@ import { useGetUserCartQuery } from "../../../../store/slices/apiSlice";
 
 const CartDrop = () => {
   const { data: cartData, isLoading } = useGetUserCartQuery();
+  const cart = cartData?.cart || [];
   if (isLoading) return <p>Loading...</p>;
-  if (!cartData) return <p>You should log in to see your cart</p>;
-  if (cartData.favourites.length === 0) return <p>Your cart is empty.</p>;
-  console.log(cartData, "cartData iz CartDrop-a");
+  if (!cart) return <p>You should log in to see your cart</p>;
+  if (cart.length === 0) return <p>Your cart is empty.</p>;
+  console.log(cart, "cartData iz CartDrop-a");
   return (
     <div>
       <ul>
-        {/* {cartData.map((item) => (
+        {cart.map((item) => (
           <li key={item._id}>
             {item.name} - {item.quantity}
           </li>
-        ))} */}
+        ))}
       </ul>
     </div>
   );
