@@ -1,7 +1,12 @@
 import { useState } from "react";
 import HeaderActionsDrop from "../../../../UX/HeaderActionsDrop";
 
-const HeaderAction = ({ icon, children }) => {
+interface HeaderActionProps {
+  icon: React.ReactNode;
+  children: React.ReactNode;
+}
+
+const HeaderAction = ({ icon, children }: HeaderActionProps) => {
   const [isHovered, setHover] = useState(false);
   return (
     <div
