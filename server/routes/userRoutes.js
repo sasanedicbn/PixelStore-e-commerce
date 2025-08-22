@@ -1,6 +1,7 @@
 import express from "express";
 import {
   getMe,
+  getUserCart,
   getUserFavourites,
   loginUser,
   registerUser,
@@ -15,6 +16,6 @@ routeUser.post("/login", loginUser);
 routeUser.get("/me", getMe); //treba ubaciti protect
 routeUser.post("/contact", sendMessageUser);
 routeUser.get("/favourites", getUserFavourites);
-routeUser.get("/cart", getUserFavourites);
+routeUser.get("/cart", getUserCart);
 
 export default routeUser;
