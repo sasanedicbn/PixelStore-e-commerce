@@ -32,7 +32,7 @@ export const registerUser = async (req, res) => {
       const token = generateToken(user.id);
       res.cookie("jwt", token, {
         httpOnly: true,
-        secure: process.env.NODE_ENV !== "production",
+        secure: process.env.NODE_ENV !== "development",
         sameSite: "strict",
         maxAge: 30 * 24 * 60 * 60 * 1000,
       });
@@ -59,7 +59,7 @@ export const loginUser = async (req, res) => {
     const token = generateToken(user.id);
     res.cookie("jwt", token, {
       httpOnly: true,
-      secure: process.env.NODE_ENV !== "production",
+      secure: process.env.NODE_ENV !== "development",
       sameSite: "strict",
       maxAge: 30 * 24 * 60 * 60 * 1000,
     });
@@ -74,9 +74,8 @@ export const loginUser = async (req, res) => {
   }
 };
 export const getMe = async (req, res) => {
-  const { _id, name, email, country } = await UserModel.findById(
-    "689b579224c60577df0bd643"
-  );
+  const { _id, name, email, country } = await UserModel.findById(req.user.id);
+  console.log(req.user.id, "id usera");
 
   if (!name) {
     return res.status(404).json({ message: "User not found" });
@@ -164,9 +163,7 @@ export const sendMessageUser = async (req, res) => {
 
 export const getUserFavourites = async (req, res) => {
   try {
-    const user = await UserModel.findById("689b579224c60577df0bd643").populate(
-      "favourites"
-    );
+    const user = await UserModel.findById(req.user.id).populate("favourites");
 
     console.log(user, "user");
     if (!user) {
@@ -189,9 +186,7 @@ export const getUserFavourites = async (req, res) => {
 
 export const getUserCart = async (req, res) => {
   try {
-    const user = await UserModel.findById("689b579224c60577df0bd643").populate(
-      "cart"
-    );
+    const user = await UserModel.findById(req.user.id).populate("cart");
     if (!user) {
       res.status(404).json({ message: "User not found" });
     }

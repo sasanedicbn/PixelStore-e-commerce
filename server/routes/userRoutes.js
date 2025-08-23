@@ -13,9 +13,9 @@ const routeUser = express.Router();
 
 routeUser.post("/", registerUser);
 routeUser.post("/login", loginUser);
-routeUser.get("/me", getMe); //treba ubaciti protect
+routeUser.get("/me", protect, getMe); //treba ubaciti protect
 routeUser.post("/contact", sendMessageUser);
-routeUser.get("/favourites", getUserFavourites);
-routeUser.get("/cart", getUserCart);
+routeUser.get("/favourites", protect, getUserFavourites);
+routeUser.get("/cart", protect, getUserCart);
 
 export default routeUser;
