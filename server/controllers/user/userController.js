@@ -29,12 +29,19 @@ export const registerUser = async (req, res) => {
     });
 
     if (user) {
+      const token = generateToken(user.id);
+      res.cookie("jwt", token, {
+        httpOnly: true,
+        secure: process.env.NODE_ENV !== "production",
+        sameSite: "strict",
+        maxAge: 30 * 24 * 60 * 60 * 1000,
+      });
       res.status(201).json({
         _id: user.id,
         name: user.name,
         country: user.country,
         email: user.email,
-        token: generateToken(user.id),
+        country: user.country,
       });
     } else {
       res.status(400).json("Invalid user data");
@@ -49,11 +56,18 @@ export const loginUser = async (req, res) => {
   console.log(email, password, "login");
   const user = await UserModel.findOne({ email });
   if (user && (await bcrypt.compare(password, user.password))) {
+    const token = generateToken(user.id);
+    res.cookie("jwt", token, {
+      httpOnly: true,
+      secure: process.env.NODE_ENV !== "production",
+      sameSite: "strict",
+      maxAge: 30 * 24 * 60 * 60 * 1000,
+    });
     res.json({
       _id: user.id,
       name: user.name,
       email: user.email,
-      token: generateToken(user.id),
+      country: user.country,
     });
   } else {
     res.status(400).json("Invalid credentials");

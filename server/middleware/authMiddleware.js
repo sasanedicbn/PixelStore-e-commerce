@@ -2,12 +2,9 @@ import jwt from "jsonwebtoken";
 import UserModel from "../model/user.js";
 
 export const protect = async (req, res, next) => {
-  let token;
+  const token = req.cookies.jwt;
 
-  if (
-    req.headers.authorization &&
-    req.headers.authorization.startsWith("Bearer")
-  ) {
+  if (token) {
     try {
       // Get token
       token = req.headers.authorization.split(" ")[1];

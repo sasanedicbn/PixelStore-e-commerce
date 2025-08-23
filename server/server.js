@@ -5,6 +5,7 @@ import ProductsModel from "./model/products.js";
 import { upload } from "./controllers/productsControllers.js";
 import cors from "cors";
 import userRoute from "./routes/userRoutes.js";
+import cookieParser from "cookie-parser";
 
 const app = express();
 dotenv.config();
@@ -14,6 +15,7 @@ const MONGOURL = process.env.MONGO_URL;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
+app.use(cookieParser());
 
 app.use("/api/users", userRoute);
 app.get("/api/products", async (req, res) => {
