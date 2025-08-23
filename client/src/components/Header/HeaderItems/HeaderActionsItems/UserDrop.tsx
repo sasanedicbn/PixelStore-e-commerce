@@ -1,20 +1,21 @@
-// import { useGetUserQuery } from "../../../../store/slices/apiSlice";
+import { useGetUserQuery } from "../../../../store/slices/apiSlice";
 
-// const UserDrop = () => {
-//   const { data: user, isLoading } = useGetUserQuery();
+const UserDrop = () => {
+  const { data: user, isLoading } = useGetUserQuery();
 
-//   console.log(user, "iz UserDrop-a");
-//   if (isLoading) return <p>Loading...</p>;
-//   if (!user) return <p>Not logged in</p>;
+  console.log(user, "iz UserDrop-a");
+  if (isLoading) return <p>Loading...</p>;
+  if (!user) return <p>Not logged in</p>;
 
-//   return (
-//     <div>
-//       <p>
-//         Hi, <span>{user.name}</span> <br />
-//         Welcome to PixelStudio.
-//       </p>
-//     </div>
-//   );
-// };
+  return (
+    <div>
+      <p>
+        Hi, <span>{user.name}</span> <br />
+        Welcome to PixelStudio.
+      </p>
+      <button>Log out</button>
+    </div>
+  );
+};
 
-// export default UserDrop;
+export default UserDrop;

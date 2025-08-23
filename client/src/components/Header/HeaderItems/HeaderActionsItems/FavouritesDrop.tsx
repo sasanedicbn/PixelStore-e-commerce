@@ -1,14 +1,7 @@
-import { useSelector } from "react-redux";
-import { useGetUserFavouritesMutation } from "../../../../store/slices/apiSlice";
-import { RootState } from "@reduxjs/toolkit/query";
+import { useGetUserFavouritesQuery } from "../../../../store/slices/apiSlice";
 
 const FavouritesDrop = () => {
-  const currentUser = useSelector(
-    (state: RootState) => state.products.currentUser
-  );
-
-  console.log(currentUser, "userId iz FavouritesDrop-a");
-  const { data, isLoading } = useGetUserFavouritesMutation(currentUser?._id);
+  const { data, isLoading } = useGetUserFavouritesQuery();
   const favourites = data?.favourites || [];
 
   if (isLoading) return <p>Loading...</p>;

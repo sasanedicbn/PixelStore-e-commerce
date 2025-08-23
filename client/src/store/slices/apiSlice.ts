@@ -2,49 +2,54 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 export const productsApi = createApi({
   reducerPath: "productsApi",
-  baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:8000" }),
+  baseQuery: fetchBaseQuery({ 
+    baseUrl: "http://localhost:8000", 
+    credentials: "include" 
+  }),
   endpoints: (builder) => ({
     getProductsByCategory: builder.query<Product[], string>({
       query: (category) => `products?category=${category}`,
     }),
     getProductById: builder.query<Product, string>({
-        query: (id) => `products/${id}`,
+      query: (id) => `products/${id}`,
+    }),
+    getProductsBySearchBar: builder.query<Product[], string>({
+      query: (searchTerm) => `api/products/search?query=${searchTerm}`,
     }),
     registerUser: builder.mutation({
       query: (formData) => ({
-        url:'api/users',
-        method:"POST",
+        url: "api/users",
+        method: "POST",
         body: formData,
-      })
+      }),
     }),
     loginUser: builder.mutation({
       query: (formData) => ({
-        url:'api/users/login',
-        method:"POST",
-        body:formData,
-      })
-    }),
-    getUserFavourites: builder.mutation({
-     query: (userId: string) => ({
-      url: `api/users/favourites`,
-      method: "POST",
-      body: { userId },
-    }),
-   }),
-   getUserCart: builder.mutation({
-      query: (userId:string) => ({
-      url : `api/users/cart`,
-      method: "POST",
-      body: { userId },
-      }) 
+        url: "api/users/login",
+        method: "POST",
+        body: formData,
+      }),
     }),
     getUser: builder.query({
-     query: () => `api/users/me`
+      query: () => `api/users/me`,
     }),
-     getProductsBySearchBar: builder.query({
-      query: (searchTerm) => `api/products/search?query=${searchTerm}`
+
+    getUserFavourites: builder.query({
+      query: () => `api/users/favourites`,
+    }),
+    getUserCart: builder.query({
+      query: () => `api/users/cart`,
     }),
   }),
 });
 
-export const { useGetProductsByCategoryQuery, useGetProductByIdQuery, useRegisterUserMutation, useLoginUserMutation, useGetProductsBySearchBarQuery, useGetUserQuery, useGetUserFavouritesMutation, useGetUserCartMutation} = productsApi;
+export const { 
+  useGetProductsByCategoryQuery, 
+  useGetProductByIdQuery, 
+  useGetProductsBySearchBarQuery,
+  useRegisterUserMutation, 
+  useLoginUserMutation, 
+  useGetUserQuery, 
+  useGetUserFavouritesQuery, 
+  useGetUserCartQuery 
+} = productsApi;

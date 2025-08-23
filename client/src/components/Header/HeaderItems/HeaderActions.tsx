@@ -1,9 +1,9 @@
 import Button from "../../../UX/Button";
 import Icon from "../../../UX/Icons";
-// import CartDrop from "./HeaderActionsItems/CartDrop";
+import CartDrop from "./HeaderActionsItems/CartDrop";
 import FavouritesDrop from "./HeaderActionsItems/FavouritesDrop";
 import HeaderAction from "./HeaderActionsItems/HeaderAction";
-// import UserDrop from "./HeaderActionsItems/UserDrop";
+import UserDrop from "./HeaderActionsItems/UserDrop";
 
 const HeaderActions = () => {
   return (
@@ -16,7 +16,7 @@ const HeaderActions = () => {
         }
       >
         {/* <p>Content koji treba prikazati</p> */}
-        {/* <UserDrop /> */}
+        <UserDrop />
       </HeaderAction>
 
       <HeaderAction
@@ -35,7 +35,7 @@ const HeaderActions = () => {
           </Button>
         }
       >
-        {/* <CartDrop /> */}
+        <CartDrop />
       </HeaderAction>
     </div>
   );
