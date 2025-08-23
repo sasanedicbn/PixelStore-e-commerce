@@ -74,20 +74,25 @@ export const loginUser = async (req, res) => {
   }
 };
 export const getMe = async (req, res) => {
-  const { _id, name, email, country } = await UserModel.findById(req.user.id);
-  console.log(req.user.id, "id usera");
+  try {
+    if (!req.user) {
+      return res.status(401).json({ message: "Not authorized" });
+    }
 
-  if (!name) {
-    return res.status(404).json({ message: "User not found" });
+    const { _id, name, email, country } = req.user;
+
+    res.status(200).json({
+      id: _id,
+      name,
+      email,
+      country,
+    });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ message: "Server error" });
   }
-
-  res.status(200).json({
-    id: _id,
-    name,
-    email,
-    country,
-  });
 };
+
 // Logout user
 export const logoutUser = (req, res) => {
   res.clearCookie("jwt");
