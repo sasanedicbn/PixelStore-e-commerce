@@ -89,6 +89,12 @@ export const getMe = async (req, res) => {
     country,
   });
 };
+// Logout user
+export const logoutUser = (req, res) => {
+  res.clearCookie("jwt");
+  res.json({ message: "Logged out successfully" });
+};
+
 // Generate JWT
 const generateToken = (id) => {
   return jwt.sign({ id }, process.env.JWT_SECRET, {
