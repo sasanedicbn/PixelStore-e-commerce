@@ -9,6 +9,7 @@ const initialState = {
     cameras: [],
   },
   allProducts:[],
+  currentUser: null,
   loading: false,
   error: null,
 };
@@ -30,8 +31,11 @@ export const productsSlice = createSlice({
     setError(state, action) {
       state.error = action.payload;
     },
+    setCurrentUser(state, action){
+      state.currentUser = action.payload
+    }
   },
 });
 
-export const { setProductsByCategory, setLoading, setError, setAllProducts } = productsSlice.actions;
+export const { setProductsByCategory, setLoading, setError, setAllProducts, setCurrentUser } = productsSlice.actions;
 export default productsSlice.reducer;
