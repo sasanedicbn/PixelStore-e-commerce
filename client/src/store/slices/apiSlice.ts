@@ -24,14 +24,22 @@ export const productsApi = createApi({
         body:formData,
       })
     }),
+    getUserFavourites: builder.mutation({
+     query: (userId: string) => ({
+      url: `api/users/favourites`,
+      method: "POST",
+      body: { userId },
+    }),
+   }),
+   getUserCart: builder.mutation({
+      query: (userId:string) => ({
+      url : `api/users/cart`,
+      method: "POST",
+      body: { userId },
+      }) 
+    }),
     getUser: builder.query({
      query: () => `api/users/me`
-    }),
-    getUserFavourites: builder.query({
-     query: () => `api/users/favourites`
-    }),
-    getUserCart: builder.query({
-      query: () => `api/users/cart`
     }),
      getProductsBySearchBar: builder.query({
       query: (searchTerm) => `api/products/search?query=${searchTerm}`
@@ -39,4 +47,4 @@ export const productsApi = createApi({
   }),
 });
 
-export const { useGetProductsByCategoryQuery, useGetProductByIdQuery, useRegisterUserMutation, useLoginUserMutation, useGetProductsBySearchBarQuery, useGetUserQuery, useGetUserFavouritesQuery, useGetUserCartQuery} = productsApi;
+export const { useGetProductsByCategoryQuery, useGetProductByIdQuery, useRegisterUserMutation, useLoginUserMutation, useGetProductsBySearchBarQuery, useGetUserQuery, useGetUserFavouritesMutation, useGetUserCartMutation} = productsApi;
