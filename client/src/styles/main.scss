@@ -219,10 +219,13 @@ header{
               overflow: hidden;
               animation: fadeSlideDown 0.2s ease-out;
               color: rgb(53, 53, 53);
+              p{
+                font-size: 16px;
                 span{
                   color: red;
                   font-weight: bold;
                 }
+              }
             }
           }
       }

@@ -30,6 +30,12 @@ export const productsApi = createApi({
         body: formData,
       }),
     }),
+    logoutUser: builder.mutation({
+      query: () => ({
+        url: "api/users/logout",
+        method: "POST",
+      }),
+    }),
     getUser: builder.query({
       query: () => `api/users/me`,
     }),
@@ -40,6 +46,7 @@ export const productsApi = createApi({
     getUserCart: builder.query({
       query: () => `api/users/cart`,
     }),
+
   }),
 });
 
