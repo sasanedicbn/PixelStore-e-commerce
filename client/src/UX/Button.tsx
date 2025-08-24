@@ -19,6 +19,7 @@ const Button = ({
     info: "btn-info",
     submitContact: "submit-btn-contact",
     submitSignin: "submit-btn-signin",
+    logout: "log-out",
   };
 
   return (

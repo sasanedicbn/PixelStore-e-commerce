@@ -1,4 +1,5 @@
 import { useGetUserQuery } from "../../../../store/slices/apiSlice";
+import Button from "../../../../UX/Button";
 
 const UserDrop = () => {
   const { data: user, isLoading } = useGetUserQuery();
@@ -13,7 +14,7 @@ const UserDrop = () => {
         Hi, <span>{user.name}</span> <br />
         Welcome to PixelStudio.
       </p>
-      <button>Log out</button>
+      <Button type="logout">Log out</Button>
     </div>
   );
 };

@@ -15,7 +15,6 @@ const HeaderActions = () => {
           </Button>
         }
       >
-        {/* <p>Content koji treba prikazati</p> */}
         <UserDrop />
       </HeaderAction>
 

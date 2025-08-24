@@ -7,11 +7,11 @@ import Layout from "./UX/Layout";
 import ContactUs from "./pages/NavActions/ContactUs/ContactUs";
 import CreateAcc from "./pages/NavActions/CreateAcc/CreateAcc";
 import SignIn from "./pages/NavActions/SignIn/SignIn";
-import { useGetUserQuery } from "./store/slices/apiSlice";
+// import { useGetUserQuery } from "./store/slices/apiSlice";
 
 function App() {
-  const { data: user } = useGetUserQuery();
-  console.log(user, "iz App.tsx");
+  // const { data: user } = useGetUserQuery();
+  // console.log(user, "iz App.tsx");
 
   const router = createBrowserRouter([
     {
