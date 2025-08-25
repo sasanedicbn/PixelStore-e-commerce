@@ -46,7 +46,7 @@ export const productsApi = createApi({
     getUserCart: builder.query({
       query: () => `api/users/cart`,
     }),
-
+   
   }),
 });
 
@@ -56,6 +56,7 @@ export const {
   useGetProductsBySearchBarQuery,
   useRegisterUserMutation, 
   useLoginUserMutation, 
+  useLogoutUserMutation,
   useGetUserQuery, 
   useGetUserFavouritesQuery, 
   useGetUserCartQuery 
