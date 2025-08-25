@@ -7,15 +7,15 @@ export const productsApi = createApi({
     credentials: "include" 
   }),
   endpoints: (builder) => ({
-    getProductsByCategory: builder.query<Product[], string>({
-      query: (category) => `products?category=${category}`,
-    }),
-    getProductById: builder.query<Product, string>({
-      query: (id) => `products/${id}`,
-    }),
-    getProductsBySearchBar: builder.query<Product[], string>({
-      query: (searchTerm) => `api/products/search?query=${searchTerm}`,
-    }),
+    // getProductsByCategory: builder.query<Product[], string>({
+    //   query: (category) => `products?category=${category}`,
+    // }),
+    // getProductById: builder.query<Product, string>({
+    //   query: (id) => `products/${id}`,
+    // }),
+    // getProductsBySearchBar: builder.query<Product[], string>({
+    //   query: (searchTerm) => `api/products/search?query=${searchTerm}`,
+    // }),
     registerUser: builder.mutation({
       query: (formData) => ({
         url: "api/users",
@@ -51,9 +51,9 @@ export const productsApi = createApi({
 });
 
 export const { 
-  useGetProductsByCategoryQuery, 
-  useGetProductByIdQuery, 
-  useGetProductsBySearchBarQuery,
+  // useGetProductsByCategoryQuery, 
+  // useGetProductByIdQuery, 
+  // useGetProductsBySearchBarQuery,
   useRegisterUserMutation, 
   useLoginUserMutation, 
   useGetUserQuery, 
