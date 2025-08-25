@@ -96,7 +96,7 @@ export const getMe = async (req, res) => {
 // Logout user
 export const logoutUser = (req, res) => {
   res.clearCookie("jwt");
-  res.json({ message: "Logged out successfully" });
+  res.json({ success: true, message: "Logged out successfully" });
 };
 
 // Generate JWT

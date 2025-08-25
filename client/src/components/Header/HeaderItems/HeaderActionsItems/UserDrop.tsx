@@ -1,8 +1,12 @@
-import { useGetUserQuery } from "../../../../store/slices/apiSlice";
+import {
+  useGetUserQuery,
+  useLogoutUserMutation,
+} from "../../../../store/slices/apiSlice";
 import Button from "../../../../UX/Button";
 
 const UserDrop = () => {
   const { data: user, isLoading } = useGetUserQuery();
+  const [logoutUser, { isLoading: isLoggingOut }] = useLogoutUserMutation();
 
   console.log(user, "iz UserDrop-a");
   if (isLoading) return <p>Loading...</p>;
