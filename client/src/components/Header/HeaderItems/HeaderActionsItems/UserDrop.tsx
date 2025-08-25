@@ -8,6 +8,14 @@ const UserDrop = () => {
   const { data: user, isLoading } = useGetUserQuery();
   const [logoutUser, { isLoading: isLoggingOut }] = useLogoutUserMutation();
 
+  const handleLogout = async () => {
+    try {
+      await logoutUser().unwrap();
+      window.location.reload();
+    } catch (error) {
+      console.error("Logout failed:", error);
+    }
+  };
   console.log(user, "iz UserDrop-a");
   if (isLoading) return <p>Loading...</p>;
   if (!user) return <p>Not logged in</p>;
