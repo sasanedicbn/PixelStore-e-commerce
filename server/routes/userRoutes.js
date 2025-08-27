@@ -4,6 +4,7 @@ import {
   getUserCart,
   getUserFavourites,
   loginUser,
+  logoutUser,
   registerUser,
   sendMessageUser,
 } from "../controllers/user/userController.js";
@@ -13,6 +14,7 @@ const routeUser = express.Router();
 
 routeUser.post("/", registerUser);
 routeUser.post("/login", loginUser);
+routeUser.post("/logout", protect, logoutUser);
 routeUser.get("/me", protect, getMe); //treba ubaciti protect
 routeUser.post("/contact", sendMessageUser);
 routeUser.get("/favourites", protect, getUserFavourites);
