@@ -36,6 +36,13 @@ export const productsApi = createApi({
         method: "POST",
       }),
     }),
+    sendProductToCart: builder.mutation({
+      query: (productId) => ({
+        url: `api/users/cart`,
+        method: "POST",
+        body: { productId },
+      }),
+    }),
     getUser: builder.query({
       query: () => `api/users/me`,
     }),
