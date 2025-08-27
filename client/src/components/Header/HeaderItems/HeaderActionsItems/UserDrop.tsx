@@ -10,8 +10,9 @@ const UserDrop = () => {
 
   const handleLogout = async () => {
     try {
-      await logoutUser().unwrap();
-      window.location.reload();
+      const result = await logoutUser().unwrap();
+      console.log(result, "iz UserDrop-a nakon logout-a");
+      // window.location.reload();
     } catch (error) {
       console.error("Logout failed:", error);
     }
@@ -26,7 +27,9 @@ const UserDrop = () => {
         Hi, <span>{user.name}</span> <br />
         Welcome to PixelStudio.
       </p>
-      <Button type="logout">Log out</Button>
+      <Button type="logout" onClick={handleLogout}>
+        Log out
+      </Button>
     </div>
   );
 };
