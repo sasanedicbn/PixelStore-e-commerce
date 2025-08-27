@@ -6,6 +6,13 @@ const ProductCart = ({ products = [] }) => {
   const getSinglePoductHandler = (id) => {
     navigate(`/products/${id}`);
   };
+  const addProductToCartHandler = (id) => {
+    console.log(id, "sta dobijem od id");
+    try {
+    } catch (error) {
+      console.error("Failed to add product to cart:", error);
+    }
+  };
   return (
     <div className="products-container">
       {products.length > 0 ? (
@@ -19,7 +26,9 @@ const ProductCart = ({ products = [] }) => {
             />
             <p className="product-title">{product.title}</p>
             <p className="product-price">${product.price}</p>
-            <Button>Add to Cart</Button>
+            <Button onClick={() => addProductToCartHandler(product._id)}>
+              Add to Cart
+            </Button>
           </div>
         ))
       ) : (

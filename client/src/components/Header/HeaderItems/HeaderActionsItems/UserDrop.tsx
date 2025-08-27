@@ -6,13 +6,13 @@ import Button from "../../../../UX/Button";
 
 const UserDrop = () => {
   const { data: user, isLoading } = useGetUserQuery();
-  const [logoutUser, { isLoading: isLoggingOut }] = useLogoutUserMutation();
+  const [logoutUser] = useLogoutUserMutation();
 
   const handleLogout = async () => {
     try {
       const result = await logoutUser().unwrap();
       console.log(result, "iz UserDrop-a nakon logout-a");
-      // window.location.reload();
+      window.location.reload();
     } catch (error) {
       console.error("Logout failed:", error);
     }
