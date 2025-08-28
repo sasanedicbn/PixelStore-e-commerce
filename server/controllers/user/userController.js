@@ -202,3 +202,27 @@ export const getUserCart = async (req, res) => {
     res.status(500).json({ success: false, message: "Cart is not sent" });
   }
 };
+
+export const addProductToCart = async (req, res) => {
+  const { productId } = req.body;
+  try {
+    const user = await UserModel.findById(req.user.id);
+    if (!user) {
+      res.status(404).json({ message: "You shoyld be logged in" });
+    }
+    const productInCart = user.cart.find((item) => item.id === productId);
+    if (productInCart) {
+      productInCart.quantity++;
+    } else {
+      user.cart.push({ product: productId, quantity: 1 });
+    }
+    await user.save();
+    res
+      .status(200)
+      .json({ success: true, message: "Product added to cart", user });
+  } catch (error) {
+    res
+      .status(500)
+      .json({ success: false, message: "Product is not added to cart" });
+  }
+};

@@ -1,5 +1,6 @@
 import express from "express";
 import {
+  addProductToCart,
   getMe,
   getUserCart,
   getUserFavourites,
@@ -15,6 +16,7 @@ const routeUser = express.Router();
 routeUser.post("/", registerUser);
 routeUser.post("/login", loginUser);
 routeUser.post("/logout", protect, logoutUser);
+routeUser.post("/cart", protect, addProductToCart);
 routeUser.get("/me", protect, getMe); //treba ubaciti protect
 routeUser.post("/contact", sendMessageUser);
 routeUser.get("/favourites", protect, getUserFavourites);
