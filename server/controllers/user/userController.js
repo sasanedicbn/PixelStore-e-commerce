@@ -3,6 +3,7 @@ import bcrypt from "bcryptjs";
 import UserModel from "../../model/user.js";
 // import asyncHandler from "express-async-handler";
 import nodemailer from "nodemailer";
+import ProductsModel from "../../model/products.js";
 
 export const registerUser = async (req, res) => {
   const { name, email, password, country } = req.body;
@@ -210,11 +211,15 @@ export const addProductToCart = async (req, res) => {
     if (!user) {
       res.status(404).json({ message: "You shoyld be logged in" });
     }
-    const productInCart = user.cart.find((item) => item.id === productId);
+    const productInfo = await ProductsModel.findById(productId);
+    if (!productInfo) {
+      return res.status(404).json({ message: "Product not found" });
+    }
+    const productInCart = user.cart.find((item) => item.id === productInfo._id);
     if (productInCart) {
       productInCart.quantity++;
     } else {
-      user.cart.push({ product: productId, quantity: 1 });
+      user.cart.push({ product: productInfo, quantity: 1 });
     }
     await user.save();
     res
