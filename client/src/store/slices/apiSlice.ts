@@ -38,7 +38,7 @@ export const productsApi = createApi({
     }),
     sendProductToCart: builder.mutation({
       query: (productId) => ({
-        url: `api/users/cart`,
+        url: `api/users/cart/add`,
         method: "POST",
         body: { productId },
       }),
@@ -62,6 +62,7 @@ export const {
   useGetProductByIdQuery, 
   useGetProductsBySearchBarQuery,
   useRegisterUserMutation, 
+  useSendProductToCartMutation,
   useLoginUserMutation, 
   useLogoutUserMutation,
   useGetUserQuery, 

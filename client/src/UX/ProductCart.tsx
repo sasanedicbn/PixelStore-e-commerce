@@ -1,18 +1,21 @@
 import { useNavigate } from "react-router-dom";
 import Button from "./Button";
+import { useSendProductToCartMutation } from "../store/slices/apiSlice";
 
 const ProductCart = ({ products = [] }) => {
   const navigate = useNavigate();
+  const [dataToSendHandler] = useSendProductToCartMutation();
   const getSinglePoductHandler = (id) => {
     navigate(`/products/${id}`);
   };
-  const addProductToCartHandler = (id) => {
-    console.log(id, "sta dobijem od id");
+  const addProductToCartHandler = async (id) => {
     try {
+      await dataToSendHandler(id).unwrap();
     } catch (error) {
       console.error("Failed to add product to cart:", error);
     }
   };
+
   return (
     <div className="products-container">
       {products.length > 0 ? (
