@@ -192,14 +192,23 @@ export const getUserFavourites = async (req, res) => {
 
 export const getUserCart = async (req, res) => {
   try {
-    const user = await UserModel.findById(req.user.id).populate("cart");
+    const user = await UserModel.findById(req.user.id).populate({
+      path: "cart.product",
+      model: "Product",
+    });
+
     if (!user) {
-      res.status(404).json({ message: "User not found" });
+      return res.status(404).json({ message: "User not found" });
     }
-    if (user.cart.length === 0) {
-      res.status(200).json({ cart: [] });
+
+    if (!user.cart || user.cart.length === 0) {
+      return res.status(200).json({ cart: [] });
     }
+
+    console.log(user.cart, "user.cart");
+    res.status(200).json({ cart: user.cart });
   } catch (error) {
+    console.error("Error fetching cart:", error);
     res.status(500).json({ success: false, message: "Cart is not sent" });
   }
 };
