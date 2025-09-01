@@ -179,7 +179,11 @@ export const getUserFavourites = async (req, res) => {
     if (!user.favourites || user.favourites.length === 0) {
       return res.status(200).json({ favourites: [] });
     }
-    console.log(use
+    console.log(user.favourites, "user.favourites");
+    res.status(200).json({
+      favourites: user.favourites,
+    });
+  } catch (error) {
     res
       .status(500)
       .json({ success: false, message: "Favoirotes is not sent." });
