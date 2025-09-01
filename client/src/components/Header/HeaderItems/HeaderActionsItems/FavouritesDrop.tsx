@@ -6,7 +6,9 @@ const FavouritesDrop = () => {
 
   if (isLoading) return <p>Loading...</p>;
   if (!data) return <p>You should log in to see your favourites</p>;
-  if (favourites.le
+  if (favourites.length === 0)
+    return <p>You don't have any favourites products yet.</p>;
+
   return (
     <div>
       <ul>
