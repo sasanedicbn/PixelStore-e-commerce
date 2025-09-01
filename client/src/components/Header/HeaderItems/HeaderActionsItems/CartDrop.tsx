@@ -1,4 +1,5 @@
 import { useGetUserCartQuery } from "../../../../store/slices/apiSlice";
+import Button from "../../../../UX/Button";
 
 const CartDrop = () => {
   const { data: cartData, isLoading } = useGetUserCartQuery();
@@ -22,7 +23,10 @@ const CartDrop = () => {
               <h4 className="cart-drop__title">{item.product.title}</h4>
               <p className="cart-drop__category">{item.product.category}</p>
               <p className="cart-drop__price">${item.product.price}</p>
-              <p className="cart-drop__quantity">Qty: {item.quantity}</p>
+              <p className="cart-drop__quantity">
+                Quantity: <Button type="plus">+</Button> {item.quantity}{" "}
+                <Button type="minus">-</Button>
+              </p>
             </div>
           </li>
         ))}
