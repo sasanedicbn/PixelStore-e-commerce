@@ -9,11 +9,21 @@ const CartDrop = () => {
   if (cart.length === 0) return <p>Your cart is empty.</p>;
 
   return (
-    <div>
-      <ul>
+    <div className="cart-drop">
+      <ul className="cart-drop__list">
         {cart.map((item) => (
-          <li key={item._id}>
-            {item.name} - {item.quantity}
+          <li key={item._id} className="cart-drop__item">
+            <img
+              src={item.product.imageUrl}
+              alt={item.product.title}
+              className="cart-drop__img"
+            />
+            <div className="cart-drop__info">
+              <h4 className="cart-drop__title">{item.product.title}</h4>
+              <p className="cart-drop__category">{item.product.category}</p>
+              <p className="cart-drop__price">${item.product.price}</p>
+              <p className="cart-drop__quantity">Qty: {item.quantity}</p>
+            </div>
           </li>
         ))}
       </ul>
