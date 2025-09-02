@@ -8,6 +8,7 @@ import {
   logoutUser,
   registerUser,
   sendMessageUser,
+  updateProductInCart,
 } from "../controllers/user/userController.js";
 import { protect } from "../middleware/authMiddleware.js";
 

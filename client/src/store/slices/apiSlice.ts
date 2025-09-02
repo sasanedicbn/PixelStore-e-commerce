@@ -6,6 +6,7 @@ export const productsApi = createApi({
     baseUrl: "http://localhost:8000", 
     credentials: "include" 
   }),
+  tagTypes: ["Cart"], 
   endpoints: (builder) => ({
     getProductsByCategory: builder.query<Product[], string>({
       query: (category) => `products?category=${category}`,
@@ -51,14 +52,16 @@ export const productsApi = createApi({
         url: `api/users/cart/${productId}`,
         method: "PATCH",
         body: { type },
-        include: "credentials"
+        credentials: "include"
       }),
+      invalidatesTags: ["Cart"],
     }),
     getUserFavourites: builder.query({
       query: () => `api/users/favourites`,
     }),
     getUserCart: builder.query({
       query: () => `api/users/cart`,
+      providesTags: ["Cart"], 
     }),
    
   }),
