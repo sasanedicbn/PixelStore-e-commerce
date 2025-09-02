@@ -74,5 +74,6 @@ export const {
   useLogoutUserMutation,
   useGetUserQuery, 
   useGetUserFavouritesQuery, 
-  useGetUserCartQuery 
+  useGetUserCartQuery,
+  useUpdateCartMutation
 } = productsApi;

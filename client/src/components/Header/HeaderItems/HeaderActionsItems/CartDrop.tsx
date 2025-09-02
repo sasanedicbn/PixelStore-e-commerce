@@ -1,8 +1,12 @@
-import { useGetUserCartQuery } from "../../../../store/slices/apiSlice";
+import {
+  useGetUserCartQuery,
+  useUpdateCartMutation,
+} from "../../../../store/slices/apiSlice";
 import Button from "../../../../UX/Button";
 
 const CartDrop = () => {
   const { data: cartData, isLoading } = useGetUserCartQuery();
+  const [updateCartItem] = useUpdateCartMutation();
   const cart = cartData?.cart || [];
 
   if (isLoading) return <p>Loading...</p>;
