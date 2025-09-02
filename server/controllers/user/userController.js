@@ -242,3 +242,48 @@ export const addProductToCart = async (req, res) => {
       .json({ success: false, message: "Product is not added to cart" });
   }
 };
+export const updateProductInCart = async (req, res) => {
+  const { productId } = req.params;
+  const { type } = req.body;
+
+  try {
+    const user = await UserModel.findById(req.user.id);
+    if (!user) {
+      return res.status(404).json({ message: "You should be logged in" });
+    }
+
+    const productInCart = user.cart.find(
+      (item) => item.product.toString() === productId.toString()
+    );
+
+    if (!productInCart) {
+      return res.status(404).json({ message: "Product not found in cart" });
+    }
+
+    if (type === "increment") {
+      productInCart.quantity++;
+    } else if (type === "decrement") {
+      productInCart.quantity--;
+      if (productInCart.quantity <= 0) {
+        user.cart = user.cart.filter(
+          (item) => item.product.toString() !== productId.toString()
+        );
+      }
+    } else {
+      return res.status(400).json({ message: "Invalid type" });
+    }
+
+    await user.save();
+
+    return res.status(200).json({
+      success: true,
+      message: "Cart updated",
+      cart: user.cart,
+    });
+  } catch (error) {
+    console.error("Error updating cart:", error);
+    return res
+      .status(500)
+      .json({ success: false, message: "Cart is not updated" });
+  }
+};
