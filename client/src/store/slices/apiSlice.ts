@@ -46,7 +46,14 @@ export const productsApi = createApi({
     getUser: builder.query({
       query: () => `api/users/me`,
     }),
-
+    updateCart: builder.mutation({
+      query: ({ productId, type}) => ({
+        url: `api/users/cart/${productId}`,
+        method: "PATCH",
+        body: { type },
+        include: "credentials"
+      }),
+    }),
     getUserFavourites: builder.query({
       query: () => `api/users/favourites`,
     }),
