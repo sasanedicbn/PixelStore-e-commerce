@@ -14,9 +14,8 @@ const AllProducts = () => {
   const [searchParams] = useSearchParams();
   const category = searchParams.get("category");
 
-  const allProducts = u
-
-      try {
+  const allProducts = useSelector((state) => state.products[category] || []);
+  const loading = useSelect
         const url = `http://localhost:8000/products?category=${category}`;
         const response = await fetch(url);
         const data = await response.json();
