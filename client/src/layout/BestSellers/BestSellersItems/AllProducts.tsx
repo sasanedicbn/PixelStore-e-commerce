@@ -14,10 +14,7 @@ const AllProducts = () => {
   const [searchParams] = useSearchParams();
   const category = searchParams.get("category");
 
-  const allProducts = useSelector((state) => state.products[category] || []);
-  const loading = useSelector((state) => state.products.loading);
-  const error = useSelector
-      dispatch(setLoading(true));
+  const allProducts = u
 
       try {
         const url = `http://localhost:8000/products?category=${category}`;
