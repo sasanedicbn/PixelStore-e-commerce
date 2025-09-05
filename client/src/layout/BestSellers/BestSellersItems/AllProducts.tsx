@@ -16,12 +16,7 @@ const AllProducts = () => {
 
   const allProducts = useSelector((state) => state.products[category] || []);
   const loading = useSelector((state) => state.products.loading);
-  const error = useSelector((state) => state.products.error);
-
-  useEffet(() => {
-    const fetchProducts = async () => {
-      if (products.length > 0) return;
-
+  const error = useSelector
       dispatch(setLoading(true));
 
       try {
