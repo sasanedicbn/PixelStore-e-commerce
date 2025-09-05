@@ -18,7 +18,7 @@ const AllProducts = () => {
   const loading = useSelector((state) => state.products.loading);
   const error = useSelector((state) => state.products.error);
 
-  useEffect(() => {
+  useEffet(() => {
     const fetchProducts = async () => {
       if (products.length > 0) return;
 
