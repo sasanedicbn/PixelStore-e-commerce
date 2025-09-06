@@ -9,7 +9,7 @@ import Button from "../../../../UX/Button";
 const CartDrop = () => {
   const { data: cartData, isLoading } = useGetUserCartQuery();
   const [updateCartItem] = useUpdateCartMutation();
-  const { data: product, isLoading, isError } = useGetProductByIdQuery(id);
+  const { data: product } = useGetProductByIdQuery();
   const navigate = useNavigate();
 
   const cart = cartData?.cart || [];
@@ -25,15 +25,26 @@ const CartDrop = () => {
       console.error("Failed to update cart item:", error);
     }
   };
-  const getSinglePoductHandler = (id) => {
-    navigate(`/products/${id}`);
+  const getSinglePoductHandler = async (id) => {
+    try {
+      navigate(`/products/${id}`);
+    } catch (error) {
+      console.error("Failed to navigate to product:", error);
+    }
   };
 
   return (
     <div className="cart-drop">
       <ul className="cart-drop__list">
         {cart.map((item) => (
-          <li key={item._id} className="cart-drop__item">
+          <li
+            key={item._id}
+            className="cart-drop__item"
+            onClick={(e) => {
+              e.stopPropagation();
+              getSinglePoductHandler(item._id);
+            }}
+          >
             <img
               src={item.product.imageUrl}
               alt={item.product.title}
@@ -47,9 +58,10 @@ const CartDrop = () => {
                 Quantity:{" "}
                 <Button
                   type="plus"
-                  onClick={() =>
-                    updateCartItemHandler(item.product._id, "increment")
-                  }
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    updateCartItemHandler(item.product._id, "increment");
+                  }}
                 >
                   +
                 </Button>{" "}
