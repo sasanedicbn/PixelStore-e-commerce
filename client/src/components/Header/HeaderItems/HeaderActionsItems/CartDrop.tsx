@@ -6,10 +6,15 @@ import {
 } from "../../../../store/slices/apiSlice";
 import Button from "../../../../UX/Button";
 
+import { useState } from "react";
+
 const CartDrop = () => {
   const { data: cartData, isLoading } = useGetUserCartQuery();
   const [updateCartItem] = useUpdateCartMutation();
-  const { data: product } = useGetProductByIdQuery();
+  const [selectedProductId, setSelectedProductId] = useState(null);
+  const { data: product } = useGetProductByIdQuery(selectedProductId, {
+    skip: !selectedProductId,
+  });
   const navigate = useNavigate();
 
   const cart = cartData?.cart || [];
@@ -25,12 +30,10 @@ const CartDrop = () => {
       console.error("Failed to update cart item:", error);
     }
   };
-  const getSinglePoductHandler = async (id) => {
-    try {
-      navigate(`/products/${id}`);
-    } catch (error) {
-      console.error("Failed to navigate to product:", error);
-    }
+
+  const getSingleProductHandler = (id) => {
+    setSelectedProductId(id);
+    navigate(`/products/${id}`);
   };
 
   return (
@@ -40,10 +43,7 @@ const CartDrop = () => {
           <li
             key={item._id}
             className="cart-drop__item"
-            onClick={(e) => {
-              e.stopPropagation();
-              getSinglePoductHandler(item._id);
-            }}
+            onClick={() => getSingleProductHandler(item.product._id)}
           >
             <img
               src={item.product.imageUrl}
@@ -67,9 +67,10 @@ const CartDrop = () => {
                 </Button>{" "}
                 {item.quantity}{" "}
                 <Button
-                  onClick={() =>
-                    updateCartItemHandler(item.product._id, "decrement")
-                  }
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    updateCartItemHandler(item.product._id, "decrement");
+                  }}
                   type="minus"
                 >
                   -
