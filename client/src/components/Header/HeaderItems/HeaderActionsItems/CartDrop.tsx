@@ -1,4 +1,6 @@
+import { useNavigate } from "react-router-dom";
 import {
+  useGetProductByIdQuery,
   useGetUserCartQuery,
   useUpdateCartMutation,
 } from "../../../../store/slices/apiSlice";
@@ -7,6 +9,9 @@ import Button from "../../../../UX/Button";
 const CartDrop = () => {
   const { data: cartData, isLoading } = useGetUserCartQuery();
   const [updateCartItem] = useUpdateCartMutation();
+  const { data: product, isLoading, isError } = useGetProductByIdQuery(id);
+  const navigate = useNavigate();
+
   const cart = cartData?.cart || [];
 
   if (isLoading) return <p>Loading...</p>;
@@ -19,6 +24,9 @@ const CartDrop = () => {
     } catch (error) {
       console.error("Failed to update cart item:", error);
     }
+  };
+  const getSinglePoductHandler = (id) => {
+    navigate(`/products/${id}`);
   };
 
   return (
