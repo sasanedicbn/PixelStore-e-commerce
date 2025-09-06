@@ -15,7 +15,16 @@ const AllProducts = () => {
   const category = searchParams.get("category");
 
   const allProducts = useSelector((state) => state.products[category] || []);
-  const loading = useSelect
+  const loading = useSelector((state) => state.products.loading);
+  const error = useSelector((state) => state.products.error);
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      if (products.length > 0) return;
+
+      dispatch(setLoading(true));
+
+      try {
         const url = `http://localhost:8000/products?category=${category}`;
         const response = await fetch(url);
         const data = await response.json();
