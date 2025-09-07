@@ -1,20 +1,13 @@
 import { useNavigate } from "react-router-dom";
 import {
-  useGetProductByIdQuery,
   useGetUserCartQuery,
   useUpdateCartMutation,
 } from "../../../../store/slices/apiSlice";
 import Button from "../../../../UX/Button";
 
-import { useState } from "react";
-
 const CartDrop = () => {
   const { data: cartData, isLoading } = useGetUserCartQuery();
   const [updateCartItem] = useUpdateCartMutation();
-  const [selectedProductId, setSelectedProductId] = useState(null);
-  const { data: product } = useGetProductByIdQuery(selectedProductId, {
-    skip: !selectedProductId,
-  });
   const navigate = useNavigate();
 
   const cart = cartData?.cart || [];
@@ -32,7 +25,6 @@ const CartDrop = () => {
   };
 
   const getSingleProductHandler = (id) => {
-    setSelectedProductId(id);
     navigate(`/products/${id}`);
   };
 
