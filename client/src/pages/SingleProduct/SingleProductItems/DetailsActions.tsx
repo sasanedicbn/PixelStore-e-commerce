@@ -4,14 +4,15 @@ import Button from "../../../UX/Button";
 import Icon from "../../../UX/Icons";
 
 const DetailsActions = ({ id }) => {
-  // console.log(id, "iz details actions");
+  console.log(id, "iz details actions");
   const [quantity, setQuantity] = useState(1);
   const [updateCartItem] = useUpdateCartMutation();
   const updateCartItemHandler = async (productId, type) => {
     console.log(productId, type, "iz details actions");
     try {
       const userCart = await updateCartItem({ productId, type }).unwrap();
-      const updatedItem = userCart.cart.find((item) => item._id === id);
+      const updatedItem = userCart.cart.find((item) => item.product === id);
+      console.log(updatedItem, " da li postoji uopste");
       if (updatedItem) setQuantity(updatedItem.quantity);
 
       console.log(userCart, "iz details actions datafromuser");
