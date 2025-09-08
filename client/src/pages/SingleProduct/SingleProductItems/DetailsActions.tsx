@@ -1,36 +1,34 @@
-import { useState } from "react";
-import { useUpdateCartMutation } from "../../../store/slices/apiSlice";
+import {
+  useUpdateCartMutation,
+  useGetUserCartQuery,
+} from "../../../store/slices/apiSlice";
 import Button from "../../../UX/Button";
 import Icon from "../../../UX/Icons";
 
 const DetailsActions = ({ id }) => {
-  console.log(id, "iz details actions");
-  const [quantity, setQuantity] = useState(1);
+  const { data: cartData } = useGetUserCartQuery();
   const [updateCartItem] = useUpdateCartMutation();
-  const updateCartItemHandler = async (productId, type) => {
-    console.log(productId, type, "iz details actions");
-    try {
-      const userCart = await updateCartItem({ productId, type }).unwrap();
-      const updatedItem = userCart.cart.find((item) => item.product === id);
-      console.log(updatedItem, " da li postoji uopste");
-      if (updatedItem) setQuantity(updatedItem.quantity);
 
-      console.log(userCart, "iz details actions datafromuser");
+  const cart = cartData?.cart || [];
+  const cartItem = cart.find((item) => item.product._id === id);
+  const quantity = cartItem ? cartItem.quantity : 1;
+
+  const updateCartItemHandler = async (productId, type) => {
+    try {
+      await updateCartItem({ productId, type }).unwrap();
     } catch (error) {
       console.error("Failed to update cart item:", error);
     }
   };
+
   return (
     <div className="detailsActions">
       <div className="quantity">
         <Button
           type="minus"
-          onClick={() => {
-            updateCartItemHandler(id, "decrement");
-          }}
+          onClick={() => updateCartItemHandler(id, "decrement")}
         >
-          {" "}
-          -{" "}
+          -
         </Button>
         <input
           type="text"
@@ -41,12 +39,9 @@ const DetailsActions = ({ id }) => {
         />
         <Button
           type="plus"
-          onClick={() => {
-            updateCartItemHandler(id, "increment");
-          }}
+          onClick={() => updateCartItemHandler(id, "increment")}
         >
-          {" "}
-          +{" "}
+          +
         </Button>
       </div>
       <Button type="addToCart">
@@ -59,4 +54,5 @@ const DetailsActions = ({ id }) => {
     </div>
   );
 };
+
 export default DetailsActions;
