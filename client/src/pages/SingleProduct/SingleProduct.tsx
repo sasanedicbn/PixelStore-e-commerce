@@ -9,6 +9,7 @@ const SingleProduct = () => {
 
   if (isLoading) return <p>Loading...</p>;
   if (isError) return <p>Error fetching product</p>;
+  console.log(product, "iz singla producta");
 
   return (
     <>

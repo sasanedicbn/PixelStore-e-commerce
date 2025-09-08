@@ -3,6 +3,7 @@ import DetailsActions from "./DetailsActions";
 
 const ProductDetails = ({ product }) => {
   const staticStars = 5;
+  console.log(product, "iz product details");
   return (
     <div className="product-details">
       <h1>{product.product.title} - M1 chip (Latest model)</h1>
@@ -23,7 +24,7 @@ const ProductDetails = ({ product }) => {
         MPN: <span>MGN63LL/A</span>
       </p>
       <p>{product.product.description}</p>
-      <DetailsActions />
+      <DetailsActions id={product.product._id} />
       <SocialMedia />
     </div>
   );
