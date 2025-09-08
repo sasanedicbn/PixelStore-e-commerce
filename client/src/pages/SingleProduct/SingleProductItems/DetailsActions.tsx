@@ -11,10 +11,13 @@ const DetailsActions = ({ id }) => {
 
   const cart = cartData?.cart || [];
   const cartItem = cart.find((item) => item.product._id === id);
-  const quantity = cartItem ? cartItem.quantity : 1;
+  const quantity = cartItem ? cartItem.quantity : 0;
 
   const updateCartItemHandler = async (productId, type) => {
     try {
+      if (!cartItem) {
+        toast.error("You should log in to add items to cart");
+      }
       await updateCartItem({ productId, type }).unwrap();
     } catch (error) {
       console.error("Failed to update cart item:", error);
