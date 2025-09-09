@@ -288,15 +288,33 @@ export const updateProductInCart = async (req, res) => {
   }
 };
 export const addProductInFavourites = async (req, res) => {
-  const {productId} = req.body;
-  try{
+  const { productId } = req.body;
+  try {
     const user = await UserModel.findById(req.user.id);
-    if(!user){
-      res.status(404).json({message: "You should be logged in"});
+    if (!user) {
+      res.status(404).json({ message: "You should be logged in" });
     }
     const productInfo = await ProductsModel.findById(productId);
-    if(!productInfo){
-      res.status(404).json({message: "Product not found"});
+    if (!productInfo) {
+      res.status(404).json({ message: "Product not found" });
     }
+    const productInFavorutes = user.favourites.find(
+      (item) => item.toString() === productInfo._id.toString()
+    );
+    if (productInFavorutes) {
+      user.favourites = user.favourites.filter(
+        (item) => item.toString() !== productInfo._id.toString()
+      );
+    } else {
+      user.favourites.push(productInfo._id);
+    }
+    await user.save();
+    res
+      .status(200)
+      .json({ success: true, message: "Product added to favourites", user });
+  } catch (error) {
+    res
+      .status(500)
+      .json({ success: false, message: "Product is not added to favourites" });
   }
-}
+};
