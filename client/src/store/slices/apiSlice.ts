@@ -43,6 +43,7 @@ export const productsApi = createApi({
         method: "POST",
         body: { productId },
       }),
+       invalidatesTags: ["Cart"],
     }),
     getUser: builder.query({
       query: () => `api/users/me`,
