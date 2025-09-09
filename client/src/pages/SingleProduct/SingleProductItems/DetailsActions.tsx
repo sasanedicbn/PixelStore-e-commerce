@@ -7,6 +7,7 @@ import Button from "../../../UX/Button";
 import Icon from "../../../UX/Icons";
 
 const DetailsActions = ({ id }) => {
+  console.log(id, "iz propsa");
   const { data: cartData } = useGetUserCartQuery();
   const [updateCartItem] = useUpdateCartMutation();
   const [dataToSendHandler] = useSendProductToCartMutation();
@@ -21,12 +22,14 @@ const DetailsActions = ({ id }) => {
 
   const cart = cartData?.cart || [];
   const cartItem = cart.find((item) => item.product._id === id);
+  console.log(cartItem, "iz cartItems da li je pronadjen");
   const quantity = cartItem ? cartItem.quantity : 0;
 
   const updateCartItemHandler = async (productId, type) => {
     try {
       if (!cartItem) {
-        toast.error("You should log in to add items to cart");
+        // toast.error("You should log in to add items to cart");
+        return;
       }
       await updateCartItem({ productId, type }).unwrap();
     } catch (error) {
@@ -59,9 +62,7 @@ const DetailsActions = ({ id }) => {
       </div>
       <Button type="addToCart">
         <Icon name="cart" />
-        <span onClick={() => addProductToCartHandler(cartItem)}>
-          ADD TO CART
-        </span>
+        <span onClick={() => addProductToCartHandler(id)}>ADD TO CART</span>
       </Button>
       <Button type="secondCart">
         <Icon name="favourites" />
