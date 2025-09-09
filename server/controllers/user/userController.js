@@ -287,3 +287,16 @@ export const updateProductInCart = async (req, res) => {
       .json({ success: false, message: "Cart is not updated" });
   }
 };
+export const addProductInFavourites = async (req, res) => {
+  const {productId} = req.body;
+  try{
+    const user = await UserModel.findById(req.user.id);
+    if(!user){
+      res.status(404).json({message: "You should be logged in"});
+    }
+    const productInfo = await ProductsModel.findById(productId);
+    if(!productInfo){
+      res.status(404).json({message: "Product not found"});
+    }
+  }
+}
