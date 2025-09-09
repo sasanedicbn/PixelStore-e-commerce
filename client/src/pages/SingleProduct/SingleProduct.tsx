@@ -1,10 +1,15 @@
 import { useParams } from "react-router-dom";
-import { useGetProductByIdQuery } from "../../store/slices/apiSlice";
+import {
+  useGetProductByIdQuery,
+  useSendItemtoFavouritesMutation,
+} from "../../store/slices/apiSlice";
 import ProductDetails from "./SingleProductItems/ProductDetails";
 import ProductInfo from "./SingleProductItems/ProductInfo";
 
 const SingleProduct = () => {
   const { id } = useParams();
+  const [sendItemtoFavourites] = useSendItemtoFavouritesMutation();
+
   const { data: product, isLoading, isError } = useGetProductByIdQuery(id);
 
   if (isLoading) return <p>Loading...</p>;

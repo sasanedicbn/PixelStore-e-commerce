@@ -1,7 +1,11 @@
-import { useGetUserFavouritesQuery } from "../../../../store/slices/apiSlice";
+import {
+  useGetUserFavouritesQuery,
+  useSendItemtoFavouritesMutation,
+} from "../../../../store/slices/apiSlice";
 
 const FavouritesDrop = () => {
   const { data, isLoading } = useGetUserFavouritesQuery();
+
   const favourites = data?.favourites || [];
 
   if (isLoading) return <p>Loading...</p>;

@@ -85,5 +85,6 @@ export const {
   useGetUserQuery, 
   useGetUserFavouritesQuery, 
   useGetUserCartQuery,
-  useUpdateCartMutation
+  useUpdateCartMutation,
+  useSendItemtoFavouritesMutation,
 } = productsApi;
