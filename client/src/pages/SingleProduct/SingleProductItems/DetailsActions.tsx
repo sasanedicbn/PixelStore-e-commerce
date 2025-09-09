@@ -39,31 +39,35 @@ const DetailsActions = ({ id }) => {
 
   return (
     <div className="detailsActions">
-      <div className="quantity">
-        <Button
-          type="minus"
-          onClick={() => updateCartItemHandler(id, "decrement")}
-        >
-          -
+      {cartItem ? (
+        <div className="quantity">
+          <Button
+            type="minus"
+            onClick={() => updateCartItemHandler(id, "decrement")}
+          >
+            -
+          </Button>
+          <input
+            type="text"
+            name="quantity"
+            id="quantity"
+            value={quantity}
+            readOnly
+          />
+          <Button
+            type="plus"
+            onClick={() => updateCartItemHandler(id, "increment")}
+          >
+            +
+          </Button>
+        </div>
+      ) : (
+        <Button type="addToCart" onClick={() => addProductToCartHandler(id)}>
+          <Icon name="cart" />
+          <span>ADD TO CART</span>
         </Button>
-        <input
-          type="text"
-          name="quantity"
-          id="quantity"
-          value={quantity}
-          readOnly
-        />
-        <Button
-          type="plus"
-          onClick={() => updateCartItemHandler(id, "increment")}
-        >
-          +
-        </Button>
-      </div>
-      <Button type="addToCart">
-        <Icon name="cart" />
-        <span onClick={() => addProductToCartHandler(id)}>ADD TO CART</span>
-      </Button>
+      )}
+
       <Button type="secondCart">
         <Icon name="favourites" />
       </Button>
