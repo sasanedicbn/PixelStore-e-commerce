@@ -1,5 +1,6 @@
 import express from "express";
 import {
+  addProductInFavourites,
   addProductToCart,
   getMe,
   getUserCart,
@@ -23,5 +24,5 @@ routeUser.post("/contact", sendMessageUser);
 routeUser.get("/favourites", protect, getUserFavourites);
 routeUser.get("/cart", protect, getUserCart);
 routeUser.patch("/cart/:productId", protect, updateProductInCart);
-
+routeUser.post("/favourites/add", protect, addProductInFavourites);
 export default routeUser;

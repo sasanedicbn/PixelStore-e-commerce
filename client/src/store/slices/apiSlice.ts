@@ -64,7 +64,13 @@ export const productsApi = createApi({
       query: () => `api/users/cart`,
       providesTags: ["Cart"], 
     }),
-   
+    sendItemtoFavourites: builder.mutation({
+      query: (productId) => ({
+        url: `api/users/favourites/add`,
+        method: "POST",
+        body: { productId },
+      }),
+    }),
   }),
 });
 
