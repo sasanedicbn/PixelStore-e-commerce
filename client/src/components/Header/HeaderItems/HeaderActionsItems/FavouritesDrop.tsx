@@ -1,4 +1,5 @@
 import { useGetUserFavouritesQuery } from "../../../../store/slices/apiSlice";
+import DropDownUserData from "../../../../UX/DropDownUserData";
 
 const FavouritesDrop = () => {
   const { data, isLoading } = useGetUserFavouritesQuery();
@@ -14,8 +15,8 @@ const FavouritesDrop = () => {
   return (
     <div>
       <ul>
-        {favourites.map((fav) => (
-          <li key={fav._id}>{fav.title}</li>
+        {favourites.map((favourite) => (
+          <DropDownUserData item={favourite} type="favourites" />
         ))}
       </ul>
     </div>

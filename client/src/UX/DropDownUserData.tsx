@@ -10,17 +10,13 @@ const DropDownUserData = ({
     <li
       key={item._id}
       className="cart-drop__item"
-      onClick={() => getSingleProductHandler(item.product._id)}
+      onClick={() => getSingleProductHandler(item._id)}
     >
-      <img
-        src={item.product.imageUrl}
-        alt={item.product.title}
-        className="cart-drop__img"
-      />
+      <img src={item.imageUrl} alt={item.title} className="cart-drop__img" />
       <div className="cart-drop__info">
-        <h4 className="cart-drop__title">{item.product.title}</h4>
-        <p className="cart-drop__category">{item.product.category}</p>
-        <p className="cart-drop__price">${item.product.price}</p>
+        <h4 className="cart-drop__title">{item.title}</h4>
+        <p className="cart-drop__category">{item.category}</p>
+        <p className="cart-drop__price">${item.price}</p>
         {type === "cart" && (
           <p className="cart-drop__quantity">
             Quantity:{" "}
@@ -28,7 +24,7 @@ const DropDownUserData = ({
               type="plus"
               onClick={(e) => {
                 e.stopPropagation();
-                updateCartItemHandler(item.product._id, "increment");
+                updateCartItemHandler(item._id, "increment");
               }}
             >
               +
@@ -37,7 +33,7 @@ const DropDownUserData = ({
             <Button
               onClick={(e) => {
                 e.stopPropagation();
-                updateCartItemHandler(item.product._id, "decrement");
+                updateCartItemHandler(item._id, "decrement");
               }}
               type="minus"
             >
