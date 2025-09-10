@@ -1,12 +1,10 @@
-import {
-  useGetUserFavouritesQuery,
-  useSendItemtoFavouritesMutation,
-} from "../../../../store/slices/apiSlice";
+import { useGetUserFavouritesQuery } from "../../../../store/slices/apiSlice";
 
 const FavouritesDrop = () => {
   const { data, isLoading } = useGetUserFavouritesQuery();
 
   const favourites = data?.favourites || [];
+  console.log(favourites, "IZ FAVOURITES DROP");
 
   if (isLoading) return <p>Loading...</p>;
   if (!data) return <p>You should log in to see your favourites</p>;
@@ -17,7 +15,7 @@ const FavouritesDrop = () => {
     <div>
       <ul>
         {favourites.map((fav) => (
-          <li key={fav._id}>{fav.name}</li>
+          <li key={fav._id}>{fav.title}</li>
         ))}
       </ul>
     </div>
