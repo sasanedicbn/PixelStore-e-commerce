@@ -1,8 +1,14 @@
+import { useNavigate } from "react-router-dom";
 import { useGetUserFavouritesQuery } from "../../../../store/slices/apiSlice";
 import DropDownUserData from "../../../../UX/DropDownUserData";
 
 const FavouritesDrop = () => {
   const { data, isLoading } = useGetUserFavouritesQuery();
+  const navigate = useNavigate();
+
+  const getSingleProductHandler = (id) => {
+    navigate(`/products/${id}`);
+  };
 
   const favourites = data?.favourites || [];
   console.log(favourites, "IZ FAVOURITES DROP");
@@ -16,7 +22,12 @@ const FavouritesDrop = () => {
     <div>
       <ul>
         {favourites.map((favourite) => (
-          <DropDownUserData item={favourite} type="favourites" />
+          <DropDownUserData
+            item={favourite}
+            type="favourites"
+            getSingleProductHandler={getSingleProductHandler}
+            updateCartItemHandler={"null"}
+          />
         ))}
       </ul>
     </div>

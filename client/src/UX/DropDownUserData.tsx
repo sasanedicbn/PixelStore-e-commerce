@@ -5,7 +5,9 @@ const DropDownUserData = ({
   type,
   getSingleProductHandler,
   updateCartItemHandler,
+  quantity = 0,
 }) => {
+  console.log(item, "DAAAAAAAAAAAAAAAAAAAD");
   return (
     <li
       key={item._id}
@@ -29,7 +31,7 @@ const DropDownUserData = ({
             >
               +
             </Button>{" "}
-            {item.quantity}{" "}
+            {quantity}{" "}
             <Button
               onClick={(e) => {
                 e.stopPropagation();

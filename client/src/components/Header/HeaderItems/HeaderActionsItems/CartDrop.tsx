@@ -35,6 +35,7 @@ const CartDrop = () => {
         {cart.map((item) => (
           <DropDownUserData
             item={item.product}
+            quantity={item.quantity}
             type="cart"
             getSingleProductHandler={getSingleProductHandler}
             updateCartItemHandler={updateCartItemHandler}
