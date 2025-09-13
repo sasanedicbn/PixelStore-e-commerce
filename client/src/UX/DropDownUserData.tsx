@@ -43,9 +43,7 @@ const DropDownUserData = ({
             </Button>
           </p>
         )}
-      </div>
-    </li>
-  );
 };
 
 export default DropDownUserData;
+// TREBAM U API KONEKTOVATI ONAJ CART I ZA FAVORUTIES
