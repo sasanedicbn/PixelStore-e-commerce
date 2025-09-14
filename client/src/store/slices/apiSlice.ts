@@ -70,6 +70,7 @@ export const productsApi = createApi({
         method: "POST",
         body: { productId },
       }),
+      providesTags: ["Cart"],
     }),
   }),
 });
