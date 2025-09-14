@@ -49,4 +49,3 @@ const DropDownUserData = ({
 };
 
 export default DropDownUserData;
-// TREBAM U API KONEKTOVATI ONAJ CART I ZA FAVORUTIES
