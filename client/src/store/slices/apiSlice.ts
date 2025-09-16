@@ -69,8 +69,9 @@ export const productsApi = createApi({
         url: `api/users/favourites/add`,
         method: "POST",
         body: { productId },
+        credentials: "include"
       }),
-      providesTags: ["Cart"],
+      invalidatesTags: ["Cart"],
     }),
   }),
 });

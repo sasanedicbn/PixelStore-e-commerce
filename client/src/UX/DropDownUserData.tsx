@@ -7,7 +7,6 @@ const DropDownUserData = ({
   updateCartItemHandler,
   quantity = 0,
 }) => {
-  console.log(item, "DAAAAAAAAAAAAAAAAAAAD");
   return (
     <li
       key={item._id}
