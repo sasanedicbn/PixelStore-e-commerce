@@ -24,6 +24,12 @@ const DropDownUserData = ({
             <Button
               type="plus"
               onClick={(e) => {
+                e.stopPropagation();
+                updateCartItemHandler(item._id, "increment");
+              }}
+            >
+              +
+            </Button>{" "}
             {quantity}{" "}
             <Button
               onClick={(e) => {
