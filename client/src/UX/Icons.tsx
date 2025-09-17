@@ -39,6 +39,7 @@ const Icon = ({
     truck: <FaTruck name={name} size={size} color={color} />,
     user: <FaUser name={name} />,
     favourites: <FaHeart name={name} />,
+    favouritesSingle: <FaHeart name={name} color={color} />,
     cart: <FaShoppingCart name={name} />,
     burger: <IoMenu name={name} size={size} color={color} />,
     down: <IoChevronDown name={name} color={color} />,

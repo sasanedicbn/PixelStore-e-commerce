@@ -89,7 +89,10 @@ const DetailsActions = ({ id }) => {
         className={`${isFavourite ? "cartRed" : "cartWhite"}`}
         onClick={() => addItemToFavouritesHandler(id)}
       >
-        <Icon name="favourites" color={`${isFavourite ? "white" : "black"}`} />
+        <Icon
+          name="favouritesSingle"
+          color={`${isFavourite ? "white" : "black"}`}
+        />
       </Button>
     </div>
   );
