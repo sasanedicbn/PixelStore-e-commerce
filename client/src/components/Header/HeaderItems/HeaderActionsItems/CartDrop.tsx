@@ -3,7 +3,6 @@ import {
   useGetUserCartQuery,
   useUpdateCartMutation,
 } from "../../../../store/slices/apiSlice";
-import Button from "../../../../UX/Button";
 import DropDownUserData from "../../../../UX/DropDownUserData";
 
 const CartDrop = () => {
@@ -17,7 +16,7 @@ const CartDrop = () => {
   if (!cart) return <p>You should log in to see your cart</p>;
   if (cart.length === 0) return <p>Your cart is empty.</p>;
 
-  const updateCartItemHandler = async (productId, type) => {
+  const updateCartItemHandler = async (productId: string, type: string) => {
     try {
       await updateCartItem({ productId, type }).unwrap();
     } catch (error) {
@@ -25,7 +24,7 @@ const CartDrop = () => {
     }
   };
 
-  const getSingleProductHandler = (id) => {
+  const getSingleProductHandler = (id: string) => {
     navigate(`/products/${id}`);
   };
 

@@ -1306,3 +1306,17 @@ h2{
   color: rgb(247, 39, 39);
 }
 
+.userDrop{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+.userDrop-img{
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid rgb(214, 214, 214);
+  padding: 6px;
+}
+}

@@ -3,14 +3,13 @@ import {
   useLogoutUserMutation,
 } from "../../../../store/slices/apiSlice";
 import Button from "../../../../UX/Button";
-
 const UserDrop = () => {
   const { data: user, isLoading } = useGetUserQuery();
   const [logoutUser] = useLogoutUserMutation();
 
   const handleLogout = async () => {
     try {
-      const result = await logoutUser().unwrap();
+      const result = await logoutUser("").unwrap();
       console.log(result, "iz UserDrop-a nakon logout-a");
       window.location.reload();
     } catch (error) {
@@ -22,7 +21,13 @@ const UserDrop = () => {
   if (!user) return <p>Not logged in</p>;
 
   return (
-    <div>
+    <div className="userDrop">
+      <img
+        src="../../../../public/user.png"
+        alt={user.name}
+        className="userDrop-img"
+      />
+      {/* <Button>Edit</Button> */}
       <p>
         Hi, <span>{user.name}</span> <br />
         Welcome to PixelStudio.
