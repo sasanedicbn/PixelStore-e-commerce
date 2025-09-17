@@ -4,6 +4,7 @@ const Button = ({
   onClick,
   disabled = false,
   value,
+  className = "",
 }: ButtonProps) => {
   const styles: Record<ButtonProps["type"], string> = {
     user: `header-action-btn`,
@@ -24,7 +25,7 @@ const Button = ({
 
   return (
     <button
-      className={styles[type]}
+      className={`${styles[type]} ${className}`}
       onClick={onClick}
       disabled={disabled}
       value={value}

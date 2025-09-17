@@ -3,6 +3,7 @@ import {
   useGetUserCartQuery,
   useSendProductToCartMutation,
   useSendItemtoFavouritesMutation,
+  useGetUserFavouritesQuery,
 } from "../../../store/slices/apiSlice";
 import Button from "../../../UX/Button";
 import Icon from "../../../UX/Icons";
@@ -13,7 +14,9 @@ const DetailsActions = ({ id }) => {
   const [updateCartItem] = useUpdateCartMutation();
   const [dataToSendHandler] = useSendProductToCartMutation();
   const [sendItemtoFavourites] = useSendItemtoFavouritesMutation();
-
+  const { data: favouritesData } = useGetUserFavouritesQuery();
+  const favourites = favouritesData?.favourites || [];
+  const isFavourite = favourites.some((item) => item._id === id);
   const addProductToCartHandler = async (id) => {
     try {
       await dataToSendHandler(id).unwrap();
@@ -72,14 +75,21 @@ const DetailsActions = ({ id }) => {
           </Button>
         </div>
       ) : (
-        <Button type="addToCart" onClick={() => addProductToCartHandler(id)}>
+        <Button
+          type="addToCart"
+          onClick={() => addProductToCartHandler(id)}
+          className={isFavourite ? "bg-red-success" : ""}
+        >
           <Icon name="cart" />
           <span>ADD TO CART</span>
         </Button>
       )}
 
-      <Button type="secondCart" onClick={() => addItemToFavouritesHandler(id)}>
-        <Icon name="favourites" />
+      <Button
+        className={`${isFavourite ? "cartRed" : "cartWhite"}`}
+        onClick={() => addItemToFavouritesHandler(id)}
+      >
+        <Icon name="favourites" color={`${isFavourite ? "white" : "black"}`} />
       </Button>
     </div>
   );

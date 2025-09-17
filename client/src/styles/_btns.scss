@@ -66,3 +66,32 @@
         cursor: not-allowed;
       }
     }
+
+.cartRed {
+  width: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ccc;
+  background-color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  font-size: 20px;
+  color: #333;
+  margin-left: 1rem;
+  background-color: #D62828;
+}
+.cartWhite{
+  width: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ccc;
+  background-color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  font-size: 20px;
+  color: #333;
+  margin-left: 1rem;
+  background-color: white;
+}
