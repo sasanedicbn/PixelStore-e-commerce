@@ -64,6 +64,36 @@
   cursor: not-allowed;
 }
 
+.cartRed {
+  width: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ccc;
+  background-color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  font-size: 20px;
+  color: #333;
+  margin-left: 1rem;
+  background-color: #D62828;
+}
+
+.cartWhite {
+  width: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ccc;
+  background-color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  font-size: 20px;
+  color: #333;
+  margin-left: 1rem;
+  background-color: white;
+}
+
 .genericForm {
   display: flex;
   justify-content: center;
@@ -1367,4 +1397,20 @@ p {
 .error-message {
   text-align: center;
   color: rgb(247, 39, 39);
+}
+
+.userDrop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.userDrop .userDrop-img {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 1px solid rgb(214, 214, 214);
+  padding: 6px;
 }/*# sourceMappingURL=main.css.map */

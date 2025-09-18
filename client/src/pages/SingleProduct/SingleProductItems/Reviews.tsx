@@ -5,40 +5,36 @@ import ReviewStars from "./ReviewStars";
 const Reviews = ({ product }) => {
   const { data: user, isLoading } = useGetUserQuery();
   const [userData, setUserData] = useState({
-    rating: 0,
-    name: user ? user.name : "",
+    rating: 5,
+    name: "",
     review: "",
   });
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  // };
-  console.log(user, "ima li u rivjuju");
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
+  console.log(userData, "ima li u rivjuju");
   return (
     <div className="reviews-container">
       <p>
         You're reviewing: <span>{product.product.title}</span>
       </p>
-      <form>
+      <form onSubmit={handleSubmit}>
         <div className="rating">
           <span>Your Rating:</span>
-          <ReviewStars totalStars={5} />
+          <ReviewStars totalStars={userData.rating} />
         </div>
         <div className="form-group">
           <label htmlFor="nickname">Name:</label>
           <input
             type="text"
             id="nickname"
-            value={user.name ? user.name : ""}
+            value={user?.name || userData.name}
             required
           />
         </div>
         <div className="form-group">
           <label htmlFor="review">Review:</label>
-          <textarea
-            id="review"
-            // value={review}
-            required
-          />
+          <textarea id="review" value={userData.review} required />
         </div>
         <button type="submit">SUBMIT REVIEW</button>
       </form>
