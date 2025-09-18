@@ -1,31 +1,34 @@
+import { useState } from "react";
+import { useGetUserQuery } from "../../../store/slices/apiSlice";
 import ReviewStars from "./ReviewStars";
 
 const Reviews = ({ product }) => {
-  console.log("iz reviewa", product);
+  const { data: user, isLoading } = useGetUserQuery();
+  const [userData, setUserData] = useState({
+    rating: 0,
+    name: user ? user.name : "",
+    review: "",
+  });
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  // };
+  console.log(user, "ima li u rivjuju");
   return (
     <div className="reviews-container">
-      <p>You're reviewing:</p>
-      <span>{product.product.title}</span>
+      <p>
+        You're reviewing: <span>{product.product.title}</span>
+      </p>
       <form>
         <div className="rating">
           <span>Your Rating:</span>
           <ReviewStars totalStars={5} />
         </div>
         <div className="form-group">
-          <label htmlFor="nickname">Nickname:</label>
+          <label htmlFor="nickname">Name:</label>
           <input
             type="text"
             id="nickname"
-            // value={nickname}
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="summary">Summary:</label>
-          <input
-            type="text"
-            id="summary"
-            // value={summary}
+            value={user.name ? user.name : ""}
             required
           />
         </div>
