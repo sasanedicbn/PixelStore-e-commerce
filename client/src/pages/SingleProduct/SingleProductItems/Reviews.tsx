@@ -6,17 +6,24 @@ const Reviews = ({ product }) => {
   const { data: user, isLoading } = useGetUserQuery();
   const [userData, setUserData] = useState({
     rating: 5,
-    name: "",
     review: "",
   });
+
   const updateRating = (newRating) => {
     setUserData({ ...userData, rating: newRating });
   };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(userData, "submited");
+
+    const payload = {
+      ...userData,
+      name: user?.name || userData.name,
+    };
+
+    console.log(payload, "submited");
   };
-  console.log(userData, "ima li u rivjuju");
+
   return (
     <div className="reviews-container">
       <p>
@@ -30,27 +37,36 @@ const Reviews = ({ product }) => {
             updateRating={updateRating}
           />
         </div>
+
         <div className="form-group">
           <label htmlFor="name">Name:</label>
-          <input
-            type="text"
-            id="name"
-            value={user?.name || userData.name}
-            onChange={(e) => setUserData({ ...userData, name: e.target.value })}
-            required
-          />
+          {user ? (
+            <input type="text" id="name" value={user.name} disabled />
+          ) : (
+            <input
+              type="text"
+              id="name"
+              value={userData.name || ""}
+              onChange={(e) =>
+                setUserData({ ...userData, name: e.target.value })
+              }
+              required
+            />
+          )}
         </div>
+
         <div className="form-group">
           <label htmlFor="review">Review:</label>
           <textarea
             id="review"
             value={userData.review}
+            onChange={(e) =>
+              setUserData({ ...userData, review: e.target.value })
+            }
             required
-            onChange={(e) => {
-              setUserData({ ...userData, review: e.target.value });
-            }}
           />
         </div>
+
         <button type="submit">SUBMIT REVIEW</button>
       </form>
     </div>
