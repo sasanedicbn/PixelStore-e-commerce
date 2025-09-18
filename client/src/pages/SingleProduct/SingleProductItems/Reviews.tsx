@@ -1,27 +1,26 @@
-import { useState } from "react";
 import { useGetUserQuery } from "../../../store/slices/apiSlice";
 import ReviewStars from "./ReviewStars";
+import { useForm } from "react-hook-form";
+import TextInput from "../../../components/Forms/TextInput";
+import TextareaInput from "../../../components/Forms/TextareaInput";
 
 const Reviews = ({ product }) => {
   const { data: user, isLoading } = useGetUserQuery();
-  const [userData, setUserData] = useState({
-    rating: 5,
-    review: "",
+  const { register, handleSubmit, setValue, watch } = useForm({
+    defaultValues: {
+      name: user?.name || "",
+      rating: 5,
+      review: "",
+    },
   });
 
   const updateRating = (newRating) => {
-    setUserData({ ...userData, rating: newRating });
+    setValue("rating", newRating);
   };
+  const rating = watch("rating");
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    const payload = {
-      ...userData,
-      name: user?.name || userData.name,
-    };
-
-    console.log(payload, "submited");
+  const onSubmit = (data) => {
+    console.log(data, "submited");
   };
 
   return (
@@ -29,41 +28,26 @@ const Reviews = ({ product }) => {
       <p>
         You're reviewing: <span>{product.product.title}</span>
       </p>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit(onSubmit)}>
         <div className="rating">
           <span>Your Rating:</span>
-          <ReviewStars
-            totalStars={userData.rating}
-            updateRating={updateRating}
+          <ReviewStars totalStars={5} updateRating={updateRating} />
+        </div>
+        <div className="form-group">
+          <TextInput
+            label="Name"
+            name="name"
+            type="text"
+            register={register}
+            errors={{}}
           />
         </div>
-
         <div className="form-group">
-          <label htmlFor="name">Name:</label>
-          {user ? (
-            <input type="text" id="name" value={user.name} disabled />
-          ) : (
-            <input
-              type="text"
-              id="name"
-              value={userData.name || ""}
-              onChange={(e) =>
-                setUserData({ ...userData, name: e.target.value })
-              }
-              required
-            />
-          )}
-        </div>
-
-        <div className="form-group">
-          <label htmlFor="review">Review:</label>
-          <textarea
-            id="review"
-            value={userData.review}
-            onChange={(e) =>
-              setUserData({ ...userData, review: e.target.value })
-            }
-            required
+          <TextareaInput
+            label={"Your Review"}
+            name="review"
+            register={register}
+            errors={{}}
           />
         </div>
 
