@@ -1138,7 +1138,11 @@ h2{
 
   .form-group {
     margin-bottom: 20px;
-
+    p{
+      color: rgb(204, 6, 6);
+      font-size: 14px;
+      margin-top: 0.25rem;
+    }
     label {
       display: block;
       margin-bottom: 5px;

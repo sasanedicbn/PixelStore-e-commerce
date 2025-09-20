@@ -3,10 +3,19 @@ import ReviewStars from "./ReviewStars";
 import { useForm } from "react-hook-form";
 import TextInput from "../../../components/Forms/TextInput";
 import TextareaInput from "../../../components/Forms/TextareaInput";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { reviewSchema } from "../../../schemas/schemas";
 
 const Reviews = ({ product }) => {
   const { data: user, isLoading } = useGetUserQuery();
-  const { register, handleSubmit, setValue, watch } = useForm({
+  const {
+    register,
+    handleSubmit,
+    setValue,
+    watch,
+    formState: { errors },
+  } = useForm({
+    resolver: zodResolver(reviewSchema),
     defaultValues: {
       name: user?.name || "",
       rating: 5,
@@ -17,7 +26,7 @@ const Reviews = ({ product }) => {
   const updateRating = (newRating) => {
     setValue("rating", newRating);
   };
-  const rating = watch("rating");
+  watch("rating");
 
   const onSubmit = (data) => {
     console.log(data, "submited");
@@ -39,7 +48,7 @@ const Reviews = ({ product }) => {
             name="name"
             type="text"
             register={register}
-            errors={{}}
+            errors={errors}
           />
         </div>
         <div className="form-group">
@@ -47,7 +56,7 @@ const Reviews = ({ product }) => {
             label={"Your Review"}
             name="review"
             register={register}
-            errors={{}}
+            errors={errors}
           />
         </div>
 

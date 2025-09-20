@@ -16,10 +16,6 @@ export const signupSchema = z
     path: ["confirmPassword"],
   });
 
-export const reviewSchema = z.object({
-  review: z.string().min(10, "Review must be at least 10 characters"),
-  rating: z.number().min(1, "Rating is required"),
-});
 
 export const contactUsSchema = z.object({
   name: z.string().min(2, "Review must be at least 2 characters"),
@@ -42,3 +38,9 @@ export const createAccountSchema = z
       message: "Passwords do not match",
       path: ["confirmPassword"],
     });
+
+export const reviewSchema = z.object({
+  name: z.string().min(1, "Name is required"),
+  rating: z.number().min(1, "Please give a rating"),
+  review: z.string().min(4, "Review must be at least 4 characters long"),
+});
