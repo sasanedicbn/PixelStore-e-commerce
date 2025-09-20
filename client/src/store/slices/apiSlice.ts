@@ -74,6 +74,14 @@ export const productsApi = createApi({
       }),
       invalidatesTags: ["Cart", "Favourites"],
     }),
+    sendReview: builder.mutation({
+      query: ({ productId, reviewData }) => ({
+        url: `api/products/${productId}/reviews`,
+        method: "POST",
+        body: reviewData,
+        credentials: "include"
+      }),   
+    }),
   }),
 });
 
@@ -90,4 +98,5 @@ export const {
   useGetUserCartQuery,
   useUpdateCartMutation,
   useSendItemtoFavouritesMutation,
+  useSendReviewMutation
 } = productsApi;
