@@ -1,4 +1,7 @@
-import { useGetUserQuery } from "../../../store/slices/apiSlice";
+import {
+  useGetUserQuery,
+  useSendReviewMutation,
+} from "../../../store/slices/apiSlice";
 import ReviewStars from "./ReviewStars";
 import { useForm } from "react-hook-form";
 import TextInput from "../../../components/Forms/TextInput";
@@ -8,6 +11,7 @@ import { reviewSchema } from "../../../schemas/schemas";
 
 const Reviews = ({ product }) => {
   const { data: user, isLoading } = useGetUserQuery();
+  // const {} = useSendReviewMutation()
   const {
     register,
     handleSubmit,
