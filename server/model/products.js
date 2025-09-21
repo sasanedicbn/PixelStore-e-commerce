@@ -12,6 +12,7 @@ const productsSchema = new mongoose.Schema({
     },
     default: {},
   },
+  reviews: { type: Array, default: [] },
 });
 
 const ProductsModel = mongoose.model("Product", productsSchema);
