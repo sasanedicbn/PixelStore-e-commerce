@@ -11,7 +11,8 @@ import { reviewSchema } from "../../../schemas/schemas";
 
 const Reviews = ({ product }) => {
   const { data: user, isLoading } = useGetUserQuery();
-  // const {} = useSendReviewMutation()
+  const [sendReview, { isLoading: isSending }] = useSendReviewMutation();
+
   const {
     register,
     handleSubmit,
@@ -32,8 +33,17 @@ const Reviews = ({ product }) => {
   };
   watch("rating");
 
-  const onSubmit = (data) => {
-    console.log(data, "submited");
+  const onSubmit = async (data) => {
+    try {
+      await sendReview({
+        productId: product.product._id,
+        reviewData: data,
+      }).unwrap();
+
+      console.log("Review submitted:", data);
+    } catch (err) {
+      console.error("Error submitting review:", err);
+    }
   };
 
   return (
@@ -46,6 +56,7 @@ const Reviews = ({ product }) => {
           <span>Your Rating:</span>
           <ReviewStars totalStars={5} updateRating={updateRating} />
         </div>
+
         <div className="form-group">
           <TextInput
             label="Name"
@@ -55,16 +66,19 @@ const Reviews = ({ product }) => {
             errors={errors}
           />
         </div>
+
         <div className="form-group">
           <TextareaInput
-            label={"Your Review"}
+            label="Your Review"
             name="review"
             register={register}
             errors={errors}
           />
         </div>
 
-        <button type="submit">SUBMIT REVIEW</button>
+        <button type="submit" disabled={isSending}>
+          {isSending ? "Submitting..." : "SUBMIT REVIEW"}
+        </button>
       </form>
     </div>
   );

@@ -25,4 +25,5 @@ routeUser.get("/favourites", protect, getUserFavourites);
 routeUser.get("/cart", protect, getUserCart);
 routeUser.patch("/cart/:productId", protect, updateProductInCart);
 routeUser.post("/favourites/add", protect, addProductInFavourites);
+
 export default routeUser;
