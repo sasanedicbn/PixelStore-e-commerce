@@ -1,5 +1,5 @@
 export const addReview = async (req, res) => {
-  const { review, rating } = req.body;
+  const { comment, rating } = req.body;
   const { productId } = req.params;
 
   if (!review) {

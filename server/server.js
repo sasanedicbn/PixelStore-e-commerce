@@ -24,7 +24,7 @@ app.use(
 app.use(cookieParser());
 
 app.use("/api/users", userRoute);
-app.use("api/products", productsRoute);
+app.use("/api/products", productsRoute);
 app.get("/api/products", async (req, res) => {
   try {
     const userData = await ProductsModel.find();
