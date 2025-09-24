@@ -23,9 +23,7 @@ export const addReview = async (req, res) => {
     const newReview = {
       review,
       rating,
-      user: user._id,
-      name: user.name,
-    };
+      user: user._i
 
     product.reviews.push(newReview);
     await product.save();
