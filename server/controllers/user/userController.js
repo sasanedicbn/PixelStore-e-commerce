@@ -288,8 +288,7 @@ export const addProductInFavourites = async (req, res) => {
   try {
     const user = await UserModel.findById(req.user.id);
     if (!user) {
-      res.status(404).json({ message: "You should be logged in" });
-    }
+      res.status(404).
     const productInfo = await ProductsModel.findById(productId);
     if (!productInfo) {
       res.status(404).json({ message: "Product not found" });
