@@ -20,12 +20,7 @@ export const addReview = async (req, res) => {
       return res.status(404).json({ message: "Product not found" });
     }
 
-    const newReview = {
-      review,
-      rating,
-      user: user._id,
-      name: user.name,
-    };
+    const newR
 
     product.reviews.push(newReview);
     await product.save();
