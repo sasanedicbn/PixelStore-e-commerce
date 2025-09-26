@@ -269,8 +269,6 @@ export const updateProductInCart = async (req, res) => {
       return res.status(400).json({ message: "Invalid type" });
     }
 
-    await user.save();
-
     return res.status(200).json({
       success: true,
       message: "Cart updated",
