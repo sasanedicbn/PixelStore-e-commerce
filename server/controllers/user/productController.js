@@ -1,5 +1,8 @@
+import UserModel from "../../model/user";
+
+// controller
 export const addReview = async (req, res) => {
-  const { comment, rating } = req.body;
+  const { review, rating } = req.body;
   const { productId } = req.params;
 
   if (!review) {
