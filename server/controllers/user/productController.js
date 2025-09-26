@@ -1,7 +1,11 @@
-import UserModel from "../../model/user";
+import ProductsModel from "../../model/products.js";
+import UserModel from "../../model/user.js";
 
-// controller
 export const addReview = async (req, res) => {
+  console.log("BODY:", req.body);
+  console.log("USER:", req.user);
+  console.log("PARAMS:", req.params);
+
   const { review, rating } = req.body;
   const { productId } = req.params;
 
@@ -35,6 +39,7 @@ export const addReview = async (req, res) => {
 
     res.status(200).json({ success: true, message: "Review added", product });
   } catch (error) {
+    console.error("SAVE ERROR:", error);
     res.status(500).json({ success: false, message: "Review is not added" });
   }
 };
