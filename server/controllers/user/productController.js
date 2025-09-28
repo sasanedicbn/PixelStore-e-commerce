@@ -2,10 +2,6 @@ import ProductsModel from "../../model/products.js";
 import UserModel from "../../model/user.js";
 
 export const addReview = async (req, res) => {
-  console.log("BODY:", req.body);
-  console.log("USER:", req.user);
-  console.log("PARAMS:", req.params);
-
   const { review, rating } = req.body;
   const { productId } = req.params;
 
@@ -35,7 +31,6 @@ export const addReview = async (req, res) => {
     };
 
     product.reviews.push(newReview);
-    await product.save();
 
     res.status(200).json({ success: true, message: "Review added", product });
   } catch (error) {
