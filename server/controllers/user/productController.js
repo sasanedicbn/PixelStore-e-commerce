@@ -32,6 +32,8 @@ export const addReview = async (req, res) => {
 
     product.reviews.push(newReview);
     await product.save();
+
+    res.status(200).json({ success: true, message: "Review added", product });
   } catch (error) {
     console.error("SAVE ERROR:", error);
     res.status(500).json({ success: false, message: "Review is not added" });
