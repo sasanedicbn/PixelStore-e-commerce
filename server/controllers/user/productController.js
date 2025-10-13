@@ -14,9 +14,6 @@ export const addReview = async (req, res) => {
 
   try {
     const user = await UserModel.findById(req.user.id);
-    if (!user) {
-      return res.status(404).json({ message: "You should be logged in" });
-    }
 
     const product = await ProductsModel.findById(productId);
     if (!product) {
